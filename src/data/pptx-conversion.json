@@ -1,0 +1,96 @@
+{
+  "versions": [
+    "html-source",
+    "gen-1",
+    "gen-2"
+  ],
+  "cases": [
+    {
+      "id": "cascade",
+      "title": "Cascade \u2014 FY25 quarterly revenue mix",
+      "source": "cascade-v4-revenue-mix-executive",
+      "cells": {
+        "html-source": {
+          "sources": [
+            {
+              "label": "v3",
+              "preview": "html-to-pptx/screenshots/cascade-html.png",
+              "html": "../presentations/cascade-v3-revenue-mix.html"
+            },
+            {
+              "label": "v4 exec",
+              "preview": "html-to-pptx/screenshots/cascade-html-v4.png",
+              "html": "../presentations/cascade-v4-revenue-mix-executive.html"
+            }
+          ],
+          "default": 1
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/cascade-pptx.png",
+          "pptx": "../presentations/cascade-v3-revenue-mix.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/cascade-pptx-gen2.png",
+          "pptx": "../presentations/cascade-v4-revenue-mix-executive.pptx"
+        }
+      }
+    },
+    {
+      "id": "northstar",
+      "title": "Northstar Packaging \u2014 FY25 revenue mix",
+      "source": "northstar-packaging-fy25",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/northstar-html.png",
+          "html": "../presentations/northstar-packaging-fy25.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/northstar-pptx.png",
+          "pptx": "../presentations/northstar-packaging-fy25.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/northstar-pptx-gen2.png",
+          "pptx": "../presentations/northstar-packaging-fy25-gen2.pptx"
+        }
+      }
+    },
+    {
+      "id": "sow-extension",
+      "title": "30-Day SOW Extension \u2014 Elephant Ventures",
+      "source": "sow-extension-v3-30day",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/sow-extension-html.png",
+          "html": "../presentations/sow-extension-v3-30day.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/sow-extension-pptx.png",
+          "pptx": "../presentations/sow-extension-v3-30day.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/sow-extension-pptx-gen2.png",
+          "pptx": "../presentations/sow-extension-v3-30day-gen2.pptx"
+        }
+      }
+    },
+    {
+      "id": "halvorsen-leakage",
+      "title": "Halvorsen \u2014 FY25 Discount Leakage Ranking",
+      "source": "halvorsen-v3-leakage-ranking",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/halvorsen-leakage-ranking-html.png",
+          "html": "../presentations/halvorsen-v3-leakage-ranking.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/halvorsen-leakage-ranking-pptx.png",
+          "pptx": "../presentations/halvorsen-v3-leakage-ranking.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/halvorsen-leakage-ranking-pptx-gen2.png",
+          "pptx": "../presentations/halvorsen-v3-leakage-ranking-gen2.pptx"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "id": "sow_extension_30day",
+  "title": "30-Day SOW Extension | Engineering-led sprint to maintain momentum and produce working artifacts",
+  "subtitle": "Elephant Ventures — June 29 to July 31, 2026",
+  "notes": "So-what: Standing down engineers risks losing them to other work. The 30-day extension keeps momentum, produces tangible deliverables, and feeds into Q3/Q4 planning.",
+  "layout": "canvas",
+  "content": {
+    "items": [
+      {
+        "kind": "text",
+        "text": "$30,500",
+        "x": 0.02,
+        "y": 0.04,
+        "w": 0.2,
+        "h": 0.08,
+        "fontSize": 28,
+        "bold": true,
+        "color": "primary"
+      },
+      {
+        "kind": "text",
+        "text": "Total Investment",
+        "x": 0.02,
+        "y": 0.12,
+        "w": 0.2,
+        "h": 0.03,
+        "fontSize": 9,
+        "color": "textMid"
+      },
+      {
+        "kind": "text",
+        "text": "30 Days",
+        "x": 0.25,
+        "y": 0.04,
+        "w": 0.15,
+        "h": 0.08,
+        "fontSize": 28,
+        "bold": true,
+        "color": "accent"
+      },
+      {
+        "kind": "text",
+        "text": "Duration",
+        "x": 0.25,
+        "y": 0.12,
+        "w": 0.15,
+        "h": 0.03,
+        "fontSize": 9,
+        "color": "textMid"
+      },
+      {
+        "kind": "text",
+        "text": "5",
+        "x": 0.43,
+        "y": 0.04,
+        "w": 0.1,
+        "h": 0.08,
+        "fontSize": 28,
+        "bold": true,
+        "color": "339966"
+      },
+      {
+        "kind": "text",
+        "text": "Workstreams",
+        "x": 0.43,
+        "y": 0.12,
+        "w": 0.1,
+        "h": 0.03,
+        "fontSize": 9,
+        "color": "textMid"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "x": 0.02,
+        "y": 0.19,
+        "w": 0.96,
+        "h": 0.06,
+        "text": "1. Knowledge Base 2.0 — Data organization and retrieval architecture",
+        "fontSize": 11,
+        "textColor": "FFFFFF",
+        "align": "left",
+        "valign": "middle"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "fillTransparency": 15,
+        "x": 0.02,
+        "y": 0.27,
+        "w": 0.96,
+        "h": 0.06,
+        "text": "2. Deep Research in AskINSIGHT — Cited multi-source synthesis to production",
+        "fontSize": 11,
+        "textColor": "FFFFFF",
+        "align": "left",
+        "valign": "middle"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "fillTransparency": 30,
+        "x": 0.02,
+        "y": 0.35,
+        "w": 0.96,
+        "h": 0.06,
+        "text": "3. Teams Agent Integration — End-to-end deployment in INSIGHT tenant",
+        "fontSize": 11,
+        "textColor": "FFFFFF",
+        "align": "left",
+        "valign": "middle"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "fillTransparency": 45,
+        "x": 0.02,
+        "y": 0.43,
+        "w": 0.96,
+        "h": 0.06,
+        "text": "4. Agent Builder Evaluation — Side-by-side comparison and MVP recommendation",
+        "fontSize": 11,
+        "textColor": "FFFFFF",
+        "align": "left",
+        "valign": "middle"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "fillTransparency": 60,
+        "x": 0.02,
+        "y": 0.51,
+        "w": 0.96,
+        "h": 0.06,
+        "text": "5. Architecture Assessment Review — Critical review with actionable next steps",
+        "fontSize": 11,
+        "textColor": "FFFFFF",
+        "align": "left",
+        "valign": "middle"
+      },
+      {
+        "kind": "text",
+        "text": "Team & Pricing",
+        "x": 0.02,
+        "y": 0.6,
+        "w": 0.3,
+        "h": 0.04,
+        "fontSize": 11,
+        "bold": true,
+        "color": "primary"
+      },
+      {
+        "kind": "table",
+        "x": 0.02,
+        "y": 0.65,
+        "w": 0.96,
+        "h": 0.25,
+        "hasHeader": true,
+        "rows": [
+          [
+            "Team Member",
+            "Role",
+            "Rate / Month",
+            "Allocation"
+          ],
+          [
+            "Maik Ardan",
+            "Sr. AI Architect",
+            "$11,000",
+            "Full-time"
+          ],
+          [
+            "Edward Mabuyo",
+            "Sr. Engineer",
+            "$11,000",
+            "Full-time"
+          ],
+          [
+            "Jonathan Cook",
+            "Product Owner",
+            "$8,500",
+            "Half-time"
+          ]
+        ]
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "accent",
+        "fillTransparency": 10,
+        "x": 0.02,
+        "y": 0.92,
+        "w": 0.96,
+        "h": 0.06,
+        "text": "Standing down risks losing engineers — this extension keeps momentum and feeds Q3/Q4 planning",
+        "fontSize": 10,
+        "bold": true,
+        "textColor": "FFFFFF",
+        "align": "center",
+        "valign": "middle"
+      }
+    ]
+  },
+  "palette": "INSIGHT",
+  "lineageId": "sow_extension",
+  "version": 1,
+  "parentVersion": null,
+  "createdAt": "2026-08-03T21:21:39.085Z"
+}

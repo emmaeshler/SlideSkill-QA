@@ -1,0 +1,22 @@
+{
+  "baseline": [
+    "Baseline",
+    "Canvas layout, no content strategy"
+  ],
+  "v2-rewrite": [
+    "v2",
+    "Content strategy + KPI routing"
+  ],
+  "v3": [
+    "v3",
+    "Component library + archetypes"
+  ],
+  "v4-current": [
+    "v4",
+    "Persona system + strategy components"
+  ],
+  "v5-current": [
+    "v5",
+    "3 personas + framework components + goldens"
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "id": "meridian_ebitda_bridge",
+  "title": "FY24→FY25 EBITDA Bridge | Price realization drove $31.2M recovery, offsetting $30.7M in headwinds",
+  "subtitle": "Meridian Fasteners — EBITDA Walk by Driver ($M)",
+  "notes": "So-what: Without the pricing program's +$31.2M, cost and volume headwinds would have pushed EBITDA below $60M. The bridge makes the case for continuing the pricing discipline.",
+  "layout": "canvas",
+  "content": {
+    "items": [
+      {
+        "kind": "text",
+        "text": "$86.4M",
+        "x": 0.02,
+        "y": 0.04,
+        "w": 0.12,
+        "h": 0.06,
+        "fontSize": 22,
+        "bold": true,
+        "color": "primary",
+        "align": "center"
+      },
+      {
+        "kind": "text",
+        "text": "FY24 EBITDA",
+        "x": 0.02,
+        "y": 0.1,
+        "w": 0.12,
+        "h": 0.04,
+        "fontSize": 9,
+        "color": "textMid",
+        "align": "center"
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "primary",
+        "x": 0.16,
+        "y": 0.04,
+        "w": 0.005,
+        "h": 0.08
+      },
+      {
+        "kind": "text",
+        "text": "+$12.1M net gain (+14.0%)",
+        "x": 0.18,
+        "y": 0.04,
+        "w": 0.3,
+        "h": 0.04,
+        "fontSize": 13,
+        "bold": true,
+        "color": "339966"
+      },
+      {
+        "kind": "text",
+        "text": "driven entirely by price realization",
+        "x": 0.18,
+        "y": 0.08,
+        "w": 0.3,
+        "h": 0.04,
+        "fontSize": 10,
+        "color": "textMid"
+      },
+      {
+        "kind": "text",
+        "text": "$98.5M",
+        "x": 0.86,
+        "y": 0.04,
+        "w": 0.12,
+        "h": 0.06,
+        "fontSize": 22,
+        "bold": true,
+        "color": "primary",
+        "align": "center"
+      },
+      {
+        "kind": "text",
+        "text": "FY25 EBITDA",
+        "x": 0.86,
+        "y": 0.1,
+        "w": 0.12,
+        "h": 0.04,
+        "fontSize": 9,
+        "color": "textMid",
+        "align": "center"
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "00446A",
+        "x": 0.02,
+        "y": 0.2,
+        "w": 0.12,
+        "h": 0.55
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "339966",
+        "x": 0.16,
+        "y": 0.2,
+        "w": 0.12,
+        "h": 0.2
+      },
+      {
+        "kind": "text",
+        "text": "+$31.2M\nPrice",
+        "x": 0.16,
+        "y": 0.41,
+        "w": 0.12,
+        "h": 0.06,
+        "fontSize": 9,
+        "color": "textMid",
+        "align": "center"
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "CB333B",
+        "x": 0.3,
+        "y": 0.35,
+        "w": 0.1,
+        "h": 0.08
+      },
+      {
+        "kind": "text",
+        "text": "−$12.8M\nVolume",
+        "x": 0.3,
+        "y": 0.44,
+        "w": 0.1,
+        "h": 0.06,
+        "fontSize": 9,
+        "color": "textMid",
+        "align": "center"
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "339966",
+        "x": 0.42,
+        "y": 0.35,
+        "w": 0.1,
+        "h": 0.045
+      },
+      {
+        "kind": "text",
+        "text": "+$6.9M\nMix",
+        "x": 0.42,
+        "y": 0.4,
+        "w": 0.1,
+        "h": 0.06,
+        "fontSize": 9,
+        "color": "textMid",
+        "align": "center"
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "CB333B",
+        "x": 0.54,
+        "y": 0.35,
+        "w": 0.1,
+        "h": 0.09
+      },
+      {
+        "kind": "text",
+        "text": "−$14.3M\nInput Costs",
+        "x": 0.54,
+        "y": 0.45,
+        "w": 0.1,
+        "h": 0.06,
+        "fontSize": 9,
+        "color": "textMid",
+        "align": "center"
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "CB333B",
+        "x": 0.66,
+        "y": 0.35,
+        "w": 0.08,
+        "h": 0.024
+      },
+      {
+        "kind": "text",
+        "text": "−$3.6M\nFreight",
+        "x": 0.66,
+        "y": 0.38,
+        "w": 0.08,
+        "h": 0.06,
+        "fontSize": 8,
+        "color": "textMid",
+        "align": "center"
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "339966",
+        "x": 0.76,
+        "y": 0.35,
+        "w": 0.08,
+        "h": 0.03
+      },
+      {
+        "kind": "text",
+        "text": "+$4.7M\nSG&A",
+        "x": 0.76,
+        "y": 0.39,
+        "w": 0.08,
+        "h": 0.06,
+        "fontSize": 8,
+        "color": "textMid",
+        "align": "center"
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "00446A",
+        "x": 0.86,
+        "y": 0.15,
+        "w": 0.12,
+        "h": 0.6
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "fillTransparency": 92,
+        "x": 0.02,
+        "y": 0.82,
+        "w": 0.96,
+        "h": 0.15
+      },
+      {
+        "kind": "text",
+        "text": "Price realization (+$31.2M) more than offset the combined $30.7M drag from volume, costs, and freight — first margin expansion since FY21",
+        "x": 0.04,
+        "y": 0.82,
+        "w": 0.92,
+        "h": 0.07,
+        "fontSize": 12,
+        "bold": true,
+        "color": "primary",
+        "align": "center",
+        "valign": "middle"
+      },
+      {
+        "kind": "text",
+        "text": "Without the pricing program, EBITDA would have fallen to ~$55M. Continuing pricing discipline into FY26 is the primary lever.",
+        "x": 0.04,
+        "y": 0.89,
+        "w": 0.92,
+        "h": 0.06,
+        "fontSize": 10,
+        "color": "textDark",
+        "align": "center",
+        "valign": "middle"
+      }
+    ]
+  },
+  "palette": "INSIGHT",
+  "lineageId": "meridian",
+  "version": 1,
+  "parentVersion": null,
+  "createdAt": "2026-08-03T21:19:03.671Z"
+}

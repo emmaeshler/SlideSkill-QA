@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "id": "halvorsen_leakage_ranking",
+  "title": "Discount Leakage Concentration | Top 8 accounts explain 70.7% of $31.7M in annualized leakage",
+  "subtitle": "Halvorsen Industrial Supply — FY25 Annualized Discount Leakage ($M)",
+  "notes": "So-what: Leakage is not a broad problem — it's concentrated. Three accounts alone drive 39.4% of the total. Manual overrides at the branch level without pricing-desk review explain 61% of leakage dollars.",
+  "layout": "canvas",
+  "content": {
+    "items": [
+      {
+        "kind": "text",
+        "text": "$31.7M",
+        "x": 0.02,
+        "y": 0.04,
+        "w": 0.15,
+        "h": 0.07,
+        "fontSize": 28,
+        "bold": true,
+        "color": "accent"
+      },
+      {
+        "kind": "text",
+        "text": "annualized leakage — top 3 accounts = 39.4%",
+        "x": 0.17,
+        "y": 0.04,
+        "w": 0.4,
+        "h": 0.07,
+        "fontSize": 12,
+        "color": "textDark",
+        "valign": "middle"
+      },
+      {
+        "kind": "chart",
+        "type": "bar-horizontal",
+        "x": 0.02,
+        "y": 0.14,
+        "w": 0.96,
+        "h": 0.55,
+        "data": {
+          "labels": [
+            "Great Lakes Machine & Tool",
+            "Southeastern Process Equip.",
+            "Ohio Valley Fabrication",
+            "Cornerstone Contractors",
+            "Blue Ridge Maintenance",
+            "Prairie State Bearing",
+            "Gulf Coast Industrial",
+            "Northland Equipment"
+          ],
+          "series": [
+            {
+              "name": "Annualized Leakage ($M)",
+              "values": [
+                4.8,
+                4.1,
+                3.6,
+                2.9,
+                2.3,
+                1.9,
+                1.6,
+                1.2
+              ]
+            }
+          ]
+        },
+        "options": {
+          "chartColors": [
+            "00446A"
+          ],
+          "valueFormat": "$#,##0.0",
+          "dataLabels": {
+            "value": true,
+            "position": "outside"
+          },
+          "legendPos": "b"
+        }
+      },
+      {
+        "kind": "text",
+        "text": "Root Cause Breakdown",
+        "x": 0.02,
+        "y": 0.72,
+        "w": 0.3,
+        "h": 0.04,
+        "fontSize": 11,
+        "bold": true,
+        "color": "primary"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "x": 0.02,
+        "y": 0.77,
+        "w": 0.585,
+        "h": 0.07,
+        "text": "Manual Overrides — 61%",
+        "fontSize": 12,
+        "bold": true,
+        "textColor": "FFFFFF",
+        "align": "center",
+        "valign": "middle"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "accent",
+        "x": 0.615,
+        "y": 0.77,
+        "w": 0.23,
+        "h": 0.07,
+        "text": "Stale Competitive — 24%",
+        "fontSize": 10,
+        "textColor": "FFFFFF",
+        "align": "center",
+        "valign": "middle"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "gray",
+        "x": 0.855,
+        "y": 0.77,
+        "w": 0.125,
+        "h": 0.07,
+        "text": "Freight — 15%",
+        "fontSize": 9,
+        "textColor": "FFFFFF",
+        "align": "center",
+        "valign": "middle"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "fillTransparency": 92,
+        "x": 0.02,
+        "y": 0.87,
+        "w": 0.96,
+        "h": 0.1
+      },
+      {
+        "kind": "text",
+        "text": "Fixing manual-override controls at the top 3 accounts would recover ~$7.6M (61% of $12.5M concentrated leakage) without repricing the broader book",
+        "x": 0.04,
+        "y": 0.87,
+        "w": 0.92,
+        "h": 0.1,
+        "fontSize": 11,
+        "bold": true,
+        "color": "primary",
+        "align": "center",
+        "valign": "middle"
+      }
+    ]
+  },
+  "palette": "INSIGHT",
+  "lineageId": "halvorsen",
+  "version": 1,
+  "parentVersion": null,
+  "createdAt": "2026-08-03T21:19:02.086Z"
+}

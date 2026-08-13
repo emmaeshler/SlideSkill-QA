@@ -1,0 +1,50 @@
+{
+  "_meta": "Change rationale for v2-rewrite. Each case maps to an array of {tag, note} entries.",
+  "apex": [
+    {"tag": "REMOVED", "note": "Empty decorative primary banner (full-width colored rect with no text)"},
+    {"tag": "ADDED", "note": "Focal KPI: \"6 pts\" discount gap as hero number with inline context"},
+    {"tag": "CHANGED", "note": "Quote cards now asymmetric — left uses accent bar + tinted bg, right uses tinted group — breaking visual sameness"},
+    {"tag": "REMOVED", "note": "charSpacing section headers (\"KEY FINDINGS\", \"CUSTOMER DISCOUNT & MARGIN COMPARISON\")"},
+    {"tag": "ADDED", "note": "Pattern analysis text between table and callout — explains the discount inversion, not just shows it"}
+  ],
+  "cascade": [
+    {"tag": "FIX", "note": "Single-element slide (model-specific rule): chart filled 75% of canvas with only a summary bar below"},
+    {"tag": "ADDED", "note": "Three KPIs at top: +70.5% Energy growth, 27% Energy mix share, −13.2% Private Label decline"},
+    {"tag": "CHANGED", "note": "Chart reduced from full-width to 60% — freed right 35% for a \"Quarterly Trends\" insight panel"},
+    {"tag": "ADDED", "note": "Color-coded legend bars in trends panel — each series gets a colored rect + narrative sentence"},
+    {"tag": "CHANGED", "note": "Summary strip now states the organizing idea (revenue base transformation) instead of listing raw numbers"}
+  ],
+  "halvorsen": [
+    {"tag": "BAN 1", "note": "Replaced triple-card grid (3 identical rounded-rects for Manual Overrides / Stale Competitive / Freight)"},
+    {"tag": "ADDED", "note": "Proportional stacked bar — bar widths reflect actual data (61% / 24% / 15%), making the concentration visible"},
+    {"tag": "ADDED", "note": "Focal KPI: \"$31.7M\" as hero number with inline \"top 3 = 39.4%\" context"},
+    {"tag": "REMOVED", "note": "charSpacing section header (\"LEAKAGE DRIVERS\")"},
+    {"tag": "CHANGED", "note": "Callout is now actionable: quantifies the recovery ($7.6M) from fixing top-3 manual overrides"}
+  ],
+  "isb": [
+    {"tag": "BAN 1", "note": "Replaced triple-card grid (3 identical rounded-rects: Pricing Strategy / Servicing Model / Deployment Mix — generic text, no real data)"},
+    {"tag": "ADDED", "note": "Comparison table: 5 rows of structured Factor / Merchandiser / ISB data replacing vague prose cards"},
+    {"tag": "ADDED", "note": "Focal hero text inside each group: \"Higher\" / \"Lower\" at 28pt with subtitle — immediate visual anchor"},
+    {"tag": "REMOVED", "note": "charSpacing section headers (\"EQUIPMENT COST COMPARISON\", \"KEY CONSIDERATIONS\")"},
+    {"tag": "ADDED", "note": "\"Best for:\" conclusion line in each group — makes the trade-off decision explicit"},
+    {"tag": "ADDED", "note": "Strategic callout strip: frames the decision as volume-per-location, not which-is-better"}
+  ],
+  "logistec": [
+    {"tag": "REMOVED", "note": "charSpacing section headers (\"BUSINESS MODEL\", \"RECENT LEADERSHIP\") — replaced with plain bold labels"},
+    {"tag": "ADDED", "note": "Descriptive table label: \"New Leadership Team (Post–Take-Private)\" — contextualizes why the table matters"},
+    {"tag": "ADDED", "note": "Footer callout: \"Blue Wolf took LOGISTEC private... entire C-suite replaced within 18 months\" — ties the leadership table to the take-private thesis"},
+    {"tag": "NOTE", "note": "Composition largely preserved — baseline was already strong (4 KPIs + 2 filled groups + table)"}
+  ],
+  "meridian": [
+    {"tag": "ADDED", "note": "Narrative header between bookend EBITDA figures: \"+$12.1M net gain (+14.0%)\" with \"driven entirely by price realization\""},
+    {"tag": "ADDED", "note": "Vertical accent bar separating FY24 figure from the narrative — visual pause"},
+    {"tag": "CHANGED", "note": "Callout expanded to two lines: headline (price realization offset) + supporting detail (counterfactual: EBITDA would have fallen to ~$55M)"},
+    {"tag": "NOTE", "note": "Waterfall bridge composition preserved — already a strong custom build from rect primitives. 8pt labels on small bars flagged by engine but match baseline"}
+  ],
+  "sow-extension": [
+    {"tag": "BAN 1", "note": "Replaced triple-card grid (3 identical team member cards: Maik Ardan / Edward Mabuyo / Jonathan Cook)"},
+    {"tag": "ADDED", "note": "Team & pricing table: 4 columns (Member / Role / Rate / Allocation) — tabular data belongs in a table"},
+    {"tag": "CHANGED", "note": "Scope bars compressed from h:0.08 to h:0.06 with tighter gaps — freed vertical space for the table"},
+    {"tag": "REMOVED", "note": "charSpacing section headers (\"SCOPE\", \"TEAM & PRICING\") — replaced with plain bold labels"}
+  ]
+}

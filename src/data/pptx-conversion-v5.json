@@ -1,0 +1,38 @@
+{
+  "versions": [
+    "html-source",
+    "gen-1",
+    "gen-2",
+    "gen-3",
+    "gen-4"
+  ],
+  "cases": [
+    {
+      "id": "logistec-platform-exec",
+      "title": "Logistec \u2014 Dual-Engine Platform Strategy (Executive)",
+      "source": "logistec-v4-platform-strategy-executive",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-html.png",
+          "html": "../presentations/logistec-v4-platform-strategy-executive.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-pptx.png",
+          "pptx": "../presentations/logistec-v5-platform-strategy-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-pptx-gen2.png",
+          "pptx": "../presentations/logistec-v5-platform-strategy-executive.pptx"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-pptx-gen3.png",
+          "pptx": "../presentations/logistec-v5-platform-strategy-executive.pptx"
+        },
+        "gen-4": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-pptx-gen4.png",
+          "pptx": "../presentations/logistec-v5-platform-strategy-executive.pptx"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "cascade_revenue_mix",
+  "title": "FY25 Quarterly Revenue | Mix shift from water to energy accelerated through the year",
+  "subtitle": "Cascade Beverage Group — Net Revenue by Product Family ($M)",
+  "notes": "So-what: Energy grew 70.5% Q1→Q4 and now represents 27% of revenue. Still water and Private Label are in managed decline. The quarterly stack shows a company transforming its revenue base.",
+  "layout": "canvas",
+  "content": {
+    "items": [
+      {
+        "kind": "chart",
+        "type": "bar",
+        "x": 0.03,
+        "y": 0.05,
+        "w": 0.94,
+        "h": 0.75,
+        "data": {
+          "labels": [
+            "Q1 FY25",
+            "Q2 FY25",
+            "Q3 FY25",
+            "Q4 FY25"
+          ],
+          "series": [
+            {
+              "name": "Sparkling",
+              "values": [
+                48.2,
+                50.1,
+                53.4,
+                57.8
+              ]
+            },
+            {
+              "name": "Still",
+              "values": [
+                31.6,
+                30.8,
+                29.5,
+                28.1
+              ]
+            },
+            {
+              "name": "Energy",
+              "values": [
+                22.4,
+                26.7,
+                31.9,
+                38.2
+              ]
+            },
+            {
+              "name": "Private Label",
+              "values": [
+                18.9,
+                18.2,
+                17.6,
+                16.4
+              ]
+            }
+          ]
+        },
+        "options": {
+          "chartColors": [
+            "00446A",
+            "7A95A5",
+            "E56910",
+            "B0BEC5"
+          ],
+          "valueFormat": "$#,##0.0",
+          "dataLabels": {
+            "value": true,
+            "position": "center"
+          },
+          "legendPos": "b"
+        }
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "fillTransparency": 90,
+        "x": 0.03,
+        "y": 0.83,
+        "w": 0.94,
+        "h": 0.13,
+        "text": "Energy: $22.4M → $38.2M (+70.5%)  |  Still: −11.1%  |  Private Label: −13.2% (deliberate)  |  Sparkling anchor at ~40% with +19.9% growth",
+        "fontSize": 10,
+        "textColor": "textDark",
+        "align": "center",
+        "valign": "middle"
+      }
+    ]
+  },
+  "palette": "INSIGHT",
+  "lineageId": "cascade",
+  "version": 1,
+  "parentVersion": null,
+  "createdAt": "2026-08-03T20:01:22.956Z"
+}

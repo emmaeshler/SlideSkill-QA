@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "id": "apex_discount_leakage",
+  "title": "Discount Leakage | Inconsistent discounting erodes margin across the customer portfolio",
+  "subtitle": "Apex Components — Customer Discount & Margin Analysis",
+  "notes": "So-what: Volume is growing but revenue is flat because discount exceptions are granted without visibility or controls. Smaller customers sometimes get better pricing than strategic accounts.",
+  "layout": "canvas",
+  "content": {
+    "items": [
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.08
+      },
+      {
+        "kind": "text",
+        "text": "KEY FINDINGS",
+        "x": 0.02,
+        "y": 0.1,
+        "w": 0.3,
+        "h": 0.04,
+        "fontSize": 10,
+        "bold": true,
+        "color": "accent",
+        "charSpacing": 3
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "F8F9FA",
+        "line": {
+          "color": "E1E8ED",
+          "width": 1
+        },
+        "x": 0.02,
+        "y": 0.15,
+        "w": 0.46,
+        "h": 0.22,
+        "text": "\"Sales reps often discount to close deals quickly, even when customers have limited alternatives.\"\n— Sales Manager",
+        "fontSize": 10,
+        "textColor": "textDark",
+        "align": "left",
+        "valign": "top"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "F8F9FA",
+        "line": {
+          "color": "E1E8ED",
+          "width": 1
+        },
+        "x": 0.52,
+        "y": 0.15,
+        "w": 0.46,
+        "h": 0.22,
+        "text": "\"Approval thresholds exist, but exceptions are common and not always documented.\"\n— Finance Director",
+        "fontSize": 10,
+        "textColor": "textDark",
+        "align": "left",
+        "valign": "top"
+      },
+      {
+        "kind": "text",
+        "text": "CUSTOMER DISCOUNT & MARGIN COMPARISON",
+        "x": 0.02,
+        "y": 0.4,
+        "w": 0.5,
+        "h": 0.04,
+        "fontSize": 10,
+        "bold": true,
+        "color": "accent",
+        "charSpacing": 3
+      },
+      {
+        "kind": "table",
+        "x": 0.02,
+        "y": 0.46,
+        "w": 0.96,
+        "h": 0.38,
+        "hasHeader": true,
+        "rows": [
+          [
+            "Customer",
+            "Revenue",
+            "List Price",
+            "Realized Price",
+            "Avg. Discount",
+            "Gross Margin"
+          ],
+          [
+            "Northstar Manufacturing Group",
+            "$10M",
+            "$100",
+            "$82",
+            "18%",
+            "41%"
+          ],
+          [
+            "Oak Street Industrial",
+            "$8M",
+            "$100",
+            "$76",
+            "24%",
+            "34%"
+          ],
+          [
+            "Pioneer Process Solutions",
+            "$1M",
+            "$100",
+            "$88",
+            "12%",
+            "46%"
+          ]
+        ]
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "accent",
+        "fillTransparency": 10,
+        "x": 0.02,
+        "y": 0.87,
+        "w": 0.96,
+        "h": 0.1,
+        "text": "⚠ Oak Street ($8M) receives the deepest discounts at 24% — 6 pts above the largest account — suggesting inconsistent negotiation, not strategic pricing",
+        "fontSize": 11,
+        "bold": true,
+        "textColor": "FFFFFF",
+        "align": "center",
+        "valign": "middle"
+      }
+    ]
+  },
+  "palette": "INSIGHT",
+  "lineageId": "apex",
+  "version": 1,
+  "parentVersion": null,
+  "createdAt": "2026-08-03T19:58:43.556Z"
+}

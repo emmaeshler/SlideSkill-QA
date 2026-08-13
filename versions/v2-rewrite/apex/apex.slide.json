@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "id": "apex_discount_leakage",
+  "title": "Discount Leakage | Inconsistent discounting erodes margin across the customer portfolio",
+  "subtitle": "Apex Components — Customer Discount & Margin Analysis",
+  "notes": "So-what: Volume is growing but revenue is flat because discount exceptions are granted without visibility or controls. Smaller customers sometimes get better pricing than strategic accounts.",
+  "layout": "canvas",
+  "content": {
+    "items": [
+      {
+        "kind": "text",
+        "text": "6 pts",
+        "x": 0.02,
+        "y": 0.04,
+        "w": 0.12,
+        "h": 0.07,
+        "fontSize": 28,
+        "bold": true,
+        "color": "accent"
+      },
+      {
+        "kind": "text",
+        "text": "discount gap — mid-tier accounts priced below strategic",
+        "x": 0.15,
+        "y": 0.04,
+        "w": 0.5,
+        "h": 0.07,
+        "fontSize": 12,
+        "color": "textDark",
+        "valign": "middle"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "fillTransparency": 92,
+        "x": 0.02,
+        "y": 0.14,
+        "w": 0.46,
+        "h": 0.22
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "primary",
+        "x": 0.02,
+        "y": 0.14,
+        "w": 0.015,
+        "h": 0.22
+      },
+      {
+        "kind": "text",
+        "text": "\"Sales reps often discount to close deals quickly, even when customers have limited alternatives.\"\n\n— Sales Manager",
+        "x": 0.05,
+        "y": 0.15,
+        "w": 0.41,
+        "h": 0.2,
+        "fontSize": 11,
+        "color": "textDark",
+        "valign": "middle"
+      },
+      {
+        "kind": "group",
+        "style": "tinted",
+        "heading": "",
+        "accent": "accent",
+        "x": 0.52,
+        "y": 0.14,
+        "w": 0.46,
+        "h": 0.22,
+        "items": [
+          {
+            "kind": "text",
+            "text": "\"Approval thresholds exist, but exceptions are common and not always documented.\"\n\n— Finance Director",
+            "x": 0.04,
+            "y": 0.04,
+            "w": 0.92,
+            "h": 0.92,
+            "fontSize": 11,
+            "color": "textDark",
+            "valign": "middle"
+          }
+        ]
+      },
+      {
+        "kind": "table",
+        "x": 0.02,
+        "y": 0.4,
+        "w": 0.96,
+        "h": 0.38,
+        "hasHeader": true,
+        "rows": [
+          [
+            "Customer",
+            "Revenue",
+            "List Price",
+            "Realized",
+            "Discount",
+            "Margin"
+          ],
+          [
+            "Northstar Manufacturing Group",
+            "$10M",
+            "$100",
+            "$82",
+            "18%",
+            "41%"
+          ],
+          [
+            "Oak Street Industrial",
+            "$8M",
+            "$100",
+            "$76",
+            "24%",
+            "34%"
+          ],
+          [
+            "Pioneer Process Solutions",
+            "$1M",
+            "$100",
+            "$88",
+            "12%",
+            "46%"
+          ]
+        ]
+      },
+      {
+        "kind": "shape",
+        "shape": "rect",
+        "fill": "accent",
+        "fillTransparency": 85,
+        "x": 0.02,
+        "y": 0.78,
+        "w": 0.96,
+        "h": 0.003
+      },
+      {
+        "kind": "text",
+        "text": "Key pattern: Oak Street ($8M) receives the deepest discounts at 24% — 6 pts above the largest account.\nPioneer ($1M) is priced tighter than the strategic account. The inversion signals ad-hoc negotiation, not strategy.",
+        "x": 0.02,
+        "y": 0.8,
+        "w": 0.96,
+        "h": 0.08,
+        "fontSize": 11,
+        "color": "textDark"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "accent",
+        "fillTransparency": 10,
+        "x": 0.02,
+        "y": 0.89,
+        "w": 0.96,
+        "h": 0.08,
+        "text": "Volume is growing but revenue is flat — discount exceptions without controls are giving away the gains",
+        "fontSize": 11,
+        "bold": true,
+        "textColor": "FFFFFF",
+        "align": "center",
+        "valign": "middle"
+      }
+    ]
+  },
+  "palette": "INSIGHT",
+  "lineageId": "apex",
+  "version": 1,
+  "parentVersion": null,
+  "createdAt": "2026-08-03T21:19:01.089Z"
+}

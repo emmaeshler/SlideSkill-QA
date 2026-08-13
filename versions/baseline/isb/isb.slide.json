@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "id": "isb_merchandiser_cost",
+  "title": "Merchandiser vs. ISB Cost Comparison | Investment and servicing economics for ice equipment",
+  "subtitle": "Reddy Ice — Cost Structure Analysis",
+  "notes": "So-what: The meeting transcript discusses cost differences between merchandiser and ISB equipment, including initial investment, servicing, and operational considerations.",
+  "layout": "canvas",
+  "content": {
+    "items": [
+      {
+        "kind": "text",
+        "text": "EQUIPMENT COST COMPARISON",
+        "x": 0.02,
+        "y": 0.06,
+        "w": 0.5,
+        "h": 0.04,
+        "fontSize": 10,
+        "bold": true,
+        "color": "accent",
+        "charSpacing": 3
+      },
+      {
+        "kind": "group",
+        "style": "tinted",
+        "heading": "Merchandiser",
+        "accent": "primary",
+        "x": 0.02,
+        "y": 0.12,
+        "w": 0.46,
+        "h": 0.4,
+        "items": [
+          {
+            "kind": "icon",
+            "name": "box",
+            "color": "primary",
+            "x": 0.02,
+            "y": 0.05,
+            "w": 0.08,
+            "h": 0.12
+          },
+          {
+            "kind": "text",
+            "text": "Initial investment: Higher upfront cost\nFootprint: Larger floor space required\nCapacity: Higher volume per unit\nMaintenance: More complex servicing",
+            "x": 0.12,
+            "y": 0.02,
+            "w": 0.85,
+            "h": 0.9,
+            "fontSize": 11,
+            "color": "textDark"
+          }
+        ]
+      },
+      {
+        "kind": "group",
+        "style": "tinted",
+        "heading": "ISB (In-Store Bin)",
+        "accent": "accent",
+        "x": 0.52,
+        "y": 0.12,
+        "w": 0.46,
+        "h": 0.4,
+        "items": [
+          {
+            "kind": "icon",
+            "name": "package",
+            "color": "accent",
+            "x": 0.02,
+            "y": 0.05,
+            "w": 0.08,
+            "h": 0.12
+          },
+          {
+            "kind": "text",
+            "text": "Initial investment: Lower upfront cost\nFootprint: Smaller, flexible placement\nCapacity: Lower volume per unit\nMaintenance: Simpler servicing model",
+            "x": 0.12,
+            "y": 0.02,
+            "w": 0.85,
+            "h": 0.9,
+            "fontSize": 11,
+            "color": "textDark"
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "text": "KEY CONSIDERATIONS",
+        "x": 0.02,
+        "y": 0.56,
+        "w": 0.5,
+        "h": 0.04,
+        "fontSize": 10,
+        "bold": true,
+        "color": "accent",
+        "charSpacing": 3
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "F8F9FA",
+        "line": {
+          "color": "E1E8ED",
+          "width": 1
+        },
+        "x": 0.02,
+        "y": 0.62,
+        "w": 0.3,
+        "h": 0.3,
+        "text": "Pricing Strategy\n\nEquipment costs should factor into customer pricing models and ROI calculations",
+        "fontSize": 10,
+        "textColor": "textDark",
+        "align": "center",
+        "valign": "top"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "F8F9FA",
+        "line": {
+          "color": "E1E8ED",
+          "width": 1
+        },
+        "x": 0.35,
+        "y": 0.62,
+        "w": 0.3,
+        "h": 0.3,
+        "text": "Servicing Model\n\nBoth types require regular maintenance; frequency and cost differ significantly",
+        "fontSize": 10,
+        "textColor": "textDark",
+        "align": "center",
+        "valign": "top"
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "F8F9FA",
+        "line": {
+          "color": "E1E8ED",
+          "width": 1
+        },
+        "x": 0.68,
+        "y": 0.62,
+        "w": 0.3,
+        "h": 0.3,
+        "text": "Deployment Mix\n\nOptimal ratio of merchandisers to ISBs depends on location type and volume",
+        "fontSize": 10,
+        "textColor": "textDark",
+        "align": "center",
+        "valign": "top"
+      }
+    ]
+  },
+  "palette": "INSIGHT",
+  "lineageId": "isb",
+  "version": 1,
+  "parentVersion": null,
+  "createdAt": "2026-08-03T20:01:24.027Z"
+}

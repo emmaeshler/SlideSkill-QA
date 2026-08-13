@@ -1,0 +1,61 @@
+{
+  "version": "v5-current",
+  "date": "2026-08-12",
+  "summary": "Three-persona system (Analyst + Executive + Consultant), framework components, golden matrix",
+  "changes": [
+    {
+      "tag": "ADDED",
+      "description": "Consultant persona — framework-first design for deliverables that earn trust through methodology and survive forwarding without a presenter"
+    },
+    {
+      "tag": "ADDED",
+      "description": "benchmark-comparison component — horizontal bars with benchmark markers and gap badges for positioning against industry/peer data"
+    },
+    {
+      "tag": "ADDED",
+      "description": "maturity-model component — 3-5 stage ordinal scale with 'you are here' and target position markers"
+    },
+    {
+      "tag": "ADDED",
+      "description": "quadrant-matrix component — 2×2 positioning grid with labeled axes and focal/neutral item discipline"
+    },
+    {
+      "tag": "ADDED",
+      "description": "Golden matrix structure — 10 goldens planned across 3 personas × key archetypes, plus 4 anti-goldens"
+    },
+    {
+      "tag": "ADDED",
+      "description": "Consultant-specific regression prompts (#10 benchmark, #11 maturity, #12 positioning)"
+    },
+    {
+      "tag": "CHANGED",
+      "description": "Every prompt now produces 3 slides (was 2 in v4)"
+    },
+    {
+      "tag": "CHANGED",
+      "description": "Personas routing tables expanded to include consultant visual/chart/findings/evidence forks"
+    },
+    {
+      "tag": "CHANGED",
+      "description": "Color system section restructured — analyst (semantic), executive (brand), consultant (brand + benchmark markers)"
+    },
+    {
+      "tag": "FIX",
+      "description": "Canvas size inconsistency resolved — contract §1 said 1920×1080 but §4 and SKILL.md said 1280×720. All now consistently 1280×720"
+    },
+    {
+      "tag": "FIX",
+      "description": "Phantom tokens.css reference fixed — SKILL.md pointed to components/tokens.css which doesn't exist; now correctly references :root block in slide-shell.html"
+    },
+    {
+      "tag": "CHANGED",
+      "description": "LEARNINGS.md cleaned — 25+ promoted rules collapsed into folded details block, 1 active rule retained"
+    },
+    {
+      "tag": "ADDED",
+      "description": "Consultant-specific bans in slide contract §7: generic methodology slides, same-quadrant matrices, unsourced benchmarks"
+    }
+  ],
+  "personas": ["analyst", "executive", "consultant"],
+  "previewNaming": "{case}-{persona}.png"
+}

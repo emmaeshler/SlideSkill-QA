@@ -1,0 +1,2643 @@
+{
+  "versions": [
+    "v5-current",
+    "v4-current",
+    "v3",
+    "v2-rewrite",
+    "baseline",
+    "0.5.1-local",
+    "0.5.1",
+    "0.5.0-rc.0-local",
+    "0.5.0-rc.0-claude",
+    "0.5.0-rc.0",
+    "anthropic-pptx",
+    "dry",
+    "0.4.0",
+    "0.3.0",
+    "0.2.0"
+  ],
+  "lanes": {
+    "0.2.0": {
+      "model": "gpt-5.5-1",
+      "runtime": "codex"
+    },
+    "0.3.0": {
+      "model": "gpt-5.5-1",
+      "runtime": "codex"
+    },
+    "0.4.0": {
+      "model": "gpt-5.5-1",
+      "runtime": "codex"
+    },
+    "0.5.0-rc.0": {
+      "model": "gpt-5.5-1",
+      "runtime": "codex"
+    },
+    "0.5.0-rc.0-claude": {
+      "model": "claude-fable-5",
+      "runtime": "claude-code"
+    },
+    "0.5.0-rc.0-local": {
+      "model": "gpt-5.5-1",
+      "runtime": "codex"
+    },
+    "0.5.1-local": {
+      "model": "gpt-5.5-1",
+      "runtime": "codex"
+    },
+    "anthropic-pptx": {
+      "model": "claude-fable-5",
+      "runtime": "claude-code"
+    },
+    "dry": {
+      "model": "gpt-5.5-1",
+      "runtime": "codex"
+    },
+    "0.5.1": {
+      "model": "gpt-5.5-1",
+      "runtime": "codex"
+    },
+    "baseline": {
+      "model": "hand-curated",
+      "runtime": "skill baseline"
+    },
+    "v2-rewrite": {
+      "model": "hand-curated",
+      "runtime": "skill v2"
+    },
+    "v3": {
+      "model": "hand-curated",
+      "runtime": "skill v3"
+    },
+    "v4-current": {
+      "model": "hand-curated",
+      "runtime": "skill v4"
+    },
+    "v5-current": {
+      "model": "hand-curated",
+      "runtime": "skill v5"
+    }
+  },
+  "cases": [
+    {
+      "id": "apex",
+      "title": "Apex — smaller group pricing exercises",
+      "cells": {
+        "0.2.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "apex",
+                "version": "0.2.0",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T22:22:43.172Z",
+                "finishedAt": "2026-07-20T22:25:42.829Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.2.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "threadId": "019f819f-d58a-7382-895e-38af2cadf33c",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "tokensUsed": 1207355
+              },
+              "truth": "../poc-pptx-qa/results/apex/0.2.0/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/apex/0.2.0/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.3.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "apex",
+                "version": "0.3.0",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T22:22:43.194Z",
+                "finishedAt": "2026-07-20T22:28:01.798Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.3.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "threadId": "019f819f-d791-7ba1-b4ee-082b61533922",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "tokensUsed": 3256279
+              },
+              "truth": "../poc-pptx-qa/results/apex/0.3.0/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/apex/0.3.0/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.4.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "apex",
+                "version": "0.4.0",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T22:22:43.219Z",
+                "finishedAt": "2026-07-20T22:28:11.963Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.4.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "threadId": "019f819f-d77d-7050-b429-a082a30add4e",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "tokensUsed": 3562063
+              },
+              "truth": "../poc-pptx-qa/results/apex/0.4.0/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/apex/0.4.0/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "apex",
+                "version": "0.5.0-rc.0",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T23:21:19.725Z",
+                "finishedAt": "2026-07-20T23:32:47.172Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.0-rc.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 4245430,
+                "threadId": "019f81d5-7f6a-7293-9461-905fa1a55499"
+              },
+              "truth": "../poc-pptx-qa/results/apex/0.5.0-rc.0/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/apex/0.5.0-rc.0/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0-claude": {
+          "runs": [
+            {
+              "runId": "run-2026-07-30-a",
+              "meta": {
+                "caseId": "apex",
+                "version": "0.5.0-rc.0-claude",
+                "runId": "run-2026-07-30-a",
+                "startedAt": "2026-07-30T16:11:25.866Z",
+                "finishedAt": "2026-07-30T16:15:22.837Z",
+                "model": "claude-fable-5",
+                "runtime": "claude-code",
+                "claudeCodeVersion": "2.1.220 (Claude Code)",
+                "provider": "anthropic",
+                "skill": "insight-branded-pptx-slide",
+                "skillVersion": "0.5.0-rc.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "bypassPermissions",
+                "status": "ok",
+                "engineWarnings": [
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 13338,
+                "threadId": "1cf9b66f-772d-4bc8-a3be-1a86d65517d5"
+              },
+              "truth": "../poc-pptx-qa/results/apex/0.5.0-rc.0-claude/run-2026-07-30-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/apex/0.5.0-rc.0-claude/run-2026-07-30-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0-local": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "apex",
+                "version": "0.5.0-rc.0-local",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T22:22:43.240Z",
+                "finishedAt": "2026-07-20T22:29:53.631Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.0-rc.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "threadId": "019f819f-d783-7851-a1c2-f07189c0191d",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "tokensUsed": 6539401
+              },
+              "truth": "../poc-pptx-qa/results/apex/0.5.0-rc.0-local/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/apex/0.5.0-rc.0-local/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.1-local": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "apex",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T15:04:24.387Z",
+                "finishedAt": "2026-08-03T15:09:45.721Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 47 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 2886362,
+                "threadId": "019fc827-9b97-70b2-84b3-bb035eba1dc6"
+              },
+              "truth": "../poc-pptx-qa/results/apex/0.5.1-local/run-2026-08-03-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/apex/0.5.1-local/run-2026-08-03-a/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "apex",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T15:04:24.461Z",
+                "finishedAt": "2026-08-03T15:12:01.419Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 53 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~3 lines vs ~2 fit). Consider shortening.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 4166311,
+                "threadId": "019fc827-99c1-7922-afae-c7976e714b73"
+              },
+              "truth": "../poc-pptx-qa/results/apex/0.5.1-local/run-2026-08-03-b/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/apex/0.5.1-local/run-2026-08-03-b/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "apex",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T15:04:24.506Z",
+                "finishedAt": "2026-08-03T15:11:57.993Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 4961213,
+                "threadId": "019fc827-99ba-7140-b9a0-796859c50c40"
+              },
+              "truth": "../poc-pptx-qa/results/apex/0.5.1-local/run-2026-08-03-c/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/apex/0.5.1-local/run-2026-08-03-c/preview/slide-01.png"
+            }
+          ]
+        },
+        "anthropic-pptx": {
+          "runs": [
+            {
+              "runId": "run-2026-07-30-a",
+              "meta": {
+                "caseId": "apex",
+                "version": "anthropic-pptx",
+                "runId": "run-2026-07-30-a",
+                "startedAt": "2026-07-30T16:11:27.417Z",
+                "finishedAt": "2026-07-30T16:15:21.804Z",
+                "model": "claude-fable-5",
+                "runtime": "claude-code",
+                "claudeCodeVersion": "2.1.220 (Claude Code)",
+                "provider": "anthropic",
+                "skill": "pptx",
+                "skillVersion": "stock-eb0a7fd8a7db",
+                "scaffoldHash": "c1542f8cf37f27b5dc4286fbce40a1f55534bf519bea351e4c70cae99e3c9399",
+                "sandbox": "bypassPermissions",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 12688,
+                "threadId": "f02c78a4-3fc4-48e9-9599-ed1db28c45d7"
+              },
+              "truth": "../poc-pptx-qa/results/apex/anthropic-pptx/run-2026-07-30-a/truth/slide-01.png",
+              "preview": null
+            }
+          ]
+        },
+        "dry": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "apex",
+                "version": "dry",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T15:03:28.049Z",
+                "finishedAt": "2026-08-03T15:03:28.133Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "dry",
+                "skillVersion": "dry",
+                "providerBaseUrl": "https://aif-askinsight-prod-eastus2.openai.azure.com/openai/v1",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "skipped"
+              },
+              "truth": null,
+              "preview": "../poc-pptx-qa/results/apex/dry/run-2026-08-03-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "baseline": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/baseline/apex/preview/slide-01.png",
+              "preview": "versions/baseline/apex/preview/slide-01.png"
+            }
+          ]
+        },
+        "v2-rewrite": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v2-rewrite/apex/preview/slide-01.png",
+              "preview": "versions/v2-rewrite/apex/preview/slide-01.png"
+            }
+          ]
+        },
+        "v3": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v3-current/previews/apex.png",
+              "preview": "versions/v3-current/previews/apex.png"
+            }
+          ]
+        },
+        "v4-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v4/previews/apex.png",
+              "preview": "versions/v4/previews/apex.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v4-current/previews/apex-option1.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v4-current/previews/apex-option2.png"
+            }
+          ]
+        },
+        "v5-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v5-current/previews/apex-consultant.png",
+              "preview": "versions/v5-current/previews/apex-consultant.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/apex-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/apex-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/apex-consultant.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cascade",
+      "title": "Cascade — FY25 quarterly revenue mix (expects column-stacked)",
+      "cells": {
+        "0.5.1": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "cascade",
+                "version": "0.5.1",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T16:06:11.071Z",
+                "finishedAt": "2026-08-03T16:12:19.695Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 58 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 4211758,
+                "threadId": "019fc860-2612-7471-b21b-526015f7ce4a"
+              },
+              "truth": "../poc-pptx-qa/results/cascade/0.5.1/run-2026-08-03-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/cascade/0.5.1/run-2026-08-03-a/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "cascade",
+                "version": "0.5.1",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T16:06:11.118Z",
+                "finishedAt": "2026-08-03T16:11:02.866Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 42 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 2964758,
+                "threadId": "019fc860-2633-7c70-b89e-5633ec210e74"
+              },
+              "truth": "../poc-pptx-qa/results/cascade/0.5.1/run-2026-08-03-b/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/cascade/0.5.1/run-2026-08-03-b/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "cascade",
+                "version": "0.5.1",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T16:06:11.154Z",
+                "finishedAt": "2026-08-03T16:12:08.311Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 65 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 3946845,
+                "threadId": "019fc860-2629-71f0-ad88-d40f6a41bbd5"
+              },
+              "truth": "../poc-pptx-qa/results/cascade/0.5.1/run-2026-08-03-c/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/cascade/0.5.1/run-2026-08-03-c/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.1-local": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "cascade",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T16:21:48.578Z",
+                "finishedAt": "2026-08-03T16:26:23.276Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "failed",
+                "engineWarnings": [],
+                "truthExport": "skipped",
+                "tokensUsed": 1178774,
+                "threadId": "019fc86e-74a2-74f1-aa7d-3f9e4cc6da10",
+                "error": "No engine preview PNG found beneath C:\\Scripts\\pptx-qa\\versions\\work\\cascade-0.5.1-local-run-2026-08-03-a\\presentations\\cascade-run-2026-08-03-a\\slides\\slide_fy25_revenue_mix_v2."
+              },
+              "truth": null,
+              "preview": null
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "cascade",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T16:21:48.645Z",
+                "finishedAt": "2026-08-03T16:26:38.856Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "failed",
+                "engineWarnings": [],
+                "truthExport": "skipped",
+                "tokensUsed": 1693178,
+                "threadId": "019fc86e-7504-7492-99a6-2dabb24a7ca9",
+                "error": "No engine preview PNG found beneath C:\\Scripts\\pptx-qa\\versions\\work\\cascade-0.5.1-local-run-2026-08-03-b\\presentations\\cascade-run-2026-08-03-b\\slides\\slide_fy25_revenue_mix_shift_v2."
+              },
+              "truth": null,
+              "preview": null
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "cascade",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T16:26:23.291Z",
+                "finishedAt": "2026-08-03T16:37:03.798Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "failed",
+                "engineWarnings": [],
+                "truthExport": "skipped",
+                "tokensUsed": 2322442,
+                "threadId": "019fc872-a7be-7ba3-9cd1-32861dbf741a",
+                "error": "No engine preview PNG found beneath C:\\Scripts\\pptx-qa\\versions\\work\\cascade-0.5.1-local-run-2026-08-03-c\\presentations\\cascade-run-2026-08-03-c\\slides\\slide_fy25_product_mix_v3."
+              },
+              "truth": null,
+              "preview": null
+            },
+            {
+              "runId": "run-2026-08-03-d",
+              "meta": {
+                "caseId": "cascade",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-d",
+                "startedAt": "2026-08-03T16:45:38.641Z",
+                "finishedAt": "2026-08-03T16:50:32.702Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 2142256,
+                "threadId": "019fc884-47ab-74e2-805c-a7c03a425744"
+              },
+              "truth": "../poc-pptx-qa/results/cascade/0.5.1-local/run-2026-08-03-d/truth/slide-01.png",
+              "preview": null
+            },
+            {
+              "runId": "run-2026-08-03-e",
+              "meta": {
+                "caseId": "cascade",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-e",
+                "startedAt": "2026-08-03T16:45:38.716Z",
+                "finishedAt": "2026-08-03T16:51:03.520Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 2872692,
+                "threadId": "019fc884-466f-7271-bd41-53b831702ce1"
+              },
+              "truth": "../poc-pptx-qa/results/cascade/0.5.1-local/run-2026-08-03-e/truth/slide-01.png",
+              "preview": null
+            },
+            {
+              "runId": "run-2026-08-03-f",
+              "meta": {
+                "caseId": "cascade",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-f",
+                "startedAt": "2026-08-03T16:50:32.714Z",
+                "finishedAt": "2026-08-03T16:58:08.351Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 2714773,
+                "threadId": "019fc888-c255-7000-abf8-fb6c25b569f5"
+              },
+              "truth": "../poc-pptx-qa/results/cascade/0.5.1-local/run-2026-08-03-f/truth/slide-01.png",
+              "preview": null
+            }
+          ]
+        },
+        "baseline": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/baseline/cascade/preview/slide-01.png",
+              "preview": "versions/baseline/cascade/preview/slide-01.png"
+            }
+          ]
+        },
+        "v2-rewrite": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v2-rewrite/cascade/preview/slide-01.png",
+              "preview": "versions/v2-rewrite/cascade/preview/slide-01.png"
+            }
+          ]
+        },
+        "v3": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v3-current/previews/cascade.png",
+              "preview": "versions/v3-current/previews/cascade.png"
+            }
+          ]
+        },
+        "v4-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v4-current/previews/cascade-analyst.png",
+              "preview": "versions/v4-current/previews/cascade-analyst.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v4-current/previews/cascade-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v4-current/previews/cascade-executive.png"
+            }
+          ]
+        },
+        "v5-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v5-current/previews/cascade-consultant.png",
+              "preview": "versions/v5-current/previews/cascade-consultant.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/cascade-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/cascade-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/cascade-consultant.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "halvorsen",
+      "title": "Halvorsen — account leakage ranking (expects bar)",
+      "cells": {
+        "0.5.1": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "halvorsen",
+                "version": "0.5.1",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T16:06:11.193Z",
+                "finishedAt": "2026-08-03T16:11:48.216Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 55 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 3426848,
+                "threadId": "019fc860-2630-7011-b75f-035f6ed185f9"
+              },
+              "truth": "../poc-pptx-qa/results/halvorsen/0.5.1/run-2026-08-03-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/halvorsen/0.5.1/run-2026-08-03-a/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "halvorsen",
+                "version": "0.5.1",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T16:11:02.880Z",
+                "finishedAt": "2026-08-03T16:15:24.984Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 58 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 2093428,
+                "threadId": "019fc864-986b-79c2-b719-3d4aba3f1c63"
+              },
+              "truth": "../poc-pptx-qa/results/halvorsen/0.5.1/run-2026-08-03-b/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/halvorsen/0.5.1/run-2026-08-03-b/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "halvorsen",
+                "version": "0.5.1",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T16:11:48.226Z",
+                "finishedAt": "2026-08-03T16:15:37.197Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 45 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 1462774,
+                "threadId": "019fc865-47e6-7cc3-9c42-ba0fb84f84a9"
+              },
+              "truth": "../poc-pptx-qa/results/halvorsen/0.5.1/run-2026-08-03-c/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/halvorsen/0.5.1/run-2026-08-03-c/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.1-local": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "halvorsen",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T16:26:38.869Z",
+                "finishedAt": "2026-08-03T16:33:02.967Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 46 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "pending",
+                "tokensUsed": 3962701,
+                "threadId": "019fc872-e152-78e1-bbaa-c925cdd0fbef"
+              },
+              "truth": null,
+              "preview": "../poc-pptx-qa/results/halvorsen/0.5.1-local/run-2026-08-03-a/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "halvorsen",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T16:33:02.986Z",
+                "finishedAt": "2026-08-03T16:42:10.286Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 54 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "pending",
+                "tokensUsed": 5052200,
+                "threadId": "019fc878-bf64-79b0-ae39-dddd3abd4b36"
+              },
+              "truth": null,
+              "preview": "../poc-pptx-qa/results/halvorsen/0.5.1-local/run-2026-08-03-b/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "halvorsen",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T16:37:03.813Z",
+                "finishedAt": "2026-08-03T16:43:13.153Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "pending",
+                "tokensUsed": 3089627,
+                "threadId": "019fc87c-6a6c-7a43-8091-a22abdfa14c7"
+              },
+              "truth": null,
+              "preview": "../poc-pptx-qa/results/halvorsen/0.5.1-local/run-2026-08-03-c/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-d",
+              "meta": {
+                "caseId": "halvorsen",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-d",
+                "startedAt": "2026-08-03T16:51:03.537Z",
+                "finishedAt": "2026-08-03T16:55:17.434Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 1568942,
+                "threadId": "019fc889-3a64-7570-8cf9-694c4ac4ab8f"
+              },
+              "truth": "../poc-pptx-qa/results/halvorsen/0.5.1-local/run-2026-08-03-d/truth/slide-01.png",
+              "preview": null
+            },
+            {
+              "runId": "run-2026-08-03-e",
+              "meta": {
+                "caseId": "halvorsen",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-e",
+                "startedAt": "2026-08-03T16:55:17.451Z",
+                "finishedAt": "2026-08-03T17:03:19.302Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 52 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 5138079,
+                "threadId": "019fc88d-19f5-7681-bf81-974f19fbda29"
+              },
+              "truth": "../poc-pptx-qa/results/halvorsen/0.5.1-local/run-2026-08-03-e/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/halvorsen/0.5.1-local/run-2026-08-03-e/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-f",
+              "meta": {
+                "caseId": "halvorsen",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-f",
+                "startedAt": "2026-08-03T16:58:08.365Z",
+                "finishedAt": "2026-08-03T17:02:08.380Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 1309652,
+                "threadId": "019fc88f-b5ca-7f51-9e2a-2c48aeadc822"
+              },
+              "truth": "../poc-pptx-qa/results/halvorsen/0.5.1-local/run-2026-08-03-f/truth/slide-01.png",
+              "preview": null
+            }
+          ]
+        },
+        "baseline": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/baseline/halvorsen/preview/slide-01.png",
+              "preview": "versions/baseline/halvorsen/preview/slide-01.png"
+            }
+          ]
+        },
+        "v2-rewrite": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v2-rewrite/halvorsen/preview/slide-01.png",
+              "preview": "versions/v2-rewrite/halvorsen/preview/slide-01.png"
+            }
+          ]
+        },
+        "v3": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v3-current/previews/halvorsen.png",
+              "preview": "versions/v3-current/previews/halvorsen.png"
+            }
+          ]
+        },
+        "v4-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v4-current/previews/halvorsen-analyst.png",
+              "preview": "versions/v4-current/previews/halvorsen-analyst.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v4-current/previews/halvorsen-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v4-current/previews/halvorsen-executive.png"
+            }
+          ]
+        },
+        "v5-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v5-current/previews/halvorsen-consultant.png",
+              "preview": "versions/v5-current/previews/halvorsen-consultant.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/halvorsen-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/halvorsen-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/halvorsen-consultant.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "isb",
+      "title": "ISB — merchandiser cost comparison",
+      "cells": {
+        "0.2.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "isb",
+                "version": "0.2.0",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T22:25:42.839Z",
+                "finishedAt": "2026-07-20T22:28:37.194Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.2.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "threadId": "019f81a2-92f4-7c41-9146-593067443663",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "tokensUsed": 2049345
+              },
+              "truth": "../poc-pptx-qa/results/isb/0.2.0/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/isb/0.2.0/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.3.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "isb",
+                "version": "0.3.0",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T22:28:01.804Z",
+                "finishedAt": "2026-07-20T22:34:58.856Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.3.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "threadId": "019f81a4-b1f8-7a50-adfa-86df22f686fe",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "tokensUsed": 6673157
+              },
+              "truth": "../poc-pptx-qa/results/isb/0.3.0/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/isb/0.3.0/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.4.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "isb",
+                "version": "0.4.0",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T22:28:11.971Z",
+                "finishedAt": "2026-07-20T22:33:40.158Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.4.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 49 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "threadId": "019f81a4-d9bb-7ec1-b98a-806cadbc3491",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "tokensUsed": 5153776
+              },
+              "truth": "../poc-pptx-qa/results/isb/0.4.0/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/isb/0.4.0/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "isb",
+                "version": "0.5.0-rc.0",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T23:21:19.761Z",
+                "finishedAt": "2026-07-20T23:29:15.494Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.0-rc.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 10118105,
+                "threadId": "019f81d5-7f3c-7093-a693-425e16bfec42"
+              },
+              "truth": "../poc-pptx-qa/results/isb/0.5.0-rc.0/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/isb/0.5.0-rc.0/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0-claude": {
+          "runs": [
+            {
+              "runId": "run-2026-07-30-a",
+              "meta": {
+                "caseId": "isb",
+                "version": "0.5.0-rc.0-claude",
+                "runId": "run-2026-07-30-a",
+                "startedAt": "2026-07-30T16:11:28.785Z",
+                "finishedAt": "2026-07-30T16:17:21.916Z",
+                "model": "claude-fable-5",
+                "runtime": "claude-code",
+                "claudeCodeVersion": "2.1.220 (Claude Code)",
+                "provider": "anthropic",
+                "skill": "insight-branded-pptx-slide",
+                "skillVersion": "0.5.0-rc.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "bypassPermissions",
+                "status": "ok",
+                "engineWarnings": [
+                  "title likely overflows (~2 lines vs ~1 fit). Consider shortening.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 22238,
+                "threadId": "e68f3fec-6a1f-4fe2-b713-e50d5ef575f7"
+              },
+              "truth": "../poc-pptx-qa/results/isb/0.5.0-rc.0-claude/run-2026-07-30-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/isb/0.5.0-rc.0-claude/run-2026-07-30-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0-local": {
+          "runs": [
+            {
+              "runId": "run-2026-07-20-a",
+              "meta": {
+                "caseId": "isb",
+                "version": "0.5.0-rc.0-local",
+                "runId": "run-2026-07-20-a",
+                "startedAt": "2026-07-20T22:28:37.204Z",
+                "finishedAt": "2026-07-20T22:35:22.725Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.0-rc.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "threadId": "019f81a5-3ce2-7960-9f7e-4688fcf83704",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "tokensUsed": 5645527
+              },
+              "truth": "../poc-pptx-qa/results/isb/0.5.0-rc.0-local/run-2026-07-20-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/isb/0.5.0-rc.0-local/run-2026-07-20-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.1-local": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "isb",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T15:04:24.557Z",
+                "finishedAt": "2026-08-03T15:14:21.190Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 44 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 7359772,
+                "threadId": "019fc827-9aeb-7193-9e00-64173695d48d"
+              },
+              "truth": "../poc-pptx-qa/results/isb/0.5.1-local/run-2026-08-03-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/isb/0.5.1-local/run-2026-08-03-a/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "isb",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T15:09:45.737Z",
+                "finishedAt": "2026-08-03T15:15:26.049Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 3549094,
+                "threadId": "019fc82c-7baa-7ff3-ba61-77e4d438ac1e"
+              },
+              "truth": "../poc-pptx-qa/results/isb/0.5.1-local/run-2026-08-03-b/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/isb/0.5.1-local/run-2026-08-03-b/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "isb",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T15:11:58.004Z",
+                "finishedAt": "2026-08-03T15:17:16.615Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 3831080,
+                "threadId": "019fc82e-8000-77d3-8e5b-99be06798e19"
+              },
+              "truth": "../poc-pptx-qa/results/isb/0.5.1-local/run-2026-08-03-c/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/isb/0.5.1-local/run-2026-08-03-c/preview/slide-01.png"
+            }
+          ]
+        },
+        "anthropic-pptx": {
+          "runs": [
+            {
+              "runId": "run-2026-07-30-a",
+              "meta": {
+                "caseId": "isb",
+                "version": "anthropic-pptx",
+                "runId": "run-2026-07-30-a",
+                "startedAt": "2026-07-30T16:11:30.191Z",
+                "finishedAt": "2026-07-30T16:16:06.118Z",
+                "model": "claude-fable-5",
+                "runtime": "claude-code",
+                "claudeCodeVersion": "2.1.220 (Claude Code)",
+                "provider": "anthropic",
+                "skill": "pptx",
+                "skillVersion": "stock-eb0a7fd8a7db",
+                "scaffoldHash": "c1542f8cf37f27b5dc4286fbce40a1f55534bf519bea351e4c70cae99e3c9399",
+                "sandbox": "bypassPermissions",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 15024,
+                "threadId": "5df0dc4f-6316-49cb-a2d9-5c8ea0cac840"
+              },
+              "truth": "../poc-pptx-qa/results/isb/anthropic-pptx/run-2026-07-30-a/truth/slide-01.png",
+              "preview": null
+            }
+          ]
+        },
+        "dry": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "isb",
+                "version": "dry",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T15:03:28.142Z",
+                "finishedAt": "2026-08-03T15:03:28.221Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "dry",
+                "skillVersion": "dry",
+                "providerBaseUrl": "https://aif-askinsight-prod-eastus2.openai.azure.com/openai/v1",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "skipped"
+              },
+              "truth": null,
+              "preview": "../poc-pptx-qa/results/isb/dry/run-2026-08-03-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "baseline": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/baseline/isb/preview/slide-01.png",
+              "preview": "versions/baseline/isb/preview/slide-01.png"
+            }
+          ]
+        },
+        "v2-rewrite": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v2-rewrite/isb/preview/slide-01.png",
+              "preview": "versions/v2-rewrite/isb/preview/slide-01.png"
+            }
+          ]
+        },
+        "v3": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v3-current/previews/isb.png",
+              "preview": "versions/v3-current/previews/isb.png"
+            }
+          ]
+        },
+        "v4-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v4-current/previews/isb-analyst.png",
+              "preview": "versions/v4-current/previews/isb-analyst.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v4-current/previews/isb-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v4-current/previews/isb-executive.png"
+            }
+          ]
+        },
+        "v5-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v5-current/previews/isb-consultant.png",
+              "preview": "versions/v5-current/previews/isb-consultant.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/isb-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/isb-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/isb-consultant.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "logistec",
+      "title": "Logistec — deep-dive company research",
+      "cells": {
+        "0.2.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "logistec",
+                "version": "0.2.0",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:02:13.305Z",
+                "finishedAt": "2026-07-21T01:06:07.992Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.2.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 2143722,
+                "threadId": "019f8231-df45-7f51-b321-ded593f47e58"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/0.2.0/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/logistec/0.2.0/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.3.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "logistec",
+                "version": "0.3.0",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:02:13.340Z",
+                "finishedAt": "2026-07-21T01:08:27.596Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.3.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 4497409,
+                "threadId": "019f8231-df45-7350-a19c-f0f93cf544fe"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/0.3.0/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/logistec/0.3.0/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.4.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "logistec",
+                "version": "0.4.0",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:02:13.364Z",
+                "finishedAt": "2026-07-21T01:08:09.693Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.4.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 46 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 4156384,
+                "threadId": "019f8231-df45-7061-aa80-2ce2c4380170"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/0.4.0/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/logistec/0.4.0/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "logistec",
+                "version": "0.5.0-rc.0",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:02:13.396Z",
+                "finishedAt": "2026-07-21T01:09:46.055Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.0-rc.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 54 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 5657586,
+                "threadId": "019f8231-df45-7cc1-a13b-b969780ba33a"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/0.5.0-rc.0/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/logistec/0.5.0-rc.0/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0-claude": {
+          "runs": [
+            {
+              "runId": "run-2026-07-30-a",
+              "meta": {
+                "caseId": "logistec",
+                "version": "0.5.0-rc.0-claude",
+                "runId": "run-2026-07-30-a",
+                "startedAt": "2026-07-30T16:15:21.816Z",
+                "finishedAt": "2026-07-30T16:19:15.520Z",
+                "model": "claude-fable-5",
+                "runtime": "claude-code",
+                "claudeCodeVersion": "2.1.220 (Claude Code)",
+                "provider": "anthropic",
+                "skill": "insight-branded-pptx-slide",
+                "skillVersion": "0.5.0-rc.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "bypassPermissions",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 13257,
+                "threadId": "f535ab7e-a514-47be-94f4-1eedc24e2da2"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/0.5.0-rc.0-claude/run-2026-07-30-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/logistec/0.5.0-rc.0-claude/run-2026-07-30-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0-local": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "logistec",
+                "version": "0.5.0-rc.0-local",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:06:08.003Z",
+                "finishedAt": "2026-07-21T01:13:04.154Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.0-rc.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 7033542,
+                "threadId": "019f8235-72f3-7df3-b524-046799da13c2"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/0.5.0-rc.0-local/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/logistec/0.5.0-rc.0-local/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.1-local": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "logistec",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T15:12:01.430Z",
+                "finishedAt": "2026-08-03T15:18:44.306Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 4886243,
+                "threadId": "019fc82e-8ddd-74a0-8854-f551afe19d41"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/0.5.1-local/run-2026-08-03-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/logistec/0.5.1-local/run-2026-08-03-a/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "logistec",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T15:14:21.204Z",
+                "finishedAt": "2026-08-03T15:22:03.074Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 48 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening.",
+                  "text likely overflows (~3 lines vs ~2 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 6515777,
+                "threadId": "019fc830-b0bb-7f52-ac77-d1f4fc2a7369"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/0.5.1-local/run-2026-08-03-b/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/logistec/0.5.1-local/run-2026-08-03-b/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "logistec",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T15:15:26.060Z",
+                "finishedAt": "2026-08-03T15:21:48.914Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 51 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~3 lines vs ~2 fit). Consider shortening.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 4345353,
+                "threadId": "019fc831-ac9b-7540-b0e2-963467a6c01e"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/0.5.1-local/run-2026-08-03-c/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/logistec/0.5.1-local/run-2026-08-03-c/preview/slide-01.png"
+            }
+          ]
+        },
+        "anthropic-pptx": {
+          "runs": [
+            {
+              "runId": "run-2026-07-30-a",
+              "meta": {
+                "caseId": "logistec",
+                "version": "anthropic-pptx",
+                "runId": "run-2026-07-30-a",
+                "startedAt": "2026-07-30T16:15:22.850Z",
+                "finishedAt": "2026-07-30T16:20:10.418Z",
+                "model": "claude-fable-5",
+                "runtime": "claude-code",
+                "claudeCodeVersion": "2.1.220 (Claude Code)",
+                "provider": "anthropic",
+                "skill": "pptx",
+                "skillVersion": "stock-eb0a7fd8a7db",
+                "scaffoldHash": "c1542f8cf37f27b5dc4286fbce40a1f55534bf519bea351e4c70cae99e3c9399",
+                "sandbox": "bypassPermissions",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 14967,
+                "threadId": "87b2ed76-fc3b-41d6-9ae4-c98471218f8f"
+              },
+              "truth": "../poc-pptx-qa/results/logistec/anthropic-pptx/run-2026-07-30-a/truth/slide-01.png",
+              "preview": null
+            }
+          ]
+        },
+        "baseline": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/baseline/logistec/preview/slide-01.png",
+              "preview": "versions/baseline/logistec/preview/slide-01.png"
+            }
+          ]
+        },
+        "v2-rewrite": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v2-rewrite/logistec/preview/slide-01.png",
+              "preview": "versions/v2-rewrite/logistec/preview/slide-01.png"
+            }
+          ]
+        },
+        "v3": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v3-current/previews/logistec.png",
+              "preview": "versions/v3-current/previews/logistec.png"
+            }
+          ]
+        },
+        "v4-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v4-current/previews/logistec-thesis-executive.png",
+              "preview": "versions/v4-current/previews/logistec-thesis-executive.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v4-current/previews/logistec-thesis-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v4-current/previews/logistec-thesis-executive.png"
+            }
+          ]
+        },
+        "v5-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v5-current/previews/logistec-consultant.png",
+              "preview": "versions/v5-current/previews/logistec-consultant.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/logistec-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/logistec-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/logistec-consultant.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "meridian",
+      "title": "Meridian — FY24→FY25 EBITDA bridge (expects waterfall)",
+      "cells": {
+        "0.5.1": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "meridian",
+                "version": "0.5.1",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T16:12:08.320Z",
+                "finishedAt": "2026-08-03T16:16:29.703Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 44 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 2693199,
+                "threadId": "019fc865-9778-7f03-a3c6-f4dab9f37b0b"
+              },
+              "truth": "../poc-pptx-qa/results/meridian/0.5.1/run-2026-08-03-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/meridian/0.5.1/run-2026-08-03-a/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "meridian",
+                "version": "0.5.1",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T16:12:19.705Z",
+                "finishedAt": "2026-08-03T16:19:48.411Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 51 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 3103897,
+                "threadId": "019fc865-c313-7a72-84b3-74a200fd2c94"
+              },
+              "truth": "../poc-pptx-qa/results/meridian/0.5.1/run-2026-08-03-b/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/meridian/0.5.1/run-2026-08-03-b/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "meridian",
+                "version": "0.5.1",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T16:15:24.992Z",
+                "finishedAt": "2026-08-03T16:21:02.123Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 3633814,
+                "threadId": "019fc868-977f-7a72-a2ed-d4b340f953a9"
+              },
+              "truth": "../poc-pptx-qa/results/meridian/0.5.1/run-2026-08-03-c/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/meridian/0.5.1/run-2026-08-03-c/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.1-local": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "meridian",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T17:02:08.389Z",
+                "finishedAt": "2026-08-03T17:06:32.082Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 1997365,
+                "threadId": "019fc893-5e8b-7040-a056-a5d14abdc601"
+              },
+              "truth": "../poc-pptx-qa/results/meridian/0.5.1-local/run-2026-08-03-a/truth/slide-01.png",
+              "preview": null
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "meridian",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T17:03:19.317Z",
+                "finishedAt": "2026-08-03T17:12:31.672Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 3257920,
+                "threadId": "019fc894-739d-7723-a2ef-3f03e7510c07"
+              },
+              "truth": "../poc-pptx-qa/results/meridian/0.5.1-local/run-2026-08-03-b/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/meridian/0.5.1-local/run-2026-08-03-b/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "meridian",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T17:06:32.093Z",
+                "finishedAt": "2026-08-03T17:14:35.043Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 2694587,
+                "threadId": "019fc897-664b-7692-9960-bbb636485bdc"
+              },
+              "truth": "../poc-pptx-qa/results/meridian/0.5.1-local/run-2026-08-03-c/truth/slide-01.png",
+              "preview": null
+            }
+          ]
+        },
+        "baseline": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/baseline/meridian/preview/slide-01.png",
+              "preview": "versions/baseline/meridian/preview/slide-01.png"
+            }
+          ]
+        },
+        "v2-rewrite": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v2-rewrite/meridian/preview/slide-01.png",
+              "preview": "versions/v2-rewrite/meridian/preview/slide-01.png"
+            }
+          ]
+        },
+        "v3": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v3-current/previews/meridian.png",
+              "preview": "versions/v3-current/previews/meridian.png"
+            }
+          ]
+        },
+        "v4-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v4-current/previews/meridian-analyst.png",
+              "preview": "versions/v4-current/previews/meridian-analyst.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v4-current/previews/meridian-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v4-current/previews/meridian-executive.png"
+            }
+          ]
+        },
+        "v5-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v5-current/previews/meridian-consultant.png",
+              "preview": "versions/v5-current/previews/meridian-consultant.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/meridian-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/meridian-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/meridian-consultant.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sow-extension",
+      "title": "30-day SOW extension proposal",
+      "cells": {
+        "0.2.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "0.2.0",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:08:09.702Z",
+                "finishedAt": "2026-07-21T01:09:59.013Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.2.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 535886,
+                "threadId": "019f8237-4dd1-7dd3-b9fa-3aa8d6f8a572"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/0.2.0/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/sow-extension/0.2.0/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.3.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "0.3.0",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:08:27.603Z",
+                "finishedAt": "2026-07-21T01:14:47.823Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.3.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 4732629,
+                "threadId": "019f8237-92e1-7380-b20f-0033b3ef4143"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/0.3.0/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/sow-extension/0.3.0/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.4.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "0.4.0",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:09:46.066Z",
+                "finishedAt": "2026-07-21T01:16:36.239Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.4.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 45 items — that's a lot; check the preview for clutter and breathing room."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 5927009,
+                "threadId": "019f8238-c637-7713-8b0b-fd7ac8315b17"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/0.4.0/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/sow-extension/0.4.0/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "0.5.0-rc.0",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:09:59.024Z",
+                "finishedAt": "2026-07-21T01:18:22.516Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.0-rc.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 57 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 5953386,
+                "threadId": "019f8238-f7f4-7f12-9b2b-64b0183e5c36"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/0.5.0-rc.0/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/sow-extension/0.5.0-rc.0/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0-claude": {
+          "runs": [
+            {
+              "runId": "run-2026-07-30-a",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "0.5.0-rc.0-claude",
+                "runId": "run-2026-07-30-a",
+                "startedAt": "2026-07-30T16:16:06.132Z",
+                "finishedAt": "2026-07-30T16:20:47.771Z",
+                "model": "claude-fable-5",
+                "runtime": "claude-code",
+                "claudeCodeVersion": "2.1.220 (Claude Code)",
+                "provider": "anthropic",
+                "skill": "insight-branded-pptx-slide",
+                "skillVersion": "0.5.0-rc.0",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "bypassPermissions",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 16491,
+                "threadId": "609033bd-66de-4669-853d-a350c63201be"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/0.5.0-rc.0-claude/run-2026-07-30-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/sow-extension/0.5.0-rc.0-claude/run-2026-07-30-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.0-rc.0-local": {
+          "runs": [
+            {
+              "runId": "run-2026-07-21-a",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "0.5.0-rc.0-local",
+                "runId": "run-2026-07-21-a",
+                "startedAt": "2026-07-21T01:13:04.182Z",
+                "finishedAt": "2026-07-21T01:17:55.810Z",
+                "model": "gpt-5.5-1",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.0-rc.0",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 3099685,
+                "threadId": "019f823b-cb84-7ff0-9213-aa7449dd334a"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/0.5.0-rc.0-local/run-2026-07-21-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/sow-extension/0.5.0-rc.0-local/run-2026-07-21-a/preview/slide-01.png"
+            }
+          ]
+        },
+        "0.5.1-local": {
+          "runs": [
+            {
+              "runId": "run-2026-08-03-a",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-a",
+                "startedAt": "2026-08-03T15:17:16.628Z",
+                "finishedAt": "2026-08-03T15:23:32.002Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 45 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 4288983,
+                "threadId": "019fc833-5dc9-7e80-a05b-0960f805f1f6"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/0.5.1-local/run-2026-08-03-a/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/sow-extension/0.5.1-local/run-2026-08-03-a/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-b",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-b",
+                "startedAt": "2026-08-03T15:18:44.318Z",
+                "finishedAt": "2026-08-03T15:26:18.694Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [
+                  "canvas has 54 items — that's a lot; check the preview for clutter and breathing room.",
+                  "text likely overflows (~2 lines vs ~1 fit). Consider shortening."
+                ],
+                "truthExport": "ok",
+                "tokensUsed": 4252918,
+                "threadId": "019fc834-b372-7832-9ea3-85be2a3e4349"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/0.5.1-local/run-2026-08-03-b/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/sow-extension/0.5.1-local/run-2026-08-03-b/preview/slide-01.png"
+            },
+            {
+              "runId": "run-2026-08-03-c",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "0.5.1-local",
+                "runId": "run-2026-08-03-c",
+                "startedAt": "2026-08-03T15:21:48.929Z",
+                "finishedAt": "2026-08-03T15:28:49.583Z",
+                "model": "gpt-5.5-1",
+                "runtime": "codex",
+                "codexVersion": "codex-cli 0.144.6",
+                "skillVersion": "0.5.1",
+                "providerBaseUrl": "https://aif-askinsight-dev-eastus2.cognitiveservices.azure.com/openai/v1",
+                "codexConfigSource": "~/.codex/config.toml",
+                "scaffoldHash": "24e6507b8287d4adc28c9e801019fa26de0dd8029569d2853f70987a4afa0536",
+                "sandbox": "danger-full-access",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 3680702,
+                "threadId": "019fc837-8471-7f61-b3da-6b19df37ded9"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/0.5.1-local/run-2026-08-03-c/truth/slide-01.png",
+              "preview": "../poc-pptx-qa/results/sow-extension/0.5.1-local/run-2026-08-03-c/preview/slide-01.png"
+            }
+          ]
+        },
+        "anthropic-pptx": {
+          "runs": [
+            {
+              "runId": "run-2026-07-30-a",
+              "meta": {
+                "caseId": "sow-extension",
+                "version": "anthropic-pptx",
+                "runId": "run-2026-07-30-a",
+                "startedAt": "2026-07-30T16:17:21.942Z",
+                "finishedAt": "2026-07-30T16:20:51.689Z",
+                "model": "claude-fable-5",
+                "runtime": "claude-code",
+                "claudeCodeVersion": "2.1.220 (Claude Code)",
+                "provider": "anthropic",
+                "skill": "pptx",
+                "skillVersion": "stock-eb0a7fd8a7db",
+                "scaffoldHash": "c1542f8cf37f27b5dc4286fbce40a1f55534bf519bea351e4c70cae99e3c9399",
+                "sandbox": "bypassPermissions",
+                "status": "ok",
+                "engineWarnings": [],
+                "truthExport": "ok",
+                "tokensUsed": 11524,
+                "threadId": "f4cd7ece-d9c3-43a4-a8f8-31ed5b099314"
+              },
+              "truth": "../poc-pptx-qa/results/sow-extension/anthropic-pptx/run-2026-07-30-a/truth/slide-01.png",
+              "preview": null
+            }
+          ]
+        },
+        "baseline": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/baseline/sow-extension/preview/slide-01.png",
+              "preview": "versions/baseline/sow-extension/preview/slide-01.png"
+            }
+          ]
+        },
+        "v2-rewrite": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v2-rewrite/sow-extension/preview/slide-01.png",
+              "preview": "versions/v2-rewrite/sow-extension/preview/slide-01.png"
+            }
+          ]
+        },
+        "v3": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v3-current/previews/sow-extension.png",
+              "preview": "versions/v3-current/previews/sow-extension.png"
+            }
+          ]
+        },
+        "v4-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v4-current/previews/sow-extension-analyst.png",
+              "preview": "versions/v4-current/previews/sow-extension-analyst.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v4-current/previews/sow-extension-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v4-current/previews/sow-extension-executive.png"
+            }
+          ]
+        },
+        "v5-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v5-current/previews/sow-extension-consultant.png",
+              "preview": "versions/v5-current/previews/sow-extension-consultant.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/sow-extension-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/sow-extension-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/sow-extension-consultant.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "regional-sales",
+      "title": "Regional Sales — Q2 quarterly performance by region",
+      "cells": {
+        "v2-rewrite": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v2-rewrite/regional-sales/preview/slide-01.png",
+              "preview": "versions/v2-rewrite/regional-sales/preview/slide-01.png"
+            }
+          ]
+        },
+        "v3": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v3-current/previews/regional-sales.png",
+              "preview": "versions/v3-current/previews/regional-sales.png"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

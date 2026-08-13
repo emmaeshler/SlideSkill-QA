@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "id": "isb_merchandiser_cost",
+  "title": "Merchandiser vs. ISB Cost Comparison | Investment and servicing economics for ice equipment",
+  "subtitle": "Reddy Ice — Cost Structure Analysis",
+  "notes": "So-what: Merchandisers cost more and require specialist servicing, but deliver higher per-unit capacity. ISBs are cheaper and more flexible but need more units. The right mix depends on location volume, not which is better.",
+  "layout": "canvas",
+  "content": {
+    "items": [
+      {
+        "kind": "group",
+        "style": "tinted",
+        "heading": "Merchandiser",
+        "accent": "primary",
+        "x": 0.02,
+        "y": 0.04,
+        "w": 0.46,
+        "h": 0.44,
+        "items": [
+          {
+            "kind": "text",
+            "text": "Higher",
+            "x": 0.03,
+            "y": 0.02,
+            "w": 0.4,
+            "h": 0.14,
+            "fontSize": 28,
+            "bold": true,
+            "color": "primary"
+          },
+          {
+            "kind": "text",
+            "text": "upfront cost per unit",
+            "x": 0.03,
+            "y": 0.16,
+            "w": 0.5,
+            "h": 0.06,
+            "fontSize": 10,
+            "color": "gray"
+          },
+          {
+            "kind": "shape",
+            "shape": "rect",
+            "fill": "primary",
+            "fillTransparency": 85,
+            "x": 0,
+            "y": 0.26,
+            "w": 1,
+            "h": 0.005
+          },
+          {
+            "kind": "text",
+            "text": "Larger floor space — limits placement to back-of-store\n\nHigher volume per unit — fewer machines for same output\n\nComplex servicing — specialist technicians, longer calls",
+            "x": 0.03,
+            "y": 0.3,
+            "w": 0.94,
+            "h": 0.48,
+            "fontSize": 11,
+            "color": "textDark"
+          },
+          {
+            "kind": "text",
+            "text": "Best for: high-volume locations",
+            "x": 0.03,
+            "y": 0.82,
+            "w": 0.94,
+            "h": 0.1,
+            "fontSize": 11,
+            "bold": true,
+            "color": "primary"
+          }
+        ]
+      },
+      {
+        "kind": "group",
+        "style": "tinted",
+        "heading": "ISB (In-Store Bin)",
+        "accent": "accent",
+        "x": 0.52,
+        "y": 0.04,
+        "w": 0.46,
+        "h": 0.44,
+        "items": [
+          {
+            "kind": "text",
+            "text": "Lower",
+            "x": 0.03,
+            "y": 0.02,
+            "w": 0.4,
+            "h": 0.14,
+            "fontSize": 28,
+            "bold": true,
+            "color": "accent"
+          },
+          {
+            "kind": "text",
+            "text": "upfront cost per unit",
+            "x": 0.03,
+            "y": 0.16,
+            "w": 0.5,
+            "h": 0.06,
+            "fontSize": 10,
+            "color": "gray"
+          },
+          {
+            "kind": "shape",
+            "shape": "rect",
+            "fill": "accent",
+            "fillTransparency": 85,
+            "x": 0,
+            "y": 0.26,
+            "w": 1,
+            "h": 0.005
+          },
+          {
+            "kind": "text",
+            "text": "Smaller footprint — flexible placement near checkout or aisle\n\nLower capacity — needs more units to match merchandiser output\n\nSimple servicing — general maintenance, shorter calls",
+            "x": 0.03,
+            "y": 0.3,
+            "w": 0.94,
+            "h": 0.48,
+            "fontSize": 11,
+            "color": "textDark"
+          },
+          {
+            "kind": "text",
+            "text": "Best for: convenience / small format",
+            "x": 0.03,
+            "y": 0.82,
+            "w": 0.94,
+            "h": 0.1,
+            "fontSize": 11,
+            "bold": true,
+            "color": "accent"
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "text": "Side-by-Side Comparison",
+        "x": 0.02,
+        "y": 0.5,
+        "w": 0.4,
+        "h": 0.04,
+        "fontSize": 11,
+        "bold": true,
+        "color": "primary"
+      },
+      {
+        "kind": "table",
+        "x": 0.02,
+        "y": 0.55,
+        "w": 0.96,
+        "h": 0.3,
+        "hasHeader": true,
+        "rows": [
+          [
+            "Factor",
+            "Merchandiser",
+            "ISB"
+          ],
+          [
+            "Initial investment",
+            "Higher per unit",
+            "Lower per unit"
+          ],
+          [
+            "Floor space",
+            "Large — back of store",
+            "Small — flexible"
+          ],
+          [
+            "Volume per unit",
+            "High",
+            "Low (more units needed)"
+          ],
+          [
+            "Service model",
+            "Specialist techs",
+            "General maintenance"
+          ]
+        ]
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "accent",
+        "fillTransparency": 10,
+        "x": 0.02,
+        "y": 0.87,
+        "w": 0.96,
+        "h": 0.1,
+        "text": "The right deployment mix is a volume-per-location decision — high-volume sites warrant merchandisers; small-format stores favor ISBs",
+        "fontSize": 11,
+        "bold": true,
+        "textColor": "FFFFFF",
+        "align": "center",
+        "valign": "middle"
+      }
+    ]
+  },
+  "palette": "INSIGHT",
+  "lineageId": "isb",
+  "version": 1,
+  "parentVersion": null,
+  "createdAt": "2026-08-03T21:19:02.559Z"
+}

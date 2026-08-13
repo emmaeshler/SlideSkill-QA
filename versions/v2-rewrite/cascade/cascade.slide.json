@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "id": "cascade_revenue_mix",
+  "title": "FY25 Quarterly Revenue | Mix shift from water to energy accelerated through the year",
+  "subtitle": "Cascade Beverage Group — Net Revenue by Product Family ($M)",
+  "notes": "So-what: Energy grew 70.5% Q1-Q4 and now represents 27% of revenue. Still water and Private Label are in managed decline. The quarterly stack shows a company transforming its revenue base.",
+  "layout": "canvas",
+  "content": {
+    "items": [
+      {
+        "kind": "text",
+        "text": "+70.5%",
+        "x": 0.02,
+        "y": 0.04,
+        "w": 0.14,
+        "h": 0.07,
+        "fontSize": 28,
+        "bold": true,
+        "color": "accent"
+      },
+      {
+        "kind": "text",
+        "text": "Energy Q1→Q4",
+        "x": 0.02,
+        "y": 0.11,
+        "w": 0.14,
+        "h": 0.03,
+        "fontSize": 9,
+        "color": "textMid"
+      },
+      {
+        "kind": "text",
+        "text": "27%",
+        "x": 0.18,
+        "y": 0.04,
+        "w": 0.1,
+        "h": 0.07,
+        "fontSize": 28,
+        "bold": true,
+        "color": "primary"
+      },
+      {
+        "kind": "text",
+        "text": "Energy Mix (Q4)",
+        "x": 0.18,
+        "y": 0.11,
+        "w": 0.12,
+        "h": 0.03,
+        "fontSize": 9,
+        "color": "textMid"
+      },
+      {
+        "kind": "text",
+        "text": "−13.2%",
+        "x": 0.33,
+        "y": 0.04,
+        "w": 0.12,
+        "h": 0.07,
+        "fontSize": 28,
+        "bold": true,
+        "color": "red"
+      },
+      {
+        "kind": "text",
+        "text": "Private Label",
+        "x": 0.33,
+        "y": 0.11,
+        "w": 0.12,
+        "h": 0.03,
+        "fontSize": 9,
+        "color": "textMid"
+      },
+      {
+        "kind": "chart",
+        "type": "bar",
+        "x": 0.02,
+        "y": 0.18,
+        "w": 0.6,
+        "h": 0.65,
+        "data": {
+          "labels": [
+            "Q1 FY25",
+            "Q2 FY25",
+            "Q3 FY25",
+            "Q4 FY25"
+          ],
+          "series": [
+            {
+              "name": "Sparkling",
+              "values": [
+                48.2,
+                50.1,
+                53.4,
+                57.8
+              ]
+            },
+            {
+              "name": "Still",
+              "values": [
+                31.6,
+                30.8,
+                29.5,
+                28.1
+              ]
+            },
+            {
+              "name": "Energy",
+              "values": [
+                22.4,
+                26.7,
+                31.9,
+                38.2
+              ]
+            },
+            {
+              "name": "Private Label",
+              "values": [
+                18.9,
+                18.2,
+                17.6,
+                16.4
+              ]
+            }
+          ]
+        },
+        "options": {
+          "chartColors": [
+            "00446A",
+            "7A95A5",
+            "E56910",
+            "B0BEC5"
+          ],
+          "valueFormat": "$#,##0.0",
+          "dataLabels": {
+            "value": true,
+            "position": "center"
+          },
+          "legendPos": "b"
+        }
+      },
+      {
+        "kind": "group",
+        "style": "tinted",
+        "heading": "Quarterly Trends",
+        "accent": "primary",
+        "x": 0.65,
+        "y": 0.18,
+        "w": 0.33,
+        "h": 0.65,
+        "items": [
+          {
+            "kind": "shape",
+            "shape": "rect",
+            "fill": "E56910",
+            "x": 0,
+            "y": 0,
+            "w": 0.06,
+            "h": 0.15
+          },
+          {
+            "kind": "text",
+            "text": "Energy is the growth engine — $22.4M to $38.2M in four quarters, now the second-largest family",
+            "x": 0.1,
+            "y": 0,
+            "w": 0.88,
+            "h": 0.18,
+            "fontSize": 11,
+            "color": "textDark"
+          },
+          {
+            "kind": "shape",
+            "shape": "rect",
+            "fill": "00446A",
+            "x": 0,
+            "y": 0.22,
+            "w": 0.06,
+            "h": 0.15
+          },
+          {
+            "kind": "text",
+            "text": "Sparkling holds ~40% share with +19.9% growth — the stable anchor while the mix rotates",
+            "x": 0.1,
+            "y": 0.22,
+            "w": 0.88,
+            "h": 0.18,
+            "fontSize": 11,
+            "color": "textDark"
+          },
+          {
+            "kind": "shape",
+            "shape": "rect",
+            "fill": "7A95A5",
+            "x": 0,
+            "y": 0.44,
+            "w": 0.06,
+            "h": 0.15
+          },
+          {
+            "kind": "text",
+            "text": "Still water declining 11.1% — deliberate de-emphasis as margin compression continues",
+            "x": 0.1,
+            "y": 0.44,
+            "w": 0.88,
+            "h": 0.18,
+            "fontSize": 11,
+            "color": "textDark"
+          },
+          {
+            "kind": "shape",
+            "shape": "rect",
+            "fill": "B0BEC5",
+            "x": 0,
+            "y": 0.66,
+            "w": 0.06,
+            "h": 0.15
+          },
+          {
+            "kind": "text",
+            "text": "Private Label down 13.2% — managed runoff as branded volume grows",
+            "x": 0.1,
+            "y": 0.66,
+            "w": 0.88,
+            "h": 0.18,
+            "fontSize": 11,
+            "color": "textDark"
+          }
+        ]
+      },
+      {
+        "kind": "shape",
+        "shape": "rounded-rect",
+        "fill": "primary",
+        "fillTransparency": 92,
+        "x": 0.02,
+        "y": 0.86,
+        "w": 0.96,
+        "h": 0.11
+      },
+      {
+        "kind": "text",
+        "text": "A company transforming its revenue base: Energy's acceleration and Sparkling's stability are replacing a declining still-water/private-label core",
+        "x": 0.04,
+        "y": 0.86,
+        "w": 0.92,
+        "h": 0.11,
+        "fontSize": 11,
+        "bold": true,
+        "color": "primary",
+        "align": "center",
+        "valign": "middle"
+      }
+    ]
+  },
+  "palette": "INSIGHT",
+  "lineageId": "cascade",
+  "version": 1,
+  "parentVersion": null,
+  "createdAt": "2026-08-03T21:19:01.607Z"
+}

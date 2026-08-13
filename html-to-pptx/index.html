@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PowerPoint Conversion — Pepper</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='3' y='5' width='26' height='22' rx='3' fill='%2300446A'/><rect x='6' y='9' width='10' height='3' rx='1' fill='%23fff'/><rect x='6' y='14' width='20' height='2' rx='1' fill='%23fff' opacity='.5'/><rect x='6' y='18' width='16' height='2' rx='1' fill='%23fff' opacity='.3'/><circle cx='23' cy='13' r='4' fill='%23E56910'/></svg>">
+<style>
+:root{--paper:#f3f6f8;--card:#fff;--ink:#13222e;--soft:#4f5f6d;--faint:#8493a0;--line:#e1e8ed;--accent:#0e5562;--tint:#eaf4f4;--shadow:0 1px 2px rgba(19,34,46,.04),0 8px 24px rgba(19,34,46,.05);--display:system-ui,sans-serif;--body:system-ui,-apple-system,"Segoe UI",sans-serif;--mono:ui-monospace,Consolas,monospace;--primary:#00446A;--accent-orange:#E56910}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--body)}
+.wrap{max-width:1800px;margin:auto;padding:0 28px}
+.mast{padding:48px 0 28px}
+.meta,.foot{font:600 11px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+h1{font:700 clamp(28px,4vw,44px)/1.08 var(--display);letter-spacing:-.02em;margin:.35rem 0 .6rem}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.meta span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 9px}
+
+/* matrix */
+.matrix-wrap{overflow:auto;max-height:calc(100vh - 200px);border:1px solid var(--line);border-radius:12px;background:var(--card);box-shadow:var(--shadow)}
+.matrix{display:grid;min-width:max-content}
+.head,.case-head,.cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.head{position:sticky;top:0;z-index:3;background:var(--ink);color:#fff;padding:13px 14px;font:600 13px/1.3 var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.head.corner{position:sticky;left:0;top:0;z-index:5}
+.head.html-col{background:var(--accent)}
+.head.pptx-col{background:var(--accent-orange)}
+.case-head{position:sticky;left:0;z-index:2;background:var(--card);width:240px;padding:16px}
+.case-head strong{display:block;font:600 15px/1.3 var(--display)}
+.case-head .case-id{color:var(--faint);font:11px var(--mono)}
+.case-head .case-source{color:var(--soft);font:11px/1.4 var(--body);margin-top:4px}
+.cell{width:360px;padding:12px;background:#fff;position:relative}
+.image-button{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:8px;background:#edf1f4;overflow:hidden;cursor:zoom-in;aspect-ratio:16/9}
+.image-button img{display:block;width:100%;height:100%;object-fit:contain}
+.empty{height:100%;display:grid;place-items:center;color:var(--faint);font:11px var(--mono);text-transform:uppercase}
+.cell-foot{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:8px;color:var(--soft);font:11px var(--mono)}
+.cell-foot a{color:var(--accent);text-decoration:none}
+.cell-foot a:hover{text-decoration:underline}
+.version-label{display:inline-block;padding:2px 6px;border-radius:4px;font:600 10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.version-label.html-src{background:var(--accent);color:#fff}
+.version-label.pptx-gen{background:var(--accent-orange);color:#fff}
+
+/* html source dropdown */
+.source-select{display:inline-flex;align-items:center;gap:0;border-radius:4px;overflow:hidden;font:600 10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.source-select select{appearance:none;-webkit-appearance:none;background:var(--accent);color:#fff;border:none;padding:2px 18px 2px 6px;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='white'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 5px center;background-size:8px 5px}
+.source-select select:focus{outline:2px solid var(--accent);outline-offset:1px}
+
+/* content tabs */
+.content-tab{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:7px 14px;cursor:pointer;font:600 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--soft);transition:all .15s}
+.content-tab:hover{border-color:var(--accent);color:var(--accent)}
+.content-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* compare */
+.compare-toggle{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:7px 14px;cursor:pointer;font:600 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--soft);transition:all .15s}
+.compare-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.compare-toggle.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.compare-bar{display:none;align-items:center;gap:12px;margin-top:18px}
+.compare-bar.active{display:flex}
+.compare-status{font:12px var(--mono);color:var(--soft)}
+.compare-clear{background:none;border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer;font:11px var(--mono);color:var(--soft)}
+.compare-clear:hover{border-color:var(--accent);color:var(--accent)}
+.cell.selectable{cursor:pointer}
+.cell.selectable:hover{background:var(--tint)}
+.cell.selected{outline:3px solid var(--accent);outline-offset:-3px;background:var(--tint)}
+.select-badge{display:none}
+.cell.selected .select-badge{display:flex;position:absolute;top:6px;right:6px;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font:700 12px/1 var(--mono);align-items:center;justify-content:center;z-index:1}
+
+/* compare modal */
+.compare-modal{position:fixed;inset:0;z-index:55;background:rgba(19,34,46,.95);display:none;grid-template-rows:auto 1fr;padding:18px}
+.compare-modal.open{display:grid}
+.compare-modal-bar{display:flex;justify-content:space-between;align-items:center;color:#fff;font:12px var(--mono);margin-bottom:12px}
+.compare-panes{display:grid;grid-template-rows:1fr 1fr;gap:12px;min-height:0;overflow:hidden}
+.compare-pane{text-align:center;overflow:hidden}
+.compare-pane-label{color:rgba(255,255,255,.6);font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.compare-pane img{max-width:100%;max-height:calc(50vh - 60px);object-fit:contain}
+
+/* zoom modal */
+.modal{position:fixed;inset:0;z-index:55;background:rgba(19,34,46,.92);display:none;grid-template-rows:auto 1fr auto;padding:18px}
+.modal.open{display:grid}
+.modal-bar{display:flex;justify-content:space-between;align-items:center;color:#fff;font:12px var(--mono)}
+.modal button{color:#fff;background:transparent;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:6px 10px;cursor:pointer}
+.modal img{max-width:96vw;max-height:88vh;margin:auto;object-fit:contain}
+.hint{text-align:center;color:#d6ebec;font:11px var(--mono)}
+
+/* nav */
+.site-nav{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.1);transition:background .25s,box-shadow .25s}
+.site-nav.scrolled{background:var(--card);border-color:var(--line);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.site-nav-inner{max-width:1800px;margin:auto;padding:0 28px;height:52px;display:flex;align-items:center;justify-content:space-between}
+.site-brand{font:700 14px/1 var(--display);letter-spacing:-.01em;color:#fff;text-decoration:none}
+.site-nav.scrolled .site-brand{color:var(--ink)}
+.page-tabs{display:flex;align-items:center;gap:2px}
+.page-tab{padding:6px 12px;border-radius:8px;font:500 13px/1 var(--body);color:rgba(255,255,255,.5);text-decoration:none;transition:all .15s}
+.page-tab:hover{color:#fff;background:rgba(255,255,255,.1)}
+.page-tab.active{color:#fff;background:rgba(255,255,255,.15)}
+.site-nav.scrolled .page-tab{color:var(--faint)}
+.site-nav.scrolled .page-tab:hover{color:var(--ink);background:var(--paper)}
+.site-nav.scrolled .page-tab.active{color:var(--ink);background:var(--paper)}
+
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:18px 0 28px;color:var(--soft)}
+.foot-line{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:0}
+@media(max-width:720px){.wrap{padding:0 14px}.case-head{width:180px}.cell{width:280px}}
+.close-x{position:absolute;top:18px;right:18px;width:40px;height:40px;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font:400 24px/40px system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .15s;z-index:60}.close-x:hover{background:rgba(255,255,255,.3);border-color:rgba(255,255,255,.6)}
+@media print{body{background:#fff}.modal{display:none!important}.site-nav{display:none}}
+/* ── Column collapse ─────────────── */
+.collapse-btn{position:absolute;top:8px;right:8px;width:28px;height:28px;border:1px solid rgba(255,255,255,.3);border-radius:6px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);cursor:pointer;display:grid;place-items:center;font:700 16px/1 var(--body);transition:all .15s;z-index:1;padding:0}
+.collapse-btn:hover{background:rgba(255,255,255,.25);color:#fff}
+.head-vlabel{display:none;writing-mode:vertical-lr;text-orientation:mixed;white-space:nowrap;font:600 11px/1.3 var(--mono);letter-spacing:.06em;margin-top:4px}
+.head.collapsed{overflow:hidden;padding:8px 4px;text-align:center}
+.head.collapsed .head-content{display:none}
+.head.collapsed .head-vlabel{display:block;margin:4px auto 0}
+.head.collapsed .collapse-btn{position:static;display:block;margin:0 auto;width:24px;height:24px;font-size:13px}
+.cell.collapsed{overflow:hidden}
+.cell.collapsed>*{display:none}
+.cell.collapsed::after{content:'';display:block;width:3px;min-height:120px;margin:0 auto;background:var(--line);border-radius:2px}
+</style></head>
+<body>
+<nav id="siteNav" class="site-nav">
+<div class="site-nav-inner">
+<div style="display:flex;align-items:center;gap:24px">
+<a href="../../galleries.html" class="site-brand">Pepper</a>
+</div>
+<div class="page-tabs">
+<a href="../../poc-pptx-qa/gallery/index.html" class="page-tab">All Versions</a>
+<a href="../gallery/index.html" class="page-tab">Skill Progression</a>
+<a href="#" class="page-tab active">PPTX Conversion</a>
+</div>
+</div>
+</nav>
+<main class="wrap" style="padding-top:52px">
+<header class="mast">
+<h1>PowerPoint conversion</h1>
+<p style="color:var(--soft);max-width:72ch;margin-bottom:4px">These slides are built with PptxGenJS, which renders native PowerPoint charts. think-cell is not available on Mac, so chart fidelity here reflects the PptxGenJS engine only — charts will render better on Windows where think-cell is installed.</p>
+<div style="display:flex;align-items:center;gap:4px;margin:18px 0 12px">
+<button class="content-tab active" data-tab="conversion">HTML&rarr;PPTX V4</button>
+<button class="content-tab" data-tab="new-skill">HTML&rarr;PPTX V5</button>
+</div>
+<div class="meta">
+<span id="tabMeta">4 cases · 2 generations · all gen-2 complete</span>
+<button id="compareToggle" class="compare-toggle">Compare slides</button>
+</div>
+<div id="compareBar" class="compare-bar">
+<span id="compareStatus" class="compare-status">Click two slides to compare</span>
+<button id="compareClear" class="compare-clear">Clear</button>
+</div>
+</header>
+<section id="tab-conversion" class="matrix-wrap" aria-label="HTML to PPTX conversion matrix">
+<div id="matrix" class="matrix"></div>
+</section>
+<section id="tab-new-skill" class="matrix-wrap" style="display:none" aria-label="New skill conversion matrix">
+<div id="matrix2" class="matrix"></div>
+</section>
+</main>
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="Zoomed screenshot">
+<button class="close-x" onclick="closeModal()" aria-label="Close">&times;</button>
+<div class="modal-bar">
+<span id="modalTitle"></span>
+</div>
+<img id="modalImage" alt="Zoomed view">
+<div class="hint">&larr; / &rarr; adjacent column</div>
+</div>
+<div id="compareModal" class="compare-modal" role="dialog" aria-modal="true" aria-label="Side-by-side comparison">
+<button class="close-x" onclick="closeCompareModal()" aria-label="Close">&times;</button>
+<div class="compare-modal-bar">
+<span id="compareTitle">Comparison</span>
+</div>
+<div class="compare-panes">
+<div class="compare-pane"><div id="cmpLabel1" class="compare-pane-label"></div><img id="cmpImg1" alt="Selection A"></div>
+<div class="compare-pane"><div id="cmpLabel2" class="compare-pane-label"></div><img id="cmpImg2" alt="Selection B"></div>
+</div>
+</div>
+<footer class="foot"><div class="wrap foot-line">
+<span>Pepper · PowerPoint Skill</span>
+</div></footer>
+<script>
+/* ═══════════════════════════════════════
+   TAB 1 — HTML → PPTX CONVERSION
+   ═══════════════════════════════════════ */
+const MODEL={
+  "versions":["html-source","gen-1","gen-2"],
+  "cases":[
+    {
+      "id":"cascade",
+      "title":"Cascade — FY25 quarterly revenue mix",
+      "source":"cascade-v4-revenue-mix-executive",
+      "cells":{
+        "html-source":{
+          "sources":[
+            {"label":"v3","preview":"screenshots/cascade-html.png","html":"../../presentations/cascade-v3-revenue-mix.html"},
+            {"label":"v4 exec","preview":"screenshots/cascade-html-v4.png","html":"../../presentations/cascade-v4-revenue-mix-executive.html"}
+          ],
+          "default":1
+        },
+        "gen-1":{
+          "preview":"screenshots/cascade-pptx.png",
+          "pptx":"../../presentations/cascade-v3-revenue-mix.pptx"
+        },
+        "gen-2":{
+          "preview":"screenshots/cascade-pptx-gen2.png",
+          "pptx":"../../presentations/cascade-v4-revenue-mix-executive.pptx"
+        }
+      }
+    },
+    {
+      "id":"northstar",
+      "title":"Northstar Packaging — FY25 revenue mix",
+      "source":"northstar-packaging-fy25",
+      "cells":{
+        "html-source":{
+          "preview":"screenshots/northstar-html.png",
+          "html":"../../presentations/northstar-packaging-fy25.html"
+        },
+        "gen-1":{
+          "preview":"screenshots/northstar-pptx.png",
+          "pptx":"../../presentations/northstar-packaging-fy25.pptx"
+        },
+        "gen-2":{
+          "preview":"screenshots/northstar-pptx-gen2.png",
+          "pptx":"../../presentations/northstar-packaging-fy25-gen2.pptx"
+        }
+      }
+    },
+    {
+      "id":"sow-extension",
+      "title":"30-Day SOW Extension — Elephant Ventures",
+      "source":"sow-extension-v3-30day",
+      "cells":{
+        "html-source":{
+          "preview":"screenshots/sow-extension-html.png",
+          "html":"../../presentations/sow-extension-v3-30day.html"
+        },
+        "gen-1":{
+          "preview":"screenshots/sow-extension-pptx.png",
+          "pptx":"../../presentations/sow-extension-v3-30day.pptx"
+        },
+        "gen-2":{
+          "preview":"screenshots/sow-extension-pptx-gen2.png",
+          "pptx":"../../presentations/sow-extension-v3-30day-gen2.pptx"
+        }
+      }
+    },
+    {
+      "id":"halvorsen-leakage",
+      "title":"Halvorsen — FY25 Discount Leakage Ranking",
+      "source":"halvorsen-v3-leakage-ranking",
+      "cells":{
+        "html-source":{
+          "preview":"screenshots/halvorsen-leakage-ranking-html.png",
+          "html":"../../presentations/halvorsen-v3-leakage-ranking.html"
+        },
+        "gen-1":{
+          "preview":"screenshots/halvorsen-leakage-ranking-pptx.png",
+          "pptx":"../../presentations/halvorsen-v3-leakage-ranking.pptx"
+        },
+        "gen-2":{
+          "preview":"screenshots/halvorsen-leakage-ranking-pptx-gen2.png",
+          "pptx":"../../presentations/halvorsen-v3-leakage-ranking-gen2.pptx"
+        }
+      }
+    }
+  ]
+};
+
+/* ═══════════════════════════════════════
+   TAB 2 — NEW SKILL VARIANT
+   ═══════════════════════════════════════
+   Same structure as Tab 1. Add cases + cells as conversions are produced.
+*/
+const MODEL_B={
+  "versions":["html-source","gen-1","gen-2"],
+  "cases":[
+    {
+      "id":"logistec-platform-exec",
+      "title":"Logistec — Dual-Engine Platform Strategy (Executive)",
+      "source":"logistec-v4-platform-strategy-executive",
+      "cells":{
+        "html-source":{
+          "preview":"screenshots/logistec-platform-executive-html.png",
+          "html":"../../presentations/logistec-v4-platform-strategy-executive.html"
+        },
+        "gen-1":{
+          "preview":"screenshots/logistec-platform-executive-pptx.png",
+          "pptx":"../../presentations/logistec-v5-platform-strategy-executive.pptx"
+        },
+        "gen-2":{
+          "preview":"screenshots/logistec-platform-executive-pptx-gen2.png",
+          "pptx":"../../presentations/logistec-v5-platform-strategy-executive.pptx"
+        }
+      }
+    }
+  ]
+};
+
+/* ═══════════════════════════════════════
+   SHARED STATE
+   ═══════════════════════════════════════ */
+function metaText(tab){
+  if(tab==='conversion') return MODEL.cases.length+' cases · '+(MODEL.versions.length-1)+' generations · all gen-2 complete';
+  return MODEL_B.cases.length+' cases · '+(MODEL_B.versions.length-1)+' generations';
+}
+
+const HEADER_LABELS={'html-source':'HTML Source'};
+function headerLabel(v){return HEADER_LABELS[v]||v.replace('gen-','Gen ')}
+function colClass(v){return v==='html-source'?'html-col':'pptx-col'}
+
+let currentTab='conversion';
+function getModel(){return currentTab==='conversion'?MODEL:MODEL_B}
+function getContainer(){return document.querySelector(currentTab==='conversion'?'#matrix':'#matrix2')}
+
+let active=null;
+let compareMode=false;
+let compareSelections=[];
+const activeSource={};
+const collapsedA=new Set();
+const collapsedB=new Set();
+function updateGridA(){matrix.style.gridTemplateColumns='240px'+MODEL.versions.map(function(_,vi){return collapsedA.has(vi)?' 44px':' 360px'}).join('')}
+function updateGridB(){matrix2.style.gridTemplateColumns='240px'+MODEL_B.versions.map(function(_,vi){return collapsedB.has(vi)?' 44px':' 360px'}).join('')}
+function toggleColumnA(vi){if(collapsedA.has(vi))collapsedA.delete(vi);else collapsedA.add(vi);updateGridA();document.querySelectorAll('#matrix [data-vi="'+vi+'"]').forEach(function(el){el.classList.toggle('collapsed',collapsedA.has(vi))});document.querySelectorAll('#matrix .head[data-vi="'+vi+'"] .collapse-btn').forEach(function(btn){btn.textContent=collapsedA.has(vi)?'»':'«';btn.title=collapsedA.has(vi)?'Expand column':'Collapse column'})}
+function toggleColumnB(vi){if(collapsedB.has(vi))collapsedB.delete(vi);else collapsedB.add(vi);updateGridB();document.querySelectorAll('#matrix2 [data-vi="'+vi+'"]').forEach(function(el){el.classList.toggle('collapsed',collapsedB.has(vi))});document.querySelectorAll('#matrix2 .head[data-vi="'+vi+'"] .collapse-btn').forEach(function(btn){btn.textContent=collapsedB.has(vi)?'»':'«';btn.title=collapsedB.has(vi)?'Expand column':'Collapse column'})}
+
+/* ═══════════════════════════════════════
+   TAB 1 RENDERING
+   ═══════════════════════════════════════ */
+const matrix=document.querySelector('#matrix');
+
+MODEL.cases.forEach(function(c,ci){
+  var cell=c.cells['html-source'];
+  if(cell&&cell.sources) activeSource[ci]=cell.default||cell.sources.length-1;
+});
+
+function resolveCell(c,ci,v){
+  var cell=c.cells[v];
+  if(v==='html-source'&&cell&&cell.sources){
+    var idx=activeSource[ci]!=null?activeSource[ci]:(cell.default!=null?cell.default:cell.sources.length-1);
+    return cell.sources[idx];
+  }
+  return cell;
+}
+
+function versionLabel(v,c,ci){
+  if(v==='html-source'){
+    var cell=c.cells[v];
+    if(cell&&cell.sources){
+      var idx=activeSource[ci]!=null?activeSource[ci]:(cell.default!=null?cell.default:cell.sources.length-1);
+      var html='<span class="source-select"><select data-ci="'+ci+'">';
+      cell.sources.forEach(function(s,si){
+        html+='<option value="'+si+'"'+(si===idx?' selected':'')+'>HTML · '+s.label+'</option>';
+      });
+      html+='</select></span>';
+      return html;
+    }
+    return '<span class="version-label html-src">HTML</span>';
+  }
+  return '<span class="version-label pptx-gen">'+headerLabel(v)+'</span>';
+}
+
+function render(){
+  updateGridA();
+  matrix.innerHTML='<div class="head corner">Case</div>'+MODEL.versions.map(function(v,vi){
+    var cls=v==='html-source'?'html-col':'pptx-col';
+    var label=headerLabel(v);
+    return '<div class="head '+cls+(collapsedA.has(vi)?' collapsed':'')+'" data-vi="'+vi+'"><button class="collapse-btn" onclick="toggleColumnA('+vi+')" title="Collapse column">«</button><span class="head-content">'+label+'</span><span class="head-vlabel">'+label+'</span></div>';
+  }).join('');
+
+  MODEL.cases.forEach(function(c,ci){
+    var resolved=resolveCell(c,ci,'html-source');
+    var sourceLabel=c.cells['html-source']&&c.cells['html-source'].sources
+      ? c.cells['html-source'].sources[activeSource[ci]!=null?activeSource[ci]:c.cells['html-source'].default].label
+      : '';
+    matrix.insertAdjacentHTML('beforeend',
+      '<div class="case-head"><strong>'+c.title+'</strong>'+
+      '<span class="case-id">'+c.id+(sourceLabel?' · '+sourceLabel:'')+'</span>'+
+      (c.source?'<div class="case-source">'+c.source+'</div>':'')+
+      '</div>'
+    );
+
+    MODEL.versions.forEach(function(v,vi){
+      var cell=resolveCell(c,ci,v);
+      var img=cell?cell.preview:null;
+      var el=document.createElement('div');
+      el.className='cell'+(collapsedA.has(vi)?' collapsed':'');
+      el.dataset.ci=ci;
+      el.dataset.vi=vi;
+      el.dataset.tab='conversion';
+      el.innerHTML=(img
+        ?'<button class="image-button"><img src="'+img+'" alt="'+c.title+' · '+headerLabel(v)+'"></button>'
+        :'<div class="image-button"><span class="empty">No artifact</span></div>'
+      )+'<span class="select-badge"></span>'+
+      '<div class="cell-foot">'+versionLabel(v,c,ci)+
+      (cell&&cell.pptx?'<a href="'+cell.pptx+'" download>Download .pptx</a>':(cell&&cell.html?'<a href="'+cell.html+'" target="_blank">Open HTML ↗</a>':'<span>—</span>'))+
+      '</div>';
+      if(img) el.querySelector('.image-button').addEventListener('click',function(){
+        if(compareMode) return handleCompareClick(ci,vi);
+        openModal(ci,vi);
+      });
+      matrix.append(el);
+    });
+  });
+
+  matrix.querySelectorAll('.source-select select').forEach(function(sel){
+    sel.addEventListener('change',function(e){
+      activeSource[+e.target.dataset.ci]=+e.target.value;
+      render();
+    });
+  });
+}
+
+/* ═══════════════════════════════════════
+   TAB 2 RENDERING
+   ═══════════════════════════════════════ */
+const matrix2=document.querySelector('#matrix2');
+const activeSource2={};
+
+MODEL_B.cases.forEach(function(c,ci){
+  var cell=c.cells&&c.cells['html-source'];
+  if(cell&&cell.sources) activeSource2[ci]=cell.default||cell.sources.length-1;
+});
+
+function renderB(){
+  var m=MODEL_B;
+  updateGridB();
+  matrix2.innerHTML='<div class="head corner">Case</div>'+m.versions.map(function(v,vi){
+    var label=headerLabel(v);
+    return '<div class="head '+colClass(v)+(collapsedB.has(vi)?' collapsed':'')+'" data-vi="'+vi+'"><button class="collapse-btn" onclick="toggleColumnB('+vi+')" title="Collapse column">«</button><span class="head-content">'+label+'</span><span class="head-vlabel">'+label+'</span></div>';
+  }).join('');
+
+  if(!m.cases.length){
+    matrix2.insertAdjacentHTML('beforeend',
+      '<div class="case-head" style="grid-column:1/-1;text-align:center;padding:48px;color:var(--faint);font:13px var(--mono)">No cases yet — add entries to MODEL_B to begin</div>'
+    );
+    return;
+  }
+
+  m.cases.forEach(function(c,ci){
+    var sourceLabel='';
+    if(c.cells&&c.cells['html-source']&&c.cells['html-source'].sources){
+      var idx=activeSource2[ci]!=null?activeSource2[ci]:c.cells['html-source'].default;
+      sourceLabel=c.cells['html-source'].sources[idx].label;
+    }
+    matrix2.insertAdjacentHTML('beforeend',
+      '<div class="case-head"><strong>'+c.title+'</strong>'+
+      '<span class="case-id">'+c.id+(sourceLabel?' · '+sourceLabel:'')+'</span>'+
+      (c.source?'<div class="case-source">'+c.source+'</div>':'')+
+      '</div>'
+    );
+
+    m.versions.forEach(function(v,vi){
+      var cell=c.cells[v];
+      if(v==='html-source'&&cell&&cell.sources){
+        var idx=activeSource2[ci]!=null?activeSource2[ci]:(cell.default!=null?cell.default:cell.sources.length-1);
+        cell=cell.sources[idx];
+      }
+      var img=cell?cell.preview:null;
+      var el=document.createElement('div');
+      el.className='cell'+(collapsedB.has(vi)?' collapsed':'');
+      el.dataset.ci=ci;
+      el.dataset.vi=vi;
+      el.dataset.tab='new-skill';
+      var footLabel=v==='html-source'
+        ?'<span class="version-label html-src">HTML</span>'
+        :'<span class="version-label pptx-gen">'+headerLabel(v)+'</span>';
+      el.innerHTML=(img
+        ?'<button class="image-button"><img src="'+img+'" alt="'+c.title+' · '+headerLabel(v)+'"></button>'
+        :'<div class="image-button"><span class="empty">No artifact</span></div>'
+      )+'<span class="select-badge"></span>'+
+      '<div class="cell-foot">'+footLabel+
+      (cell&&cell.pptx?'<a href="'+cell.pptx+'" download>Download .pptx</a>':(cell&&cell.html?'<a href="'+cell.html+'" target="_blank">Open HTML ↗</a>':'<span>—</span>'))+
+      '</div>';
+      if(img) el.querySelector('.image-button').addEventListener('click',function(){
+        if(compareMode) return handleCompareClick(ci,vi);
+        currentTab='new-skill';
+        openModal(ci,vi);
+      });
+      matrix2.append(el);
+    });
+  });
+}
+
+/* ═══════════════════════════════════════
+   ZOOM MODAL (tab-aware)
+   ═══════════════════════════════════════ */
+function resolveModalCell(ci,vi){
+  var m=getModel();
+  var c=m.cases[ci];
+  var v=m.versions[vi];
+  var cell=c.cells[v];
+  if(v==='html-source'&&cell&&cell.sources){
+    var src=currentTab==='conversion'?activeSource:activeSource2;
+    var idx=src[ci]!=null?src[ci]:(cell.default!=null?cell.default:cell.sources.length-1);
+    return cell.sources[idx];
+  }
+  return cell;
+}
+
+function openModal(ci,vi){
+  active={ci:ci,vi:vi};
+  updateModal();
+  document.querySelector('#modal').classList.add('open');
+}
+
+function updateModal(){
+  if(!active) return;
+  var m=getModel();
+  var c=m.cases[active.ci];
+  var v=m.versions[active.vi];
+  var cell=resolveModalCell(active.ci,active.vi);
+  var img=cell?cell.preview:null;
+  document.querySelector('#modalTitle').textContent=c.title+' · '+headerLabel(v);
+  var image=document.querySelector('#modalImage');
+  image.src=img||'';
+  image.style.visibility=img?'visible':'hidden';
+}
+
+function closeModal(){
+  document.querySelector('#modal').classList.remove('open');
+  active=null;
+}
+
+document.querySelector('#modal').addEventListener('click',function(e){if(e.target.id==='modal')closeModal()});
+
+/* ═══════════════════════════════════════
+   COMPARE MODE (tab-aware)
+   ═══════════════════════════════════════ */
+var compareToggle=document.querySelector('#compareToggle');
+var compareBar=document.querySelector('#compareBar');
+var compareStatus=document.querySelector('#compareStatus');
+var compareClear=document.querySelector('#compareClear');
+var compareModal=document.querySelector('#compareModal');
+
+compareToggle.onclick=function(){
+  compareMode=!compareMode;
+  compareToggle.classList.toggle('active',compareMode);
+  compareBar.classList.toggle('active',compareMode);
+  if(!compareMode){clearCompare();updateCellStates()}
+};
+
+compareClear.onclick=function(){clearCompare();updateCellStates()};
+
+function clearCompare(){
+  compareSelections=[];
+  compareStatus.textContent='Click two slides to compare';
+}
+
+function updateCellStates(){
+  var m=getModel();
+  var container=getContainer();
+  container.querySelectorAll('.cell').forEach(function(el){
+    var ci=+el.dataset.ci,vi=+el.dataset.vi;
+    var c=m.cases[ci];
+    var v=m.versions[vi];
+    var cell=resolveModalCell(ci,vi);
+    var hasPreview=cell&&cell.preview;
+    el.classList.toggle('selectable',compareMode&&!!hasPreview);
+    var sel=compareSelections.find(function(s){return s.ci===ci&&s.vi===vi});
+    el.classList.toggle('selected',!!sel);
+    var badge=el.querySelector('.select-badge');
+    if(badge) badge.textContent=sel?sel.idx:'';
+  });
+}
+
+function handleCompareClick(ci,vi){
+  var existing=compareSelections.findIndex(function(s){return s.ci===ci&&s.vi===vi});
+  if(existing>=0){
+    compareSelections.splice(existing,1);
+    compareSelections.forEach(function(s,i){s.idx=i+1});
+    updateCellStates();
+    compareStatus.textContent=compareSelections.length===1?'Click one more slide':'Click two slides to compare';
+    return;
+  }
+  if(compareSelections.length>=2) compareSelections.shift();
+  compareSelections.push({ci:ci,vi:vi,idx:compareSelections.length+1});
+  compareSelections.forEach(function(s,i){s.idx=i+1});
+  updateCellStates();
+  if(compareSelections.length===2){
+    compareStatus.textContent='Comparing...';
+    openCompareModal();
+  } else {
+    compareStatus.textContent='Click one more slide';
+  }
+}
+
+function openCompareModal(){
+  var m=getModel();
+  var a=compareSelections[0],b=compareSelections[1];
+  var ca=m.cases[a.ci],cb=m.cases[b.ci];
+  var va=m.versions[a.vi],vb=m.versions[b.vi];
+  var cellA=resolveModalCell(a.ci,a.vi);
+  var cellB=resolveModalCell(b.ci,b.vi);
+  document.querySelector('#compareTitle').textContent=ca.title+(ca.id===cb.id?' — '+headerLabel(va)+' vs '+headerLabel(vb):' vs '+cb.title);
+  document.querySelector('#cmpLabel1').textContent=ca.title+' · '+headerLabel(va);
+  document.querySelector('#cmpLabel2').textContent=cb.title+' · '+headerLabel(vb);
+  document.querySelector('#cmpImg1').src=(cellA&&cellA.preview)||'';
+  document.querySelector('#cmpImg2').src=(cellB&&cellB.preview)||'';
+  compareModal.classList.add('open');
+}
+
+function closeCompareModal(){
+  compareModal.classList.remove('open');
+  compareStatus.textContent='Click two slides to compare';
+}
+
+/* ═══════════════════════════════════════
+   KEYBOARD NAVIGATION
+   ═══════════════════════════════════════ */
+addEventListener('keydown',function(e){
+  if(compareModal.classList.contains('open')){
+    if(e.key==='Escape'){closeCompareModal();return}
+    return;
+  }
+  if(!active) return;
+  var m=getModel();
+  if(e.key==='Escape') closeModal();
+  if(e.key==='ArrowLeft'){active.vi=Math.max(0,active.vi-1);updateModal()}
+  if(e.key==='ArrowRight'){active.vi=Math.min(m.versions.length-1,active.vi+1);updateModal()}
+});
+
+/* ═══════════════════════════════════════
+   TAB SWITCHING
+   ═══════════════════════════════════════ */
+document.querySelectorAll('.content-tab').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var tab=btn.dataset.tab;
+    if(tab===currentTab) return;
+    currentTab=tab;
+    document.querySelectorAll('.content-tab').forEach(function(b){b.classList.toggle('active',b.dataset.tab===tab)});
+    document.querySelector('#tab-conversion').style.display=tab==='conversion'?'':'none';
+    document.querySelector('#tab-new-skill').style.display=tab==='new-skill'?'':'none';
+    document.querySelector('#tabMeta').textContent=metaText(tab);
+    if(compareMode){compareMode=false;compareToggle.classList.remove('active');compareBar.classList.remove('active');clearCompare()}
+  });
+});
+
+/* ═══════════════════════════════════════
+   NAV SCROLL
+   ═══════════════════════════════════════ */
+var nav=document.getElementById('siteNav');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>8)});
+
+/* ═══════════════════════════════════════
+   INIT
+   ═══════════════════════════════════════ */
+render();
+renderB();
+</script>
+</body></html>
