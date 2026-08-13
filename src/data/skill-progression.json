@@ -3977,7 +3977,11 @@
             },
             {
               "tag": "ADDED",
-              "note": "Three personas: analyst (40bps hero + lever bars + classification table), executive ($8.4M hero + segmented bar + strategy-progression strip), consultant (lever bars with execution/structural badges + bridge-format findings)"
+              "note": "Three personas: analyst (40bps hero + lever bars + classification table), executive (full-width waterfall bridge chart as hero visual), consultant (lever bars with execution/structural badges + bridge-format findings)"
+            },
+            {
+              "tag": "CHANGED",
+              "note": "Executive redesigned: replaced findings-list + hero-stat + segmented-bar with a single waterfall bridge showing $10.5M price capture → three leakage bars → $2.1M net margin — the visual IS the argument"
             },
             {
               "tag": "ADDED",

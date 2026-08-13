@@ -11,10 +11,10 @@ let cleanup = null;
 
 function navigate(pageId) {
   if (cleanup) cleanup();
-  const [page, subtab] = pageId.split('/');
-  window.location.hash = pageId;
+  const page = pageId.split('/')[0];
+  window.location.hash = page;
   if (page === 'conversion') {
-    cleanup = mountConversion(appEl, { tab: subtab });
+    cleanup = mountConversion(appEl);
   } else if (page === 'all-versions') {
     cleanup = mountAllVersions(appEl);
   } else {

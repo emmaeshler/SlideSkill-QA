@@ -2,12 +2,67 @@
   "versions": [
     "html-source",
     "gen-1",
-    "gen-2"
+    "gen-2",
+    "gen-3",
+    "gen-4"
   ],
   "cases": [
     {
+      "id": "logistec-platform-exec",
+      "title": "Logistec — Dual-Engine Platform Strategy (Executive)",
+      "version": "V5",
+      "source": "logistec-v4-platform-strategy-executive",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-html.png",
+          "html": "../presentations/logistec-v4-platform-strategy-executive.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-pptx.png",
+          "pptx": "../presentations/logistec-v5-platform-strategy-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-pptx-gen2.png",
+          "pptx": "../presentations/logistec-v5-platform-strategy-executive.pptx"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-pptx-gen3.png",
+          "pptx": "../presentations/logistec-v5-platform-strategy-executive.pptx"
+        },
+        "gen-4": {
+          "preview": "html-to-pptx/screenshots/logistec-platform-executive-pptx-gen4.png",
+          "pptx": "../presentations/logistec-v5-platform-strategy-executive.pptx"
+        }
+      }
+    },
+    {
+      "id": "halvorsen-leakage-exec",
+      "title": "Halvorsen — FY25 Discount Leakage (Executive)",
+      "version": "V5",
+      "source": "halvorsen-v4-leakage-ranking-executive",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/halvorsen-v4-executive-html.png",
+          "html": "../presentations/halvorsen-v4-leakage-ranking-executive.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/halvorsen-v4-executive-pptx.png",
+          "pptx": "../presentations/halvorsen-v4-leakage-ranking-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/halvorsen-v4-executive-pptx-gen2.png",
+          "pptx": "../presentations/halvorsen-v4-leakage-ranking-executive.pptx"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/halvorsen-v4-executive-pptx-gen3.png",
+          "pptx": "../presentations/halvorsen-v4-leakage-ranking-executive.pptx"
+        }
+      }
+    },
+    {
       "id": "cascade",
-      "title": "Cascade \u2014 FY25 quarterly revenue mix",
+      "title": "Cascade — FY25 quarterly revenue mix",
+      "version": "V4",
       "source": "cascade-v4-revenue-mix-executive",
       "cells": {
         "html-source": {
@@ -37,7 +92,8 @@
     },
     {
       "id": "northstar",
-      "title": "Northstar Packaging \u2014 FY25 revenue mix",
+      "title": "Northstar Packaging — FY25 revenue mix",
+      "version": "V4",
       "source": "northstar-packaging-fy25",
       "cells": {
         "html-source": {
@@ -56,7 +112,8 @@
     },
     {
       "id": "sow-extension",
-      "title": "30-Day SOW Extension \u2014 Elephant Ventures",
+      "title": "30-Day SOW Extension — Elephant Ventures",
+      "version": "V4",
       "source": "sow-extension-v3-30day",
       "cells": {
         "html-source": {
@@ -75,7 +132,8 @@
     },
     {
       "id": "halvorsen-leakage",
-      "title": "Halvorsen \u2014 FY25 Discount Leakage Ranking",
+      "title": "Halvorsen — FY25 Discount Leakage Ranking",
+      "version": "V4",
       "source": "halvorsen-v3-leakage-ranking",
       "cells": {
         "html-source": {
