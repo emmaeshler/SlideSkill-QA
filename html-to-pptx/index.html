@@ -73,7 +73,7 @@ h1{font:700 clamp(28px,4vw,44px)/1.08 var(--display);letter-spacing:-.02em;margi
 .modal{position:fixed;inset:0;z-index:55;background:rgba(19,34,46,.92);display:none;grid-template-rows:auto 1fr auto;padding:18px}
 .modal.open{display:grid}
 .modal-bar{display:flex;justify-content:space-between;align-items:center;color:#fff;font:12px var(--mono)}
-.modal button{color:#fff;background:transparent;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:6px 10px;cursor:pointer}
+.modal button:not(.close-x){color:#fff;background:transparent;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:6px 10px;cursor:pointer}
 .modal img{max-width:96vw;max-height:88vh;margin:auto;object-fit:contain}
 .hint{text-align:center;color:#d6ebec;font:11px var(--mono)}
 
@@ -279,6 +279,25 @@ const MODEL_B={
         "gen-2":{
           "preview":"screenshots/logistec-platform-executive-pptx-gen2.png",
           "pptx":"../../presentations/logistec-v5-platform-strategy-executive.pptx"
+        }
+      }
+    },
+    {
+      "id":"halvorsen-leakage-exec",
+      "title":"Halvorsen — FY25 Discount Leakage (Executive)",
+      "source":"halvorsen-v4-leakage-ranking-executive",
+      "cells":{
+        "html-source":{
+          "preview":"screenshots/halvorsen-v4-executive-html.png",
+          "html":"../../presentations/halvorsen-v4-leakage-ranking-executive.html"
+        },
+        "gen-1":{
+          "preview":"screenshots/halvorsen-v4-executive-pptx.png",
+          "pptx":"../../presentations/halvorsen-v4-leakage-ranking-executive.pptx"
+        },
+        "gen-2":{
+          "preview":"screenshots/halvorsen-v4-executive-html-gen2.png",
+          "pptx":"../../presentations/halvorsen-v4-leakage-ranking-executive.pptx"
         }
       }
     }

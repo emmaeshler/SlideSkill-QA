@@ -11,10 +11,11 @@ let cleanup = null;
 
 function navigate(pageId) {
   if (cleanup) cleanup();
+  const [page, subtab] = pageId.split('/');
   window.location.hash = pageId;
-  if (pageId === 'conversion') {
-    cleanup = mountConversion(appEl);
-  } else if (pageId === 'all-versions') {
+  if (page === 'conversion') {
+    cleanup = mountConversion(appEl, { tab: subtab });
+  } else if (page === 'all-versions') {
     cleanup = mountAllVersions(appEl);
   } else {
     cleanup = mountProgression(appEl);
@@ -25,7 +26,8 @@ const nav = createNav(navEl, { onNavigate: navigate });
 
 function initFromHash() {
   const hash = window.location.hash.replace('#', '') || 'all-versions';
-  nav.render(hash);
+  const page = hash.split('/')[0];
+  nav.render(page);
   navigate(hash);
 }
 

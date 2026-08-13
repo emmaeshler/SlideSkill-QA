@@ -12,7 +12,7 @@ function colClass(v) {
   return v === 'html-source' ? 'html-col' : 'pptx-col';
 }
 
-export function mount(root) {
+export function mount(root, opts = {}) {
   root.innerHTML = `
     <main class="wrap" style="padding-top:52px">
       <header class="mast">
@@ -48,11 +48,12 @@ export function mount(root) {
     </div>
     <div id="compareModal" class="compare-modal" role="dialog" aria-modal="true" aria-label="Side-by-side comparison">
       <button class="close-x" aria-label="Close">&times;</button>
-      <div class="compare-modal-bar"><span id="compareTitle">Comparison</span><button id="compareCopyPng" class="compare-copy-png">Copy as PNG</button></div>
+      <div class="compare-modal-bar"><span id="compareTitle">Comparison</span></div>
       <div class="compare-panes">
         <div class="compare-pane"><div id="compareLabel1" class="compare-pane-label"></div><img id="compareImg1" alt="Selection A"></div>
         <div class="compare-pane"><div id="compareLabel2" class="compare-pane-label"></div><img id="compareImg2" alt="Selection B"></div>
       </div>
+      <div class="compare-modal-foot"><button id="compareCopyPng" class="compare-copy-png">Copy as PNG</button></div>
     </div>
     <footer class="foot"><div class="wrap foot-line"><span>Pepper · PowerPoint Skill</span></div></footer>`;
 
@@ -63,7 +64,15 @@ export function mount(root) {
   const modal = createModal(root.querySelector('#modal'));
   const compare = createCompare(root.querySelector('#compareModal'));
 
-  let currentTab = 'conversion';
+  const initialTab = opts.tab === 'v5' ? 'new-skill' : 'conversion';
+  let currentTab = initialTab;
+
+  if (initialTab === 'new-skill') {
+    root.querySelector('#tab-conversion').style.display = 'none';
+    root.querySelector('#tab-new-skill').style.display = '';
+    root.querySelectorAll('.content-tab').forEach((b) => b.classList.toggle('active', b.dataset.tab === 'new-skill'));
+    root.querySelector('#tabMeta').textContent = `${MODEL_B.cases.length} cases · ${MODEL_B.versions.length - 1} generations`;
+  }
   let compareMode = false;
   const activeSource = {};
   const activeSource2 = {};
@@ -308,6 +317,7 @@ export function mount(root) {
       const tab = btn.dataset.tab;
       if (tab === currentTab) return;
       currentTab = tab;
+      history.replaceState(null, '', '#conversion' + (tab === 'new-skill' ? '/v5' : ''));
       root.querySelectorAll('.content-tab').forEach((b) => b.classList.toggle('active', b.dataset.tab === tab));
       root.querySelector('#tab-conversion').style.display = tab === 'conversion' ? '' : 'none';
       root.querySelector('#tab-new-skill').style.display = tab === 'new-skill' ? '' : 'none';

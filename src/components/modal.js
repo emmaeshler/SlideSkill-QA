@@ -9,8 +9,8 @@ export function createModal(modalEl) {
   const personaTabsEl = modalEl.querySelector('#modalPersonaTabs');
   const copyBtn = modalEl.querySelector('#modalCopyBtn');
 
-  function open(ci, vi, slot) {
-    active = { ci, vi, slot };
+  function open(ci, vi, slot, variantIdx) {
+    active = { ci, vi, slot, variantIdx };
     update();
     modalEl.classList.add('open');
   }

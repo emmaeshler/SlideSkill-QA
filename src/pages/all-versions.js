@@ -37,11 +37,12 @@ export function mount(root) {
     </div>
     <div id="compareModal" class="compare-modal" role="dialog" aria-modal="true" aria-label="Side-by-side comparison">
       <button class="close-x" aria-label="Close">&times;</button>
-      <div class="compare-modal-bar"><span id="compareTitle"></span><button id="compareCopyPng" class="compare-copy-png">Copy as PNG</button></div>
+      <div class="compare-modal-bar"><span id="compareTitle"></span></div>
       <div class="compare-panes">
         <div class="compare-pane"><div id="compareLabel1" class="compare-pane-label"></div><img id="compareImg1" alt="Compare slide A"></div>
         <div class="compare-pane"><div id="compareLabel2" class="compare-pane-label"></div><img id="compareImg2" alt="Compare slide B"></div>
       </div>
+      <div class="compare-modal-foot"><button id="compareCopyPng" class="compare-copy-png">Copy as PNG</button></div>
     </div>
     <footer class="foot"><div class="wrap foot-line">
       <span>PPTX-QA GALLERY</span>

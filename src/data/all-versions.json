@@ -74,8 +74,8 @@
       "runtime": "skill v4"
     },
     "v5-current": {
-      "model": "hand-curated",
-      "runtime": "skill v5"
+      "model": "agents",
+      "runtime": "3 personas + framework components + goldens"
     }
   },
   "cases": [
@@ -2634,6 +2634,75 @@
               },
               "truth": "versions/v3-current/previews/regional-sales.png",
               "preview": "versions/v3-current/previews/regional-sales.png"
+            }
+          ]
+        },
+        "v5-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v5-current/previews/regional-sales-executive.png",
+              "preview": "versions/v5-current/previews/regional-sales-executive.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/regional-sales-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/regional-sales-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/regional-sales-consultant.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "novaria",
+      "title": "Novaria Example",
+      "cells": {
+        "baseline": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/baseline/curtiss/preview/slide-01.png",
+              "preview": "versions/baseline/curtiss/preview/slide-01.png"
+            }
+          ]
+        },
+        "v5-current": {
+          "runs": [
+            {
+              "runId": "curated",
+              "meta": {
+                "status": "passed",
+                "engineWarnings": []
+              },
+              "truth": "versions/v5-current/previews/novaria-v1-analyst.png",
+              "preview": "versions/v5-current/previews/novaria-v1-analyst.png"
+            }
+          ],
+          "previews": [
+            {
+              "label": "Variant 1",
+              "src": "versions/v5-current/previews/novaria-v1-analyst.png"
+            },
+            {
+              "label": "Variant 2",
+              "src": "versions/v5-current/previews/novaria-v2-analyst.png"
             }
           ]
         }

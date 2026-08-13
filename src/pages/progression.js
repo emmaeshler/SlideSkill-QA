@@ -12,8 +12,7 @@ export function mount(root) {
         <h1>HTML skill progression analysis</h1>
         <p class="lede">This skill is the design engine. See <strong>PPTX Conversion</strong> to see its conversion to PowerPoint.</p>
         <div class="meta">
-          <span>${MODEL.cases.length} cases · ${MODEL.versions.length} versions · 3 personas per case</span>
-          <button id="compareToggle" class="compare-toggle">Compare mode</button>
+          <button id="compareToggle" class="compare-toggle">Compare slides</button>
         </div>
         <div id="compareBar" class="compare-bar">
           <span id="compareStatus" class="compare-status">Select two slides to compare</span>
@@ -35,16 +34,12 @@ export function mount(root) {
     </div>
     <div id="compareModal" class="compare-modal" role="dialog" aria-modal="true" aria-label="Side-by-side comparison">
       <button class="close-x" aria-label="Close">&times;</button>
-      <div class="compare-modal-bar"><span id="compareTitle"></span><button id="compareCopyPng" class="compare-copy-png">Copy as PNG</button></div>
+      <div class="compare-modal-bar"><span id="compareTitle"></span></div>
       <div class="compare-panes">
         <div class="compare-pane"><div id="compareLabel1" class="compare-pane-label"></div><img id="compareImg1" alt="Compare slide A"></div>
         <div class="compare-pane"><div id="compareLabel2" class="compare-pane-label"></div><img id="compareImg2" alt="Compare slide B"></div>
       </div>
-    </div>
-    <div id="changesModal" class="changes-modal" role="dialog" aria-modal="true" aria-label="Version changes">
-      <button class="close-x" aria-label="Close">&times;</button>
-      <div class="changes-modal-bar"><span id="changesTitle"></span></div>
-      <div id="changesBody" class="changes-modal-body"></div>
+      <div class="compare-modal-foot"><button id="compareCopyPng" class="compare-copy-png">Copy as PNG</button></div>
     </div>
     <footer class="foot"><div class="wrap foot-line">
       <span>SKILL LAB GALLERY</span>
@@ -108,7 +103,7 @@ export function mount(root) {
 
     MODEL.cases.forEach((c, ci) => {
       matrixEl.insertAdjacentHTML('beforeend',
-        `<div class="case-head"><strong>${c.title}</strong><span class="case-id">${c.id}</span></div>`
+        `<div class="case-head"><strong>${c.title}</strong><span class="case-id">${c.id}</span>${c.prompt ? `<button class="copy-prompt-btn" data-ci="${ci}">⧉ Copy prompt</button>` : ''}</div>`
       );
 
       MODEL.versions.forEach((v, vi) => {
@@ -121,7 +116,15 @@ export function mount(root) {
         el.dataset.ci = ci;
         el.dataset.vi = vi;
 
-        if (previews && previews.length) {
+        const variants = cell?.variants;
+        if (variants && variants.length) {
+          el.innerHTML =
+            '<span class="select-badge"></span>' +
+            `<button class="image-button active" data-variant="0"><img src="${variants[0].src}" alt="${c.title} · ${v} · ${variants[0].label}"></button>` +
+            variants.slice(1).map((vr, i) =>
+              `<button class="image-button" data-variant="${i + 1}" style="display:none"><img src="${vr.src}" alt="${c.title} · ${v} · ${vr.label}"></button>`
+            ).join('');
+        } else if (previews && previews.length) {
           el.innerHTML =
             '<span class="select-badge"></span>' +
             '<div class="persona-tabs">' +
@@ -138,11 +141,33 @@ export function mount(root) {
               : '<div class="image-button"><span class="empty">No artifact</span></div>');
         }
 
+        const htmlLink = variants ? variants[0].html : cell?.html;
         el.innerHTML +=
           '<div class="cell-foot">' +
-          (cell?.pptx ? `<a href="${cell.pptx}" download>Download .pptx</a>` : cell?.html ? `<a href="${cell.html}" target="_blank">Open HTML ↗</a>` : '') +
-          (changes.length ? `<button class="changes-chip" data-ci="${ci}" data-vi="${vi}">${changes.length} change${changes.length === 1 ? '' : 's'}</button>` : '') +
+          (cell?.pptx ? `<a href="${cell.pptx}" download>Download .pptx</a>` : htmlLink ? `<a class="html-link" href="${htmlLink}" target="_blank">Open HTML ↗</a>` : '') +
           '</div>';
+
+        if (variants && variants.length > 1) {
+          el.innerHTML +=
+            '<div class="variant-wrap"><span class="variant-label">Layout</span>' +
+            `<select class="variant-select" data-ci="${ci}" data-vi="${vi}">` +
+            variants.map((vr, vri) => `<option value="${vri}">${vr.label}</option>`).join('') +
+            '</select></div>';
+        }
+
+        const variantSelect = el.querySelector('.variant-select');
+        if (variantSelect) {
+          variantSelect.addEventListener('change', () => {
+            const idx = parseInt(variantSelect.value);
+            el.querySelectorAll('.image-button[data-variant]').forEach((btn) => {
+              const show = parseInt(btn.dataset.variant) === idx;
+              btn.style.display = show ? 'block' : 'none';
+              btn.classList.toggle('active', show);
+            });
+            const link = el.querySelector('.html-link');
+            if (link && variants[idx]?.html) link.href = variants[idx].html;
+          });
+        }
 
         el.querySelectorAll('.persona-tab').forEach((tab) => {
           tab.addEventListener('click', () => {
@@ -156,9 +181,14 @@ export function mount(root) {
         el.querySelectorAll('.image-button').forEach((btn) => {
           btn.addEventListener('click', () => {
             if (compareMode) { handleCompareClick(ci, vi); return; }
-            const slot = btn.dataset.slot;
-            if (slot !== undefined && previews) modal.open(ci, vi, parseInt(slot));
-            else modal.open(ci, vi);
+            const variantIdx = btn.dataset.variant;
+            if (variantIdx !== undefined && variants) {
+              modal.open(ci, vi, undefined, parseInt(variantIdx));
+            } else {
+              const slot = btn.dataset.slot;
+              if (slot !== undefined && previews) modal.open(ci, vi, parseInt(slot));
+              else modal.open(ci, vi);
+            }
           });
         });
 
@@ -171,11 +201,26 @@ export function mount(root) {
     const c = MODEL.cases[active.ci];
     const v = MODEL.versions[active.vi];
     const cell = c.cells[v];
+    const variants = cell?.variants;
     const previews = cell?.previews;
     let img = cell?.preview;
     let suffix = '';
 
-    if (previews && previews.length) {
+    if (variants && variants.length) {
+      const vi2 = active.variantIdx !== undefined ? active.variantIdx : 0;
+      img = variants[vi2].src;
+      suffix = ' · ' + variants[vi2].label;
+      els.personaTabsEl.style.display = 'flex';
+      els.personaTabsEl.innerHTML = variants.map((vr, vri) =>
+        `<button class="modal-persona-tab${vri === vi2 ? ' active' : ''}" data-slot="${vri}">${vr.label}</button>`
+      ).join('');
+      els.personaTabsEl.querySelectorAll('.modal-persona-tab').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          modal.active.variantIdx = parseInt(btn.dataset.slot);
+          modal.update();
+        });
+      });
+    } else if (previews && previews.length) {
       const si = active.slot !== undefined ? active.slot : previews.length - 1;
       img = previews[si].src;
       suffix = ' · ' + previews[si].label;
@@ -280,10 +325,6 @@ export function mount(root) {
   // Keyboard
   const keyHandler = (e) => {
     const compareModalEl = root.querySelector('#compareModal');
-    if (changesModalEl.classList.contains('open')) {
-      if (e.key === 'Escape') changesModalEl.classList.remove('open');
-      return;
-    }
     if (compareModalEl.classList.contains('open')) {
       if (e.key === 'Escape') compare.closeCompare();
       return;
@@ -294,28 +335,18 @@ export function mount(root) {
     if (e.key === 'ArrowRight') modal.navigate(1, MODEL.versions.length - 1);
   };
 
-  const changesModalEl = root.querySelector('#changesModal');
-  const changesTitle = root.querySelector('#changesTitle');
-  const changesBody = root.querySelector('#changesBody');
-  changesModalEl.querySelector('.close-x').addEventListener('click', () => changesModalEl.classList.remove('open'));
-  changesModalEl.addEventListener('click', (e) => { if (e.target === changesModalEl) changesModalEl.classList.remove('open'); });
-
   matrixEl.addEventListener('click', (e) => {
-    const chip = e.target.closest('.changes-chip');
-    if (!chip) return;
-    const ci = parseInt(chip.dataset.ci);
-    const vi = parseInt(chip.dataset.vi);
-    const c = MODEL.cases[ci];
-    const v = MODEL.versions[vi];
-    const changes = c.cells[v]?.changes || [];
-    const info = VERSION_INFO[v] || [v, ''];
-    changesTitle.textContent = `${c.title} — ${info[0]} changes from previous version`;
-    changesBody.innerHTML = changes.map((ch) => {
-      const t = ch.tag.toLowerCase();
-      const cls = t.startsWith('ban') ? 'ban' : { removed: 'removed', added: 'added', changed: 'changed', fix: 'fix' }[t] || 'note';
-      return `<div class="change"><span class="change-tag ${cls}">${ch.tag}</span><span>${ch.note}</span></div>`;
-    }).join('');
-    changesModalEl.classList.add('open');
+    const copyBtn = e.target.closest('.copy-prompt-btn');
+    if (copyBtn) {
+      const ci = parseInt(copyBtn.dataset.ci);
+      const text = MODEL.cases[ci]?.prompt;
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(() => {
+        copyBtn.textContent = '✓ Copied';
+        copyBtn.classList.add('copied');
+        setTimeout(() => { copyBtn.textContent = '⧉ Copy prompt'; copyBtn.classList.remove('copied'); }, 1500);
+      });
+    }
   });
 
   window.addEventListener('keydown', keyHandler);

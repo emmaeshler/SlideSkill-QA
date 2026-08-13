@@ -33,11 +33,10 @@ body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.55 v
 h1 { font: 700 clamp(28px, 4vw, 44px)/1.08 var(--display); letter-spacing: -0.02em; margin: 0.35rem 0 0.6rem; }
 h1 em { color: var(--accent); font-style: normal; }
 .lede { color: var(--soft); max-width: 72ch; }
-.meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
-.meta span { background: var(--card); border: 1px solid var(--line); border-radius: 99px; padding: 5px 9px; }
+.meta { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
 
 /* ── Matrix grid ─────────────────────────────── */
-.matrix-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--card); box-shadow: var(--shadow); }
+.matrix-wrap { overflow: auto; max-height: calc(100dvh - 200px); border: 1px solid var(--line); border-radius: 12px; background: var(--card); box-shadow: var(--shadow); }
 .matrix { display: grid; min-width: max-content; }
 .head, .case-head, .cell { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .head { position: sticky; top: 0; z-index: 3; background: var(--ink); color: #fff; padding: 13px 14px; font: 600 13px/1.3 var(--mono); }
@@ -54,6 +53,9 @@ h1 em { color: var(--accent); font-style: normal; }
 .case-head strong { display: block; font: 600 15px/1.3 var(--display); }
 .case-head .case-id { color: var(--faint); font: 11px var(--mono); }
 .case-head .case-source { color: var(--soft); font: 11px/1.4 var(--body); margin-top: 4px; }
+.copy-prompt-btn { display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; padding: 3px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); color: var(--faint); font: 11px var(--mono); cursor: pointer; transition: all 0.15s; }
+.copy-prompt-btn:hover { background: var(--line); color: var(--ink); }
+.copy-prompt-btn.copied { color: var(--accent); border-color: var(--accent); }
 
 .prompt-wrap { position: relative; margin-top: 6px; }
 .case-head .prompt { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; padding: 5px 28px 5px 7px; background: var(--tint); border-radius: 4px; color: var(--soft); font: italic 12px/1.4 var(--body); word-break: break-word; }
@@ -125,8 +127,9 @@ select { max-width: 145px; border: 1px solid var(--line); border-radius: 6px; ba
 .modal-persona-tab.active { color: #fff; background: var(--primary); border-color: var(--primary); }
 
 /* ── Compare mode ────────────────────────────── */
-.compare-toggle { background: var(--card); border: 1px solid var(--line); border-radius: 99px; padding: 7px 14px; cursor: pointer; font: 600 11px/1.3 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--soft); transition: all 0.15s; }
-.compare-toggle.on, .compare-toggle.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.compare-toggle { background: var(--primary); color: #fff; border: none; border-radius: 8px; padding: 9px 18px; cursor: pointer; font: 600 13px/1 var(--sans); letter-spacing: 0; text-transform: none; transition: all 0.15s; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+.compare-toggle:hover { filter: brightness(1.1); }
+.compare-toggle.on, .compare-toggle.active { background: var(--ink); color: #fff; }
 .compare-bar { display: none; align-items: center; gap: 12px; margin-top: 18px; }
 .compare-bar.active { display: flex; }
 .compare-status { font: 11px var(--mono); color: var(--soft); }
@@ -145,7 +148,8 @@ select { max-width: 145px; border: 1px solid var(--line); border-radius: 6px; ba
 .compare-panes { flex: 1; display: grid; grid-template-rows: 1fr 1fr; gap: 12px; min-height: 0; }
 .compare-pane { display: flex; flex-direction: column; align-items: center; gap: 6px; min-height: 0; overflow: hidden; }
 .compare-pane-label { color: #9fc9d3; font: 600 12px/1.3 var(--mono); text-align: center; }
-.compare-copy-png { margin-left: auto; padding: 5px 14px; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 6px; background: transparent; color: #fff; font: 600 11px/1.3 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+.compare-modal-foot { display: flex; justify-content: center; padding-top: 12px; }
+.compare-copy-png { padding: 6px 18px; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 6px; background: transparent; color: #fff; font: 600 11px/1.3 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
 .compare-copy-png:hover { background: rgba(255, 255, 255, 0.15); }
 .compare-pane img { max-width: 100%; max-height: calc(50vh - 60px); object-fit: contain; }
 
@@ -198,6 +202,22 @@ select { max-width: 145px; border: 1px solid var(--line); border-radius: 6px; ba
 .site-nav.scrolled .page-tab { color: var(--faint); }
 .site-nav.scrolled .page-tab:hover { color: var(--ink); background: var(--paper); }
 .site-nav.scrolled .page-tab.active { color: var(--ink); background: var(--paper); }
+
+/* ── Variant dropdown ────────────────────────── */
+.variant-wrap { display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+.variant-select {
+  appearance: none; -webkit-appearance: none;
+  background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+  padding: 4px 24px 4px 8px;
+  font: 600 10px/1.3 var(--mono); letter-spacing: .04em; color: var(--soft);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238493a0'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 8px center; background-size: 8px 5px;
+  transition: border-color .15s;
+}
+.variant-select:hover { border-color: var(--accent); }
+.variant-select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.variant-label { font: 600 10px/1.3 var(--mono); color: var(--faint); letter-spacing: .04em; text-transform: uppercase; }
 
 /* ── Footer ──────────────────────────────────── */
 .foot { border-top: 1px solid var(--line); margin-top: 40px; padding: 18px 0 28px; color: var(--soft); }

@@ -9,8 +9,8 @@
   "cases": [
     {
       "id": "apex",
-      "title": "Apex — smaller group pricing exercises",
-      "prompt": "Create an executive slide analyzing discount leakage across Apex Components’ customer portfolio. The slide should communicate that inconsistent discounting—particularly on mid-tier accounts—is eroding margin despite business growth. The central finding is a 6-percentage-point discount gap: Oak Street Industrial receives a 24% discount, compared with 18% for the company’s largest strategic account.\n\nUse the following customer data:\n\nNorthstar Manufacturing Group: $10M revenue, $100 list price, $82 realized price, 18% discount, 41% margin\nOak Street Industrial: $8M revenue, $100 list price, $76 realized price, 24% discount, 34% margin\nPioneer Process Solutions: $1M revenue, $100 list price, $88 realized price, 12% discount, 46% margin\n\nExplain the pattern: Oak Street receives the deepest discount despite generating less revenue than Northstar. Meanwhile, the much smaller Pioneer account is priced more tightly than either larger account. The lack of a consistent relationship between account value and discount level suggests ad hoc negotiation rather than strategic pricing.\n\nInclude these stakeholder observations as supporting evidence:\n\nSales Manager: “Sales reps often discount to close deals quickly, even when customers have limited alternatives.”\nFinance Director: “Approval thresholds exist, but exceptions are common and not always documented.”\n\nConclude with the executive implication: volume is growing, but revenue remains flat because uncontrolled discount exceptions are giving away the gains. The business needs stronger approval controls and more consistent discount governance across comparable accounts.",
+      "title": "Apex \u2014 smaller group pricing exercises",
+      "prompt": "Create an executive slide analyzing discount leakage across Apex Components\u2019 customer portfolio. The slide should communicate that inconsistent discounting\u2014particularly on mid-tier accounts\u2014is eroding margin despite business growth. The central finding is a 6-percentage-point discount gap: Oak Street Industrial receives a 24% discount, compared with 18% for the company\u2019s largest strategic account.\n\nUse the following customer data:\n\nNorthstar Manufacturing Group: $10M revenue, $100 list price, $82 realized price, 18% discount, 41% margin\nOak Street Industrial: $8M revenue, $100 list price, $76 realized price, 24% discount, 34% margin\nPioneer Process Solutions: $1M revenue, $100 list price, $88 realized price, 12% discount, 46% margin\n\nExplain the pattern: Oak Street receives the deepest discount despite generating less revenue than Northstar. Meanwhile, the much smaller Pioneer account is priced more tightly than either larger account. The lack of a consistent relationship between account value and discount level suggests ad hoc negotiation rather than strategic pricing.\n\nInclude these stakeholder observations as supporting evidence:\n\nSales Manager: \u201cSales reps often discount to close deals quickly, even when customers have limited alternatives.\u201d\nFinance Director: \u201cApproval thresholds exist, but exceptions are common and not always documented.\u201d\n\nConclude with the executive implication: volume is growing, but revenue remains flat because uncontrolled discount exceptions are giving away the gains. The business needs stronger approval controls and more consistent discount governance across comparable accounts.",
       "cells": {
         "baseline": {
           "preview": "versions/baseline/apex/preview/slide-01.png",
@@ -19,7 +19,7 @@
             "schemaVersion": 1,
             "id": "apex_discount_leakage",
             "title": "Discount Leakage | Inconsistent discounting erodes margin across the customer portfolio",
-            "subtitle": "Apex Components — Customer Discount & Margin Analysis",
+            "subtitle": "Apex Components \u2014 Customer Discount & Margin Analysis",
             "notes": "So-what: Volume is growing but revenue is flat because discount exceptions are granted without visibility or controls. Smaller customers sometimes get better pricing than strategic accounts.",
             "layout": "canvas",
             "content": {
@@ -57,7 +57,7 @@
                   "y": 0.15,
                   "w": 0.46,
                   "h": 0.22,
-                  "text": "\"Sales reps often discount to close deals quickly, even when customers have limited alternatives.\"\n— Sales Manager",
+                  "text": "\"Sales reps often discount to close deals quickly, even when customers have limited alternatives.\"\n\u2014 Sales Manager",
                   "fontSize": 10,
                   "textColor": "textDark",
                   "align": "left",
@@ -75,7 +75,7 @@
                   "y": 0.15,
                   "w": 0.46,
                   "h": 0.22,
-                  "text": "\"Approval thresholds exist, but exceptions are common and not always documented.\"\n— Finance Director",
+                  "text": "\"Approval thresholds exist, but exceptions are common and not always documented.\"\n\u2014 Finance Director",
                   "fontSize": 10,
                   "textColor": "textDark",
                   "align": "left",
@@ -144,7 +144,7 @@
                   "y": 0.87,
                   "w": 0.96,
                   "h": 0.1,
-                  "text": "⚠ Oak Street ($8M) receives the deepest discounts at 24% — 6 pts above the largest account — suggesting inconsistent negotiation, not strategic pricing",
+                  "text": "\u26a0 Oak Street ($8M) receives the deepest discounts at 24% \u2014 6 pts above the largest account \u2014 suggesting inconsistent negotiation, not strategic pricing",
                   "fontSize": 11,
                   "bold": true,
                   "textColor": "FFFFFF",
@@ -170,7 +170,7 @@
             "schemaVersion": 1,
             "id": "apex_discount_leakage",
             "title": "Discount Leakage | Inconsistent discounting erodes margin across the customer portfolio",
-            "subtitle": "Apex Components — Customer Discount & Margin Analysis",
+            "subtitle": "Apex Components \u2014 Customer Discount & Margin Analysis",
             "notes": "So-what: Volume is growing but revenue is flat because discount exceptions are granted without visibility or controls. Smaller customers sometimes get better pricing than strategic accounts.",
             "layout": "canvas",
             "content": {
@@ -188,7 +188,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "discount gap — mid-tier accounts priced below strategic",
+                  "text": "discount gap \u2014 mid-tier accounts priced below strategic",
                   "x": 0.15,
                   "y": 0.04,
                   "w": 0.5,
@@ -218,7 +218,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "\"Sales reps often discount to close deals quickly, even when customers have limited alternatives.\"\n\n— Sales Manager",
+                  "text": "\"Sales reps often discount to close deals quickly, even when customers have limited alternatives.\"\n\n\u2014 Sales Manager",
                   "x": 0.05,
                   "y": 0.15,
                   "w": 0.41,
@@ -239,7 +239,7 @@
                   "items": [
                     {
                       "kind": "text",
-                      "text": "\"Approval thresholds exist, but exceptions are common and not always documented.\"\n\n— Finance Director",
+                      "text": "\"Approval thresholds exist, but exceptions are common and not always documented.\"\n\n\u2014 Finance Director",
                       "x": 0.04,
                       "y": 0.04,
                       "w": 0.92,
@@ -304,7 +304,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "Key pattern: Oak Street ($8M) receives the deepest discounts at 24% — 6 pts above the largest account.\nPioneer ($1M) is priced tighter than the strategic account. The inversion signals ad-hoc negotiation, not strategy.",
+                  "text": "Key pattern: Oak Street ($8M) receives the deepest discounts at 24% \u2014 6 pts above the largest account.\nPioneer ($1M) is priced tighter than the strategic account. The inversion signals ad-hoc negotiation, not strategy.",
                   "x": 0.02,
                   "y": 0.8,
                   "w": 0.96,
@@ -321,7 +321,7 @@
                   "y": 0.89,
                   "w": 0.96,
                   "h": 0.08,
-                  "text": "Volume is growing but revenue is flat — discount exceptions without controls are giving away the gains",
+                  "text": "Volume is growing but revenue is flat \u2014 discount exceptions without controls are giving away the gains",
                   "fontSize": 11,
                   "bold": true,
                   "textColor": "FFFFFF",
@@ -349,7 +349,7 @@
             },
             {
               "tag": "CHANGED",
-              "note": "Quote cards now asymmetric — left uses accent bar + tinted bg, right uses tinted group — breaking visual sameness"
+              "note": "Quote cards now asymmetric \u2014 left uses accent bar + tinted bg, right uses tinted group \u2014 breaking visual sameness"
             },
             {
               "tag": "REMOVED",
@@ -357,7 +357,7 @@
             },
             {
               "tag": "ADDED",
-              "note": "Pattern analysis text between table and callout — explains the discount inversion, not just shows it"
+              "note": "Pattern analysis text between table and callout \u2014 explains the discount inversion, not just shows it"
             }
           ]
         },
@@ -376,7 +376,7 @@
               "src": "versions/v5-current/previews/apex-consultant.png"
             }
           ],
-          "title": "v5 — Analyst + Executive + Consultant",
+          "title": "v5 \u2014 Analyst + Executive + Consultant",
           "warnings": [],
           "changes": [
             {
@@ -398,7 +398,7 @@
             }
           ],
           "html": "../presentations/apex-pricing-diagnostic-v4.html",
-          "title": "Pricing Diagnostic — No Pricing Framework, Anomaly-Only Highlighting",
+          "title": "Pricing Diagnostic \u2014 No Pricing Framework, Anomaly-Only Highlighting",
           "warnings": [],
           "changes": [
             {
@@ -443,11 +443,11 @@
             },
             {
               "tag": "CHANGED",
-              "note": "Customer annotations use anomaly-only highlighting — only Oak Street gets --action color"
+              "note": "Customer annotations use anomaly-only highlighting \u2014 only Oak Street gets --action color"
             },
             {
               "tag": "CHANGED",
-              "note": "Lead KPI changed from numeric (12 pts / 2× / 0 of 3) to qualitative 'No pricing framework'"
+              "note": "Lead KPI changed from numeric (12 pts / 2\u00d7 / 0 of 3) to qualitative 'No pricing framework'"
             },
             {
               "tag": "CHANGED",
@@ -462,16 +462,16 @@
         "v3": {
           "preview": "versions/v3-current/previews/apex.png",
           "html": "../presentations/discount-leakage-apex-portfolio.html",
-          "title": "Mid-tier Oak Street’s 24% discount undercuts the largest account’s 18%",
+          "title": "Mid-tier Oak Street\u2019s 24% discount undercuts the largest account\u2019s 18%",
           "warnings": [],
           "changes": [
             {
               "tag": "CHANGED",
-              "note": "Layout: PPTX canvas-positioned elements → HTML two-column split (54/46) with CSS grid"
+              "note": "Layout: PPTX canvas-positioned elements \u2192 HTML two-column split (54/46) with CSS grid"
             },
             {
               "tag": "ADDED",
-              "note": "Horizontal discount bars with inline price waterfall labels ($100 → $76) — makes the inversion pattern immediately visible"
+              "note": "Horizontal discount bars with inline price waterfall labels ($100 \u2192 $76) \u2014 makes the inversion pattern immediately visible"
             },
             {
               "tag": "ADDED",
@@ -495,7 +495,7 @@
     },
     {
       "id": "cascade",
-      "title": "Cascade — FY25 quarterly revenue mix (expects column-stacked)",
+      "title": "Cascade \u2014 FY25 quarterly revenue mix (expects column-stacked)",
       "prompt": "Please make a slide for the attached content",
       "cells": {
         "baseline": {
@@ -505,8 +505,8 @@
             "schemaVersion": 1,
             "id": "cascade_revenue_mix",
             "title": "FY25 Quarterly Revenue | Mix shift from water to energy accelerated through the year",
-            "subtitle": "Cascade Beverage Group — Net Revenue by Product Family ($M)",
-            "notes": "So-what: Energy grew 70.5% Q1→Q4 and now represents 27% of revenue. Still water and Private Label are in managed decline. The quarterly stack shows a company transforming its revenue base.",
+            "subtitle": "Cascade Beverage Group \u2014 Net Revenue by Product Family ($M)",
+            "notes": "So-what: Energy grew 70.5% Q1\u2192Q4 and now represents 27% of revenue. Still water and Private Label are in managed decline. The quarterly stack shows a company transforming its revenue base.",
             "layout": "canvas",
             "content": {
               "items": [
@@ -587,7 +587,7 @@
                   "y": 0.83,
                   "w": 0.94,
                   "h": 0.13,
-                  "text": "Energy: $22.4M → $38.2M (+70.5%)  |  Still: −11.1%  |  Private Label: −13.2% (deliberate)  |  Sparkling anchor at ~40% with +19.9% growth",
+                  "text": "Energy: $22.4M \u2192 $38.2M (+70.5%)  |  Still: \u221211.1%  |  Private Label: \u221213.2% (deliberate)  |  Sparkling anchor at ~40% with +19.9% growth",
                   "fontSize": 10,
                   "textColor": "textDark",
                   "align": "center",
@@ -612,7 +612,7 @@
             "schemaVersion": 1,
             "id": "cascade_revenue_mix",
             "title": "FY25 Quarterly Revenue | Mix shift from water to energy accelerated through the year",
-            "subtitle": "Cascade Beverage Group — Net Revenue by Product Family ($M)",
+            "subtitle": "Cascade Beverage Group \u2014 Net Revenue by Product Family ($M)",
             "notes": "So-what: Energy grew 70.5% Q1-Q4 and now represents 27% of revenue. Still water and Private Label are in managed decline. The quarterly stack shows a company transforming its revenue base.",
             "layout": "canvas",
             "content": {
@@ -630,7 +630,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "Energy Q1→Q4",
+                  "text": "Energy Q1\u2192Q4",
                   "x": 0.02,
                   "y": 0.11,
                   "w": 0.14,
@@ -661,7 +661,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "−13.2%",
+                  "text": "\u221213.2%",
                   "x": 0.33,
                   "y": 0.04,
                   "w": 0.12,
@@ -769,7 +769,7 @@
                     },
                     {
                       "kind": "text",
-                      "text": "Energy is the growth engine — $22.4M to $38.2M in four quarters, now the second-largest family",
+                      "text": "Energy is the growth engine \u2014 $22.4M to $38.2M in four quarters, now the second-largest family",
                       "x": 0.1,
                       "y": 0,
                       "w": 0.88,
@@ -788,7 +788,7 @@
                     },
                     {
                       "kind": "text",
-                      "text": "Sparkling holds ~40% share with +19.9% growth — the stable anchor while the mix rotates",
+                      "text": "Sparkling holds ~40% share with +19.9% growth \u2014 the stable anchor while the mix rotates",
                       "x": 0.1,
                       "y": 0.22,
                       "w": 0.88,
@@ -807,7 +807,7 @@
                     },
                     {
                       "kind": "text",
-                      "text": "Still water declining 11.1% — deliberate de-emphasis as margin compression continues",
+                      "text": "Still water declining 11.1% \u2014 deliberate de-emphasis as margin compression continues",
                       "x": 0.1,
                       "y": 0.44,
                       "w": 0.88,
@@ -826,7 +826,7 @@
                     },
                     {
                       "kind": "text",
-                      "text": "Private Label down 13.2% — managed runoff as branded volume grows",
+                      "text": "Private Label down 13.2% \u2014 managed runoff as branded volume grows",
                       "x": 0.1,
                       "y": 0.66,
                       "w": 0.88,
@@ -876,15 +876,15 @@
             },
             {
               "tag": "ADDED",
-              "note": "Three KPIs at top: +70.5% Energy growth, 27% Energy mix share, −13.2% Private Label decline"
+              "note": "Three KPIs at top: +70.5% Energy growth, 27% Energy mix share, \u221213.2% Private Label decline"
             },
             {
               "tag": "CHANGED",
-              "note": "Chart reduced from full-width to 60% — freed right 35% for a \"Quarterly Trends\" insight panel"
+              "note": "Chart reduced from full-width to 60% \u2014 freed right 35% for a \"Quarterly Trends\" insight panel"
             },
             {
               "tag": "ADDED",
-              "note": "Color-coded legend bars in trends panel — each series gets a colored rect + narrative sentence"
+              "note": "Color-coded legend bars in trends panel \u2014 each series gets a colored rect + narrative sentence"
             },
             {
               "tag": "CHANGED",
@@ -907,7 +907,7 @@
               "src": "versions/v5-current/previews/cascade-consultant.png"
             }
           ],
-          "title": "v5 — Analyst + Executive + Consultant",
+          "title": "v5 \u2014 Analyst + Executive + Consultant",
           "warnings": [],
           "changes": [
             {
@@ -929,7 +929,7 @@
             }
           ],
           "html": "../presentations/cascade-v4-revenue-mix-analyst.html",
-          "title": "Category Rank Shift — Energy Claims #2 Over Still Water (+70.5%)",
+          "title": "Category Rank Shift \u2014 Energy Claims #2 Over Still Water (+70.5%)",
           "warnings": [],
           "changes": [
             {
@@ -942,11 +942,11 @@
             },
             {
               "tag": "ADDED",
-              "note": "Compact data table with Q1–Q4 figures and delta column (analyst)"
+              "note": "Compact data table with Q1\u2013Q4 figures and delta column (analyst)"
             },
             {
               "tag": "CHANGED",
-              "note": "Executive redesigned: bridge-endpoints (Q1→Q4), diverging contribution-bars, Energy Growth hero stat"
+              "note": "Executive redesigned: bridge-endpoints (Q1\u2192Q4), diverging contribution-bars, Energy Growth hero stat"
             },
             {
               "tag": "ADDED",
@@ -966,7 +966,7 @@
             },
             {
               "tag": "CHANGED",
-              "note": "Chips use ▲ ▼ = (fixed ↗ ↘ emoji rendering from v3)"
+              "note": "Chips use \u25b2 \u25bc = (fixed \u2197 \u2198 emoji rendering from v3)"
             }
           ]
         },
@@ -981,7 +981,7 @@
     },
     {
       "id": "halvorsen",
-      "title": "Halvorsen — account leakage ranking (expects bar)",
+      "title": "Halvorsen \u2014 account leakage ranking (expects bar)",
       "prompt": "Please make a slide for the attached content",
       "cells": {
         "baseline": {
@@ -991,8 +991,8 @@
             "schemaVersion": 1,
             "id": "halvorsen_leakage_ranking",
             "title": "Discount Leakage Concentration | Top 8 accounts explain 70.7% of $31.7M in annualized leakage",
-            "subtitle": "Halvorsen Industrial Supply — FY25 Annualized Discount Leakage ($M)",
-            "notes": "So-what: Leakage is not a broad problem — it's concentrated. Three accounts alone drive 39.4% of the total. Manual overrides at the branch level without pricing-desk review explain 61% of leakage dollars.",
+            "subtitle": "Halvorsen Industrial Supply \u2014 FY25 Annualized Discount Leakage ($M)",
+            "notes": "So-what: Leakage is not a broad problem \u2014 it's concentrated. Three accounts alone drive 39.4% of the total. Manual overrides at the branch level without pricing-desk review explain 61% of leakage dollars.",
             "layout": "canvas",
             "content": {
               "items": [
@@ -1084,7 +1084,7 @@
                   "y": 0.82,
                   "w": 0.3,
                   "h": 0.14,
-                  "text": "Stale Competitive\nDiscounts — 24%",
+                  "text": "Stale Competitive\nDiscounts \u2014 24%",
                   "fontSize": 12,
                   "bold": true,
                   "textColor": "primary",
@@ -1102,7 +1102,7 @@
                   "y": 0.82,
                   "w": 0.3,
                   "h": 0.14,
-                  "text": "Freight\nConcessions — 15%",
+                  "text": "Freight\nConcessions \u2014 15%",
                   "fontSize": 12,
                   "bold": true,
                   "textColor": "primary",
@@ -1127,8 +1127,8 @@
             "schemaVersion": 1,
             "id": "halvorsen_leakage_ranking",
             "title": "Discount Leakage Concentration | Top 8 accounts explain 70.7% of $31.7M in annualized leakage",
-            "subtitle": "Halvorsen Industrial Supply — FY25 Annualized Discount Leakage ($M)",
-            "notes": "So-what: Leakage is not a broad problem — it's concentrated. Three accounts alone drive 39.4% of the total. Manual overrides at the branch level without pricing-desk review explain 61% of leakage dollars.",
+            "subtitle": "Halvorsen Industrial Supply \u2014 FY25 Annualized Discount Leakage ($M)",
+            "notes": "So-what: Leakage is not a broad problem \u2014 it's concentrated. Three accounts alone drive 39.4% of the total. Manual overrides at the branch level without pricing-desk review explain 61% of leakage dollars.",
             "layout": "canvas",
             "content": {
               "items": [
@@ -1145,7 +1145,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "annualized leakage — top 3 accounts = 39.4%",
+                  "text": "annualized leakage \u2014 top 3 accounts = 39.4%",
                   "x": 0.17,
                   "y": 0.04,
                   "w": 0.4,
@@ -1219,7 +1219,7 @@
                   "y": 0.77,
                   "w": 0.585,
                   "h": 0.07,
-                  "text": "Manual Overrides — 61%",
+                  "text": "Manual Overrides \u2014 61%",
                   "fontSize": 12,
                   "bold": true,
                   "textColor": "FFFFFF",
@@ -1234,7 +1234,7 @@
                   "y": 0.77,
                   "w": 0.23,
                   "h": 0.07,
-                  "text": "Stale Competitive — 24%",
+                  "text": "Stale Competitive \u2014 24%",
                   "fontSize": 10,
                   "textColor": "FFFFFF",
                   "align": "center",
@@ -1248,7 +1248,7 @@
                   "y": 0.77,
                   "w": 0.125,
                   "h": 0.07,
-                  "text": "Freight — 15%",
+                  "text": "Freight \u2014 15%",
                   "fontSize": 9,
                   "textColor": "FFFFFF",
                   "align": "center",
@@ -1294,7 +1294,7 @@
             },
             {
               "tag": "ADDED",
-              "note": "Proportional stacked bar — bar widths reflect actual data (61% / 24% / 15%), making the concentration visible"
+              "note": "Proportional stacked bar \u2014 bar widths reflect actual data (61% / 24% / 15%), making the concentration visible"
             },
             {
               "tag": "ADDED",
@@ -1325,7 +1325,7 @@
               "src": "versions/v5-current/previews/halvorsen-consultant.png"
             }
           ],
-          "title": "v5 — Analyst + Executive + Consultant",
+          "title": "v5 \u2014 Analyst + Executive + Consultant",
           "warnings": [],
           "changes": [
             {
@@ -1347,7 +1347,7 @@
             }
           ],
           "html": "../presentations/halvorsen-v4-leakage-ranking-analyst.html",
-          "title": "Concentration Analysis — Top 8 Accounts Hold 71% of Leakage",
+          "title": "Concentration Analysis \u2014 Top 8 Accounts Hold 71% of Leakage",
           "warnings": [],
           "changes": [
             {
@@ -1356,7 +1356,7 @@
             },
             {
               "tag": "ADDED",
-              "note": "Detail-columns component: three-column Problem→Cause→Fix with hero stats (executive)"
+              "note": "Detail-columns component: three-column Problem\u2192Cause\u2192Fix with hero stats (executive)"
             },
             {
               "tag": "ADDED",
@@ -1399,7 +1399,7 @@
     },
     {
       "id": "isb",
-      "title": "ISB — merchandiser cost comparison",
+      "title": "ISB \u2014 merchandiser cost comparison",
       "prompt": "Please make a slide for the attached content",
       "cells": {
         "baseline": {
@@ -1409,7 +1409,7 @@
             "schemaVersion": 1,
             "id": "isb_merchandiser_cost",
             "title": "Merchandiser vs. ISB Cost Comparison | Investment and servicing economics for ice equipment",
-            "subtitle": "Reddy Ice — Cost Structure Analysis",
+            "subtitle": "Reddy Ice \u2014 Cost Structure Analysis",
             "notes": "So-what: The meeting transcript discusses cost differences between merchandiser and ISB equipment, including initial investment, servicing, and operational considerations.",
             "layout": "canvas",
             "content": {
@@ -1573,7 +1573,7 @@
             "schemaVersion": 1,
             "id": "isb_merchandiser_cost",
             "title": "Merchandiser vs. ISB Cost Comparison | Investment and servicing economics for ice equipment",
-            "subtitle": "Reddy Ice — Cost Structure Analysis",
+            "subtitle": "Reddy Ice \u2014 Cost Structure Analysis",
             "notes": "So-what: Merchandisers cost more and require specialist servicing, but deliver higher per-unit capacity. ISBs are cheaper and more flexible but need more units. The right mix depends on location volume, not which is better.",
             "layout": "canvas",
             "content": {
@@ -1621,7 +1621,7 @@
                     },
                     {
                       "kind": "text",
-                      "text": "Larger floor space — limits placement to back-of-store\n\nHigher volume per unit — fewer machines for same output\n\nComplex servicing — specialist technicians, longer calls",
+                      "text": "Larger floor space \u2014 limits placement to back-of-store\n\nHigher volume per unit \u2014 fewer machines for same output\n\nComplex servicing \u2014 specialist technicians, longer calls",
                       "x": 0.03,
                       "y": 0.3,
                       "w": 0.94,
@@ -1685,7 +1685,7 @@
                     },
                     {
                       "kind": "text",
-                      "text": "Smaller footprint — flexible placement near checkout or aisle\n\nLower capacity — needs more units to match merchandiser output\n\nSimple servicing — general maintenance, shorter calls",
+                      "text": "Smaller footprint \u2014 flexible placement near checkout or aisle\n\nLower capacity \u2014 needs more units to match merchandiser output\n\nSimple servicing \u2014 general maintenance, shorter calls",
                       "x": 0.03,
                       "y": 0.3,
                       "w": 0.94,
@@ -1737,8 +1737,8 @@
                     ],
                     [
                       "Floor space",
-                      "Large — back of store",
-                      "Small — flexible"
+                      "Large \u2014 back of store",
+                      "Small \u2014 flexible"
                     ],
                     [
                       "Volume per unit",
@@ -1761,7 +1761,7 @@
                   "y": 0.87,
                   "w": 0.96,
                   "h": 0.1,
-                  "text": "The right deployment mix is a volume-per-location decision — high-volume sites warrant merchandisers; small-format stores favor ISBs",
+                  "text": "The right deployment mix is a volume-per-location decision \u2014 high-volume sites warrant merchandisers; small-format stores favor ISBs",
                   "fontSize": 11,
                   "bold": true,
                   "textColor": "FFFFFF",
@@ -1781,7 +1781,7 @@
           "changes": [
             {
               "tag": "BAN 1",
-              "note": "Replaced triple-card grid (3 identical rounded-rects: Pricing Strategy / Servicing Model / Deployment Mix — generic text, no real data)"
+              "note": "Replaced triple-card grid (3 identical rounded-rects: Pricing Strategy / Servicing Model / Deployment Mix \u2014 generic text, no real data)"
             },
             {
               "tag": "ADDED",
@@ -1789,7 +1789,7 @@
             },
             {
               "tag": "ADDED",
-              "note": "Focal hero text inside each group: \"Higher\" / \"Lower\" at 28pt with subtitle — immediate visual anchor"
+              "note": "Focal hero text inside each group: \"Higher\" / \"Lower\" at 28pt with subtitle \u2014 immediate visual anchor"
             },
             {
               "tag": "REMOVED",
@@ -1797,7 +1797,7 @@
             },
             {
               "tag": "ADDED",
-              "note": "\"Best for:\" conclusion line in each group — makes the trade-off decision explicit"
+              "note": "\"Best for:\" conclusion line in each group \u2014 makes the trade-off decision explicit"
             },
             {
               "tag": "ADDED",
@@ -1820,7 +1820,7 @@
               "src": "versions/v5-current/previews/isb-consultant.png"
             }
           ],
-          "title": "v5 — Analyst + Executive + Consultant",
+          "title": "v5 \u2014 Analyst + Executive + Consultant",
           "warnings": [],
           "changes": [
             {
@@ -1842,12 +1842,12 @@
             }
           ],
           "html": "../presentations/isb-v4-merchandiser-cost-analyst.html",
-          "title": "Route Cost Comparison — Analyst + Executive Persona Pair",
+          "title": "Route Cost Comparison \u2014 Analyst + Executive Persona Pair",
           "warnings": [],
           "changes": [
             {
               "tag": "ADDED",
-              "note": "Strategy-progression vertical component: 3-card current→action→target with escalating visual weight (executive)"
+              "note": "Strategy-progression vertical component: 3-card current\u2192action\u2192target with escalating visual weight (executive)"
             },
             {
               "tag": "ADDED",
@@ -1882,8 +1882,8 @@
     },
     {
       "id": "logistec",
-      "title": "Logistec — dual-engine platform strategy",
-      "prompt": "Create an executive strategy slide explaining how Logistec’s two business engines—Marine Services and Environmental Services—reinforce one another. The audience is evaluating the company’s growth thesis and execution risk. The central point is that terminal density, environmental mandates, and proprietary technology create a compounding platform rather than two disconnected businesses.\n\nContext: Use 9M-2023 financials. Blue Wolf acquired Logistec in a C$1.2B take-private transaction in January 2024.\n\nKey metrics: C$711M revenue, 15.0% adjusted EBITDA margin, 85+ terminals across 62 ports, C$1.2B take-private value.\n\nMarine Services: 68% of revenue (C$479.7M). Cargo handling, Arctic shipping, 30 Green Marine-certified terminals.\n\nEnvironmental Services: 32% of revenue (C$231.3M). Water-main renewal, remediation, PFAS solutions. C$84.3M backlog. 24 granted + 15 pending ALTRA patents.\n\n2025–2028 agenda: Densify terminals, monetize ESG + ALTRA IP, control execution risk (labor, integration, capex overruns, rates).",
+      "title": "Logistec \u2014 dual-engine platform strategy",
+      "prompt": "Create an executive strategy slide explaining how Logistec\u2019s two business engines\u2014Marine Services and Environmental Services\u2014reinforce one another. The audience is evaluating the company\u2019s growth thesis and execution risk. The central point is that terminal density, environmental mandates, and proprietary technology create a compounding platform rather than two disconnected businesses.\n\nContext: Use 9M-2023 financials. Blue Wolf acquired Logistec in a C$1.2B take-private transaction in January 2024.\n\nKey metrics: C$711M revenue, 15.0% adjusted EBITDA margin, 85+ terminals across 62 ports, C$1.2B take-private value.\n\nMarine Services: 68% of revenue (C$479.7M). Cargo handling, Arctic shipping, 30 Green Marine-certified terminals.\n\nEnvironmental Services: 32% of revenue (C$231.3M). Water-main renewal, remediation, PFAS solutions. C$84.3M backlog. 24 granted + 15 pending ALTRA patents.\n\n2025\u20132028 agenda: Densify terminals, monetize ESG + ALTRA IP, control execution risk (labor, integration, capex overruns, rates).",
       "cells": {
         "baseline": {
           "preview": "versions/baseline/logistec/preview/slide-01.png",
@@ -1892,7 +1892,7 @@
             "schemaVersion": 1,
             "id": "logistec_company_overview",
             "title": "LOGISTEC Corporation | North American marine terminal and environmental services leader",
-            "subtitle": "Company Deep-Dive — FY23 Revenue $711M CAD, 15% EBITDA Margin",
+            "subtitle": "Company Deep-Dive \u2014 FY23 Revenue $711M CAD, 15% EBITDA Margin",
             "notes": "So-what: Dual-engine business model (Marine 68%, Environmental 32%) with ~18% CAGR driven by network expansion. Blue Wolf take-private at $1.2B CAD in Jan 2024 with >$200M capex commitment.",
             "layout": "canvas",
             "content": {
@@ -1996,7 +1996,7 @@
                 {
                   "kind": "group",
                   "style": "filled",
-                  "heading": "Marine Services — 68%",
+                  "heading": "Marine Services \u2014 68%",
                   "accent": "primary",
                   "x": 0.02,
                   "y": 0.26,
@@ -2005,7 +2005,7 @@
                   "items": [
                     {
                       "kind": "text",
-                      "text": "Cargo handling at 85+ terminals across 62 North American ports\n\n30 sites hold Green Marine certification — largest fleet of eco-accredited terminals in NA\n\nExpanding to offer turn-key trucking, warehousing, and CFS services",
+                      "text": "Cargo handling at 85+ terminals across 62 North American ports\n\n30 sites hold Green Marine certification \u2014 largest fleet of eco-accredited terminals in NA\n\nExpanding to offer turn-key trucking, warehousing, and CFS services",
                       "x": 0.03,
                       "y": 0.02,
                       "w": 0.94,
@@ -2018,7 +2018,7 @@
                 {
                   "kind": "group",
                   "style": "filled",
-                  "heading": "Environmental Services — 32%",
+                  "heading": "Environmental Services \u2014 32%",
                   "accent": "accent",
                   "x": 0.52,
                   "y": 0.26,
@@ -2108,7 +2108,7 @@
             "schemaVersion": 1,
             "id": "logistec_company_overview",
             "title": "LOGISTEC Corporation | North American marine terminal and environmental services leader",
-            "subtitle": "Company Deep-Dive — FY23 Revenue $711M CAD, 15% EBITDA Margin",
+            "subtitle": "Company Deep-Dive \u2014 FY23 Revenue $711M CAD, 15% EBITDA Margin",
             "notes": "So-what: Dual-engine business model (Marine 68%, Environmental 32%) with ~18% CAGR driven by network expansion. Blue Wolf take-private at $1.2B CAD in Jan 2024 with >$200M capex commitment.",
             "layout": "canvas",
             "content": {
@@ -2200,7 +2200,7 @@
                 {
                   "kind": "group",
                   "style": "filled",
-                  "heading": "Marine Services — 68%",
+                  "heading": "Marine Services \u2014 68%",
                   "accent": "primary",
                   "x": 0.02,
                   "y": 0.2,
@@ -2209,7 +2209,7 @@
                   "items": [
                     {
                       "kind": "text",
-                      "text": "Cargo handling at 85+ terminals across 62 North American ports\n\n30 sites hold Green Marine certification — largest fleet of eco-accredited terminals in NA\n\nExpanding to offer turn-key trucking, warehousing, and CFS services",
+                      "text": "Cargo handling at 85+ terminals across 62 North American ports\n\n30 sites hold Green Marine certification \u2014 largest fleet of eco-accredited terminals in NA\n\nExpanding to offer turn-key trucking, warehousing, and CFS services",
                       "x": 0.03,
                       "y": 0.02,
                       "w": 0.94,
@@ -2222,7 +2222,7 @@
                 {
                   "kind": "group",
                   "style": "filled",
-                  "heading": "Environmental Services — 32%",
+                  "heading": "Environmental Services \u2014 32%",
                   "accent": "accent",
                   "x": 0.52,
                   "y": 0.2,
@@ -2243,7 +2243,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "New Leadership Team (Post–Take-Private)",
+                  "text": "New Leadership Team (Post\u2013Take-Private)",
                   "x": 0.02,
                   "y": 0.57,
                   "w": 0.5,
@@ -2301,7 +2301,7 @@
                   "y": 0.93,
                   "w": 0.96,
                   "h": 0.05,
-                  "text": "Blue Wolf took LOGISTEC private (Jan 2024) with >$200M capex commitment — entire C-suite replaced within 18 months",
+                  "text": "Blue Wolf took LOGISTEC private (Jan 2024) with >$200M capex commitment \u2014 entire C-suite replaced within 18 months",
                   "fontSize": 10,
                   "textColor": "primary",
                   "align": "center",
@@ -2320,19 +2320,19 @@
           "changes": [
             {
               "tag": "REMOVED",
-              "note": "charSpacing section headers (\"BUSINESS MODEL\", \"RECENT LEADERSHIP\") — replaced with plain bold labels"
+              "note": "charSpacing section headers (\"BUSINESS MODEL\", \"RECENT LEADERSHIP\") \u2014 replaced with plain bold labels"
             },
             {
               "tag": "ADDED",
-              "note": "Descriptive table label: \"New Leadership Team (Post–Take-Private)\" — contextualizes why the table matters"
+              "note": "Descriptive table label: \"New Leadership Team (Post\u2013Take-Private)\" \u2014 contextualizes why the table matters"
             },
             {
               "tag": "ADDED",
-              "note": "Footer callout: \"Blue Wolf took LOGISTEC private... entire C-suite replaced within 18 months\" — ties the leadership table to the take-private thesis"
+              "note": "Footer callout: \"Blue Wolf took LOGISTEC private... entire C-suite replaced within 18 months\" \u2014 ties the leadership table to the take-private thesis"
             },
             {
               "tag": "NOTE",
-              "note": "Composition largely preserved — baseline was already strong (4 KPIs + 2 filled groups + table)"
+              "note": "Composition largely preserved \u2014 baseline was already strong (4 KPIs + 2 filled groups + table)"
             }
           ]
         },
@@ -2351,7 +2351,7 @@
               "src": "versions/v5-current/previews/logistec-consultant.png"
             }
           ],
-          "title": "v5 — Analyst + Executive + Consultant",
+          "title": "v5 \u2014 Analyst + Executive + Consultant",
           "warnings": [],
           "changes": [
             {
@@ -2363,7 +2363,7 @@
         "v4-current": {
           "preview": "versions/v4-current/previews/logistec-thesis-executive.png",
           "html": "../presentations/logistec-v4-investment-thesis-executive.html",
-          "title": "Platform Strategy — Dual-Engine Cross-Sell with Flywheel + Analyst Breakdown",
+          "title": "Platform Strategy \u2014 Dual-Engine Cross-Sell with Flywheel + Analyst Breakdown",
           "warnings": [],
           "changes": [
             {
@@ -2372,11 +2372,11 @@
             },
             {
               "tag": "CHANGED",
-              "note": "Executive uses numbered flywheel with evidence sidebar — same thesis, narrative framing"
+              "note": "Executive uses numbered flywheel with evidence sidebar \u2014 same thesis, narrative framing"
             },
             {
               "tag": "REMOVED",
-              "note": "Redundant growth-levers table removed from analyst — data already in platform-assets block"
+              "note": "Redundant growth-levers table removed from analyst \u2014 data already in platform-assets block"
             },
             {
               "tag": "ADDED",
@@ -2418,7 +2418,7 @@
     },
     {
       "id": "meridian",
-      "title": "Meridian — FY24→FY25 EBITDA bridge (expects waterfall)",
+      "title": "Meridian \u2014 FY24\u2192FY25 EBITDA bridge (expects waterfall)",
       "prompt": "Please make a slide for the attached content",
       "cells": {
         "baseline": {
@@ -2427,8 +2427,8 @@
           "spec": {
             "schemaVersion": 1,
             "id": "meridian_ebitda_bridge",
-            "title": "FY24→FY25 EBITDA Bridge | Price realization drove $31.2M recovery, offsetting $30.7M in headwinds",
-            "subtitle": "Meridian Fasteners — EBITDA Walk by Driver ($M)",
+            "title": "FY24\u2192FY25 EBITDA Bridge | Price realization drove $31.2M recovery, offsetting $30.7M in headwinds",
+            "subtitle": "Meridian Fasteners \u2014 EBITDA Walk by Driver ($M)",
             "notes": "So-what: Without the pricing program's +$31.2M, cost and volume headwinds would have pushed EBITDA below $60M. The bridge makes the case for continuing the pricing discipline.",
             "layout": "canvas",
             "content": {
@@ -2501,7 +2501,7 @@
                   "y": 0.35,
                   "w": 0.1,
                   "h": 0.08,
-                  "text": "−$12.8M",
+                  "text": "\u2212$12.8M",
                   "fontSize": 10,
                   "textColor": "FFFFFF",
                   "valign": "middle"
@@ -2549,7 +2549,7 @@
                   "y": 0.35,
                   "w": 0.1,
                   "h": 0.09,
-                  "text": "−$14.3M",
+                  "text": "\u2212$14.3M",
                   "fontSize": 10,
                   "textColor": "FFFFFF",
                   "valign": "middle"
@@ -2573,7 +2573,7 @@
                   "y": 0.35,
                   "w": 0.1,
                   "h": 0.024,
-                  "text": "−$3.6M",
+                  "text": "\u2212$3.6M",
                   "fontSize": 9,
                   "textColor": "FFFFFF",
                   "valign": "middle"
@@ -2658,7 +2658,7 @@
                   "y": 0.85,
                   "w": 0.96,
                   "h": 0.11,
-                  "text": "Price realization (+$31.2M) more than offset the combined $30.7M drag from volume, costs, and freight — first margin expansion since FY21",
+                  "text": "Price realization (+$31.2M) more than offset the combined $30.7M drag from volume, costs, and freight \u2014 first margin expansion since FY21",
                   "fontSize": 11,
                   "bold": true,
                   "textColor": "FFFFFF",
@@ -2673,7 +2673,7 @@
             "parentVersion": null,
             "createdAt": "2026-08-03T20:01:24.994Z"
           },
-          "title": "FY24→FY25 EBITDA Bridge | Price realization drove $31.2M recovery, offsetting $30.7M in headwinds",
+          "title": "FY24\u2192FY25 EBITDA Bridge | Price realization drove $31.2M recovery, offsetting $30.7M in headwinds",
           "warnings": [],
           "changes": []
         },
@@ -2683,8 +2683,8 @@
           "spec": {
             "schemaVersion": 1,
             "id": "meridian_ebitda_bridge",
-            "title": "FY24→FY25 EBITDA Bridge | Price realization drove $31.2M recovery, offsetting $30.7M in headwinds",
-            "subtitle": "Meridian Fasteners — EBITDA Walk by Driver ($M)",
+            "title": "FY24\u2192FY25 EBITDA Bridge | Price realization drove $31.2M recovery, offsetting $30.7M in headwinds",
+            "subtitle": "Meridian Fasteners \u2014 EBITDA Walk by Driver ($M)",
             "notes": "So-what: Without the pricing program's +$31.2M, cost and volume headwinds would have pushed EBITDA below $60M. The bridge makes the case for continuing the pricing discipline.",
             "layout": "canvas",
             "content": {
@@ -2805,7 +2805,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "−$12.8M\nVolume",
+                  "text": "\u2212$12.8M\nVolume",
                   "x": 0.3,
                   "y": 0.44,
                   "w": 0.1,
@@ -2845,7 +2845,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "−$14.3M\nInput Costs",
+                  "text": "\u2212$14.3M\nInput Costs",
                   "x": 0.54,
                   "y": 0.45,
                   "w": 0.1,
@@ -2865,7 +2865,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "−$3.6M\nFreight",
+                  "text": "\u2212$3.6M\nFreight",
                   "x": 0.66,
                   "y": 0.38,
                   "w": 0.08,
@@ -2915,7 +2915,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "Price realization (+$31.2M) more than offset the combined $30.7M drag from volume, costs, and freight — first margin expansion since FY21",
+                  "text": "Price realization (+$31.2M) more than offset the combined $30.7M drag from volume, costs, and freight \u2014 first margin expansion since FY21",
                   "x": 0.04,
                   "y": 0.82,
                   "w": 0.92,
@@ -2946,7 +2946,7 @@
             "parentVersion": null,
             "createdAt": "2026-08-03T21:19:03.671Z"
           },
-          "title": "FY24→FY25 EBITDA Bridge | Price realization drove $31.2M recovery, offsetting $30.7M in headwinds",
+          "title": "FY24\u2192FY25 EBITDA Bridge | Price realization drove $31.2M recovery, offsetting $30.7M in headwinds",
           "warnings": [],
           "changes": [
             {
@@ -2955,7 +2955,7 @@
             },
             {
               "tag": "ADDED",
-              "note": "Vertical accent bar separating FY24 figure from the narrative — visual pause"
+              "note": "Vertical accent bar separating FY24 figure from the narrative \u2014 visual pause"
             },
             {
               "tag": "CHANGED",
@@ -2963,7 +2963,7 @@
             },
             {
               "tag": "NOTE",
-              "note": "Waterfall bridge composition preserved — already a strong custom build from rect primitives. 8pt labels on small bars flagged by engine but match baseline"
+              "note": "Waterfall bridge composition preserved \u2014 already a strong custom build from rect primitives. 8pt labels on small bars flagged by engine but match baseline"
             }
           ]
         },
@@ -2982,7 +2982,7 @@
               "src": "versions/v5-current/previews/meridian-consultant.png"
             }
           ],
-          "title": "v5 — Analyst + Executive + Consultant",
+          "title": "v5 \u2014 Analyst + Executive + Consultant",
           "warnings": [],
           "changes": [
             {
@@ -3004,7 +3004,7 @@
             }
           ],
           "html": "../presentations/meridian-fy25-ebitda-analyst.html",
-          "title": "Price Realization (+$31.2M) Offset $30.7M in Operating Drag — EBITDA Rose 14% to $98.5M",
+          "title": "Price Realization (+$31.2M) Offset $30.7M in Operating Drag \u2014 EBITDA Rose 14% to $98.5M",
           "warnings": [],
           "changes": [
             {
@@ -3013,15 +3013,15 @@
             },
             {
               "tag": "CHANGED",
-              "note": "Executive waterfall compressed from 8 bars to 5 grouped bars (Pricing / Headwinds / Mix & SG&A) — 1:1 mapping to narrative findings"
+              "note": "Executive waterfall compressed from 8 bars to 5 grouped bars (Pricing / Headwinds / Mix & SG&A) \u2014 1:1 mapping to narrative findings"
             },
             {
               "tag": "CHANGED",
-              "note": "Findings rewritten as connected narrative — titles are conclusions, detail text adds derived insight (258%, 88%), no restated bridge arithmetic"
+              "note": "Findings rewritten as connected narrative \u2014 titles are conclusions, detail text adds derived insight (258%, 88%), no restated bridge arithmetic"
             },
             {
               "tag": "CHANGED",
-              "note": "Number de-duplication — each figure appears in ≤2 places on the slide"
+              "note": "Number de-duplication \u2014 each figure appears in \u22642 places on the slide"
             },
             {
               "tag": "REMOVED",
@@ -3029,11 +3029,11 @@
             },
             {
               "tag": "REMOVED",
-              "note": "Bridge endpoint stat card ($86.4M → $98.5M) — chart endpoints handle this"
+              "note": "Bridge endpoint stat card ($86.4M \u2192 $98.5M) \u2014 chart endpoints handle this"
             },
             {
               "tag": "REMOVED",
-              "note": "Hero stat (+14%) from right column — absorbed into headline"
+              "note": "Hero stat (+14%) from right column \u2014 absorbed into headline"
             },
             {
               "tag": "ADDED",
@@ -3049,7 +3049,7 @@
           "changes": [
             {
               "tag": "CHANGED",
-              "note": "Layout: full-width chart → sidebar layout (68% chart + 32% narrative panel)"
+              "note": "Layout: full-width chart \u2192 sidebar layout (68% chart + 32% narrative panel)"
             },
             {
               "tag": "ADDED",
@@ -3057,7 +3057,7 @@
             },
             {
               "tag": "ADDED",
-              "note": "Benchmark chip at top of sidebar: FY24 $86.4M → FY25 $98.5M"
+              "note": "Benchmark chip at top of sidebar: FY24 $86.4M \u2192 FY25 $98.5M"
             },
             {
               "tag": "ADDED",
@@ -3065,11 +3065,11 @@
             },
             {
               "tag": "CHANGED",
-              "note": "Bottom callout: wordy insight strip → punchy callout-bar (blue on light blue, ≤10 words)"
+              "note": "Bottom callout: wordy insight strip \u2192 punchy callout-bar (blue on light blue, \u226410 words)"
             },
             {
               "tag": "FIX",
-              "note": "Bar positioning: pixel-based → percentage-based with overflow:hidden on chart column to prevent sidebar bleed"
+              "note": "Bar positioning: pixel-based \u2192 percentage-based with overflow:hidden on chart column to prevent sidebar bleed"
             }
           ]
         }
@@ -3087,7 +3087,7 @@
             "schemaVersion": 1,
             "id": "sow_extension_30day",
             "title": "30-Day SOW Extension | Engineering-led sprint to maintain momentum and produce working artifacts",
-            "subtitle": "Elephant Ventures — June 29 to July 31, 2026",
+            "subtitle": "Elephant Ventures \u2014 June 29 to July 31, 2026",
             "notes": "So-what: Standing down engineers risks losing them to other work. The 30-day extension keeps momentum, produces tangible deliverables, and feeds into Q3/Q4 planning.",
             "layout": "canvas",
             "content": {
@@ -3175,7 +3175,7 @@
                   "y": 0.26,
                   "w": 0.96,
                   "h": 0.08,
-                  "text": "1. Knowledge Base 2.0 — Data organization and retrieval architecture",
+                  "text": "1. Knowledge Base 2.0 \u2014 Data organization and retrieval architecture",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3190,7 +3190,7 @@
                   "y": 0.36,
                   "w": 0.96,
                   "h": 0.08,
-                  "text": "2. Deep Research in AskINSIGHT — Cited multi-source synthesis to production",
+                  "text": "2. Deep Research in AskINSIGHT \u2014 Cited multi-source synthesis to production",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3205,7 +3205,7 @@
                   "y": 0.46,
                   "w": 0.96,
                   "h": 0.08,
-                  "text": "3. Teams Agent Integration — End-to-end deployment in INSIGHT tenant",
+                  "text": "3. Teams Agent Integration \u2014 End-to-end deployment in INSIGHT tenant",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3220,7 +3220,7 @@
                   "y": 0.56,
                   "w": 0.96,
                   "h": 0.08,
-                  "text": "4. Agent Builder Evaluation — Side-by-side comparison and MVP recommendation",
+                  "text": "4. Agent Builder Evaluation \u2014 Side-by-side comparison and MVP recommendation",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3235,7 +3235,7 @@
                   "y": 0.66,
                   "w": 0.96,
                   "h": 0.08,
-                  "text": "5. Architecture Assessment Review — Critical review with actionable next steps",
+                  "text": "5. Architecture Assessment Review \u2014 Critical review with actionable next steps",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3265,7 +3265,7 @@
                   "y": 0.83,
                   "w": 0.3,
                   "h": 0.14,
-                  "text": "Maik Ardan\nSr. AI Architect\n$11,000/mo — Full",
+                  "text": "Maik Ardan\nSr. AI Architect\n$11,000/mo \u2014 Full",
                   "fontSize": 10,
                   "textColor": "textDark",
                   "align": "center",
@@ -3283,7 +3283,7 @@
                   "y": 0.83,
                   "w": 0.3,
                   "h": 0.14,
-                  "text": "Edward Mabuyo\nSr. Engineer\n$11,000/mo — Full",
+                  "text": "Edward Mabuyo\nSr. Engineer\n$11,000/mo \u2014 Full",
                   "fontSize": 10,
                   "textColor": "textDark",
                   "align": "center",
@@ -3301,7 +3301,7 @@
                   "y": 0.83,
                   "w": 0.3,
                   "h": 0.14,
-                  "text": "Jonathan Cook\nProduct Owner\n$8,500/mo — Half",
+                  "text": "Jonathan Cook\nProduct Owner\n$8,500/mo \u2014 Half",
                   "fontSize": 10,
                   "textColor": "textDark",
                   "align": "center",
@@ -3326,7 +3326,7 @@
             "schemaVersion": 1,
             "id": "sow_extension_30day",
             "title": "30-Day SOW Extension | Engineering-led sprint to maintain momentum and produce working artifacts",
-            "subtitle": "Elephant Ventures — June 29 to July 31, 2026",
+            "subtitle": "Elephant Ventures \u2014 June 29 to July 31, 2026",
             "notes": "So-what: Standing down engineers risks losing them to other work. The 30-day extension keeps momentum, produces tangible deliverables, and feeds into Q3/Q4 planning.",
             "layout": "canvas",
             "content": {
@@ -3402,7 +3402,7 @@
                   "y": 0.19,
                   "w": 0.96,
                   "h": 0.06,
-                  "text": "1. Knowledge Base 2.0 — Data organization and retrieval architecture",
+                  "text": "1. Knowledge Base 2.0 \u2014 Data organization and retrieval architecture",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3417,7 +3417,7 @@
                   "y": 0.27,
                   "w": 0.96,
                   "h": 0.06,
-                  "text": "2. Deep Research in AskINSIGHT — Cited multi-source synthesis to production",
+                  "text": "2. Deep Research in AskINSIGHT \u2014 Cited multi-source synthesis to production",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3432,7 +3432,7 @@
                   "y": 0.35,
                   "w": 0.96,
                   "h": 0.06,
-                  "text": "3. Teams Agent Integration — End-to-end deployment in INSIGHT tenant",
+                  "text": "3. Teams Agent Integration \u2014 End-to-end deployment in INSIGHT tenant",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3447,7 +3447,7 @@
                   "y": 0.43,
                   "w": 0.96,
                   "h": 0.06,
-                  "text": "4. Agent Builder Evaluation — Side-by-side comparison and MVP recommendation",
+                  "text": "4. Agent Builder Evaluation \u2014 Side-by-side comparison and MVP recommendation",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3462,7 +3462,7 @@
                   "y": 0.51,
                   "w": 0.96,
                   "h": 0.06,
-                  "text": "5. Architecture Assessment Review — Critical review with actionable next steps",
+                  "text": "5. Architecture Assessment Review \u2014 Critical review with actionable next steps",
                   "fontSize": 11,
                   "textColor": "FFFFFF",
                   "align": "left",
@@ -3522,7 +3522,7 @@
                   "y": 0.92,
                   "w": 0.96,
                   "h": 0.06,
-                  "text": "Standing down risks losing engineers — this extension keeps momentum and feeds Q3/Q4 planning",
+                  "text": "Standing down risks losing engineers \u2014 this extension keeps momentum and feeds Q3/Q4 planning",
                   "fontSize": 10,
                   "bold": true,
                   "textColor": "FFFFFF",
@@ -3546,15 +3546,15 @@
             },
             {
               "tag": "ADDED",
-              "note": "Team & pricing table: 4 columns (Member / Role / Rate / Allocation) — tabular data belongs in a table"
+              "note": "Team & pricing table: 4 columns (Member / Role / Rate / Allocation) \u2014 tabular data belongs in a table"
             },
             {
               "tag": "CHANGED",
-              "note": "Scope bars compressed from h:0.08 to h:0.06 with tighter gaps — freed vertical space for the table"
+              "note": "Scope bars compressed from h:0.08 to h:0.06 with tighter gaps \u2014 freed vertical space for the table"
             },
             {
               "tag": "REMOVED",
-              "note": "charSpacing section headers (\"SCOPE\", \"TEAM & PRICING\") — replaced with plain bold labels"
+              "note": "charSpacing section headers (\"SCOPE\", \"TEAM & PRICING\") \u2014 replaced with plain bold labels"
             }
           ]
         },
@@ -3573,7 +3573,7 @@
               "src": "versions/v5-current/previews/sow-extension-consultant.png"
             }
           ],
-          "title": "v5 — Analyst + Executive + Consultant",
+          "title": "v5 \u2014 Analyst + Executive + Consultant",
           "warnings": [],
           "changes": [
             {
@@ -3595,7 +3595,7 @@
             }
           ],
           "html": "../presentations/sow-extension-v4-30day-analyst.html",
-          "title": "$30,500 Fixed Cost — 5 Workstreams Across 3 Engineers Feeding Q3/Q4 Planning",
+          "title": "$30,500 Fixed Cost \u2014 5 Workstreams Across 3 Engineers Feeding Q3/Q4 Planning",
           "warnings": [],
           "changes": [
             {
@@ -3616,7 +3616,7 @@
             },
             {
               "tag": "CHANGED",
-              "note": "Summary bar on analyst replaces simple callout — includes pricing model and included services (Applied Innovation Lab, AI Roadmap Pulse)"
+              "note": "Summary bar on analyst replaces simple callout \u2014 includes pricing model and included services (Applied Innovation Lab, AI Roadmap Pulse)"
             }
           ]
         },
@@ -3631,7 +3631,7 @@
     },
     {
       "id": "regional-sales",
-      "title": "Regional Sales — Q2 quarterly performance by region",
+      "title": "Regional Sales \u2014 Q2 quarterly performance by region",
       "prompt": "Create a slide analyzing Q2 FY26 regional sales performance for DataStream Analytics. Total revenue is $42.5M (+6% YoY), but growth is concentrated in the Northeast (+22%) driven by three enterprise deals. The Midwest declined 11% after losing two anchor accounts (Prism Industries $1.4M, Horizon Mfg $0.9M) to competitor bundling, and pipeline is thin at $2.1M vs $4.8M prior year. West is steady at +8%, Southeast is flat at -3%. The key risk is concentration: Northeast is 33% of revenue and 37% of pipeline.",
       "cells": {
         "v2-rewrite": {
@@ -3641,7 +3641,7 @@
             "schemaVersion": 1,
             "id": "regional_sales_q2",
             "title": "Q2 FY26 Regional Sales | Northeast surge masks softening in two regions",
-            "subtitle": "DataStream Analytics — Quarterly Revenue by Region ($M)",
+            "subtitle": "DataStream Analytics \u2014 Quarterly Revenue by Region ($M)",
             "notes": "So-what: Total revenue is up 6% but the growth is concentrated. Northeast's three enterprise deals drove a 22% spike that papers over decline in Southeast and Midwest. Losing two Midwest anchor accounts is structural, not seasonal.",
             "layout": "canvas",
             "content": {
@@ -3747,7 +3747,7 @@
                   "items": [
                     {
                       "kind": "text",
-                      "text": "Three enterprise deals closed in April — two net-new logos, one upsell. Pipeline was built over 9 months; execution, not a windfall.",
+                      "text": "Three enterprise deals closed in April \u2014 two net-new logos, one upsell. Pipeline was built over 9 months; execution, not a windfall.",
                       "x": 0.04,
                       "y": 0.02,
                       "w": 0.92,
@@ -3760,7 +3760,7 @@
                 {
                   "kind": "group",
                   "style": "tinted",
-                  "heading": "Midwest −11%",
+                  "heading": "Midwest \u221211%",
                   "accent": "accent",
                   "x": 0.6,
                   "y": 0.45,
@@ -3769,7 +3769,7 @@
                   "items": [
                     {
                       "kind": "text",
-                      "text": "Lost Prism Industries ($1.4M) and Horizon Mfg ($0.9M) — both cited competitor bundling.\n\nPipeline is thin: $2.1M weighted vs $4.8M same time last year.",
+                      "text": "Lost Prism Industries ($1.4M) and Horizon Mfg ($0.9M) \u2014 both cited competitor bundling.\n\nPipeline is thin: $2.1M weighted vs $4.8M same time last year.",
                       "x": 0.04,
                       "y": 0.02,
                       "w": 0.92,
@@ -3781,7 +3781,7 @@
                 },
                 {
                   "kind": "text",
-                  "text": "West +8% ($11.8M) — steady    |    Southeast −3% ($9.4M) — flat, not alarming    |    Midwest pipeline at $2.1M vs $4.8M prior year",
+                  "text": "West +8% ($11.8M) \u2014 steady    |    Southeast \u22123% ($9.4M) \u2014 flat, not alarming    |    Midwest pipeline at $2.1M vs $4.8M prior year",
                   "x": 0.02,
                   "y": 0.76,
                   "w": 0.96,
@@ -3843,6 +3843,147 @@
           "title": "Northeast surge masks softening in two regions",
           "warnings": [],
           "changes": []
+        },
+        "v5-current": {
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/regional-sales-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/regional-sales-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/regional-sales-consultant.png"
+            }
+          ],
+          "title": "v5 \u2014 Analyst + Executive + Consultant",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "3-persona variants: analyst, executive, consultant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "novaria",
+      "title": "Novaria Example",
+      "prompt": "Create an executive-ready business slide analyzing Q2 FY26 revenue performance by region for Datastream Analytics, comparing Q2 FY26 with Q2 FY25.\n\nUse the following data:\n\n* Northeast: $11.6M \u2192 $14.2M, +22%\n* West: $10.9M \u2192 $11.8M, +8%\n* Southeast: $9.7M \u2192 $9.4M, \u22123%\n* Midwest: $8.0M \u2192 $7.1M, \u221211%\n\nThe core takeaway is that strong Northeast growth is masking softer performance elsewhere.\n\nExplain the business drivers behind the regional results:\n\n* Northeast: Growth was driven by three enterprise deals that closed in April rather than a one-time upsell. The pipeline was built over roughly nine months, suggesting the increase reflects deliberate enterprise execution rather than a windfall. Northeast revenue is $14.2M and represents approximately 33% of total revenue.\n* Midwest: Performance weakened after the loss of two anchor accounts: Prism Industries ($1.4M) and Horizon Manufacturing ($0.9M), both of which cited competitor bundling. Pipeline is also materially weaker, with $2.1M of weighted pipeline versus $4.8M at the same point last year. Characterize this decline as structural rather than seasonal.\n* West: Revenue increased 8% to $11.8M. Characterize this as steady, healthy growth without overstating its importance.\n* Southeast: Revenue declined 3% to $9.4M. Characterize this as broadly flat and not yet a major concern.\n\nThe slide should make it immediately clear that aggregate performance looks healthier than the underlying regional picture. Emphasize the contrast between repeatable enterprise execution in the Northeast and more concerning structural weakness in the Midwest.\n\nKeep the language concise, human, and decision-oriented. Avoid generic phrases such as \u2018strong momentum,\u2019 \u2018headwinds,\u2019 \u2018mixed performance,\u2019 or \u2018strategic opportunity\u2019 unless they add specific meaning.",
+      "cells": {
+        "baseline": {
+          "preview": "versions/baseline/curtiss/preview/slide-01.png",
+          "title": "Novaria baseline",
+          "warnings": [],
+          "changes": []
+        },
+        "v5-current": {
+          "variants": [
+            {
+              "label": "1 \u2014 Full-width + movers",
+              "src": "versions/v5-current/previews/novaria-v1-analyst.png",
+              "html": "../../presentations/novaria-ytd-impact-jun-v2-analyst.html"
+            },
+            {
+              "label": "2 \u2014 Sidebar narrative",
+              "src": "versions/v5-current/previews/novaria-v2-analyst.png",
+              "html": "../../presentations/novaria-ytd-impact-jun-sidebar-analyst.html"
+            }
+          ],
+          "title": "v5 \u2014 Two analyst layout variants",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "Two layout variants: full-width + mover cards vs. sidebar narrative + tier findings"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "replacement-parts",
+      "title": "Every Machine Plays a Critical Role",
+      "prompt": "Create a slide explaining why replacement parts can sustain strong pricing and margins even when the individual component appears simple or inexpensive.\n\nOpen with the idea that every part on a machine plays a critical role in keeping the broader system operational.\n\nConsumer examples: OEM ice maker ~$98.99 vs generic ~$42.83; OEM steering pump ~$573.17 vs generic ~$198.99. OEM replacement volume ~3\u00d7 generic aftermarket.\n\nIndustrial examples: Oven gas regulator ~$347, ~80% margin (downtime urgency); Aerospace bolts $150\u2013$250/bolt, 80\u201390% margin (certification); Trenchless water-line $1,000\u2013$5,000, 75\u201385% margin (repair consequence).\n\nBusiness logic: customers pay to restore operation, avoid downtime, maintain certification, or prevent larger repair consequence \u2014 not just for the physical part.\n\nConclusion: replacement-part economics are driven by system criticality, supporting premium pricing and attractive margins even for simple components.",
+      "cells": {
+        "v5-current": {
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "../versions/v5-current/previews/replacement-parts-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "../versions/v5-current/previews/replacement-parts-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "../versions/v5-current/previews/replacement-parts-consultant.png"
+            }
+          ],
+          "html": "../../presentations/replacement-parts-pricing-v4-consultant.html",
+          "title": "System Criticality Drives 75\u201390% Replacement-Part Margins",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "New case: replacement-part pricing thesis with consumer OEM vs generic comparisons and industrial margin examples"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Three personas: analyst (KPI strip + comparison bars + data table), executive (three-column detail layout), consultant (thesis-left + evidence-right with portfolio guidance)"
+            }
+          ]
+        },
+        "baseline": {
+          "preview": "../versions/baseline/replacement-parts/preview/slide-01.png",
+          "title": "Every part on a machine plays a critical role in its operation",
+          "warnings": [],
+          "changes": []
+        }
+      }
+    },
+    {
+      "id": "margin-diagnostic",
+      "title": "B2B Distributor \u2014 margin leakage diagnostic",
+      "prompt": "Create a consultant-style slide for evaluating where a client is losing margin and what management should do about it.\n\nUse a hypothetical B2B distributor with approximately $500M in annual revenue.\n\nThe analysis should show that average realized price increased 2.1% over the last year, but gross margin improved only 40 bps because higher input costs and discount leakage absorbed most of the benefit. Roughly $8.4M of annual margin opportunity remains addressable.\n\nThe opportunity is concentrated in three areas: inconsistent discounting ($3.6M from tightening discount guardrails), low-value accounts priced below target ($2.7M from resetting prices), and slow cost pass-through ($2.1M from accelerating cost pass-through \u2014 60\u201390 day lag).\n\nDistinguish between structural issues (need new pricing rules) and execution issues (need better adherence to existing rules).\n\nRecommend a practical sequence: (1) establish price corridors and approval thresholds, (2) reprice low-value accounts, (3) introduce faster cost-triggered price updates, (4) track realized price, exception rates, and margin capture weekly.\n\nStoryline: pricing performance is improving, but inconsistent execution is leaving approximately $8M of margin on the table; most of the opportunity can be captured through tighter discount discipline and targeted repricing rather than broad-based price increases.",
+      "cells": {
+        "v5-current": {
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/margin-diagnostic-analyst.png"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/margin-diagnostic-executive.png"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/margin-diagnostic-consultant.png"
+            }
+          ],
+          "html": "../../presentations/b2b-distributor-margin-diagnostic-v4-consultant.html",
+          "title": "Execution Gaps Leave $8.4M on the Table Despite 2.1% Price Gains",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "New case: B2B distributor margin leakage diagnostic with $8.4M addressable opportunity across three levers"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Three personas: analyst (40bps hero + lever bars + classification table), executive ($8.4M hero + segmented bar + strategy-progression strip), consultant (lever bars with execution/structural badges + bridge-format findings)"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Structural vs. execution classification badges on lever bars distinguish governance fixes from repricing decisions"
+            }
+          ]
         }
       }
     }

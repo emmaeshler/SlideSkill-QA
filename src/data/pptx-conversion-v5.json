@@ -33,6 +33,25 @@
           "pptx": "../presentations/logistec-v5-platform-strategy-executive.pptx"
         }
       }
+    },
+    {
+      "id": "halvorsen-leakage-exec",
+      "title": "Halvorsen — FY25 Discount Leakage (Executive)",
+      "source": "halvorsen-v4-leakage-ranking-executive",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/halvorsen-v4-executive-html.png",
+          "html": "../presentations/halvorsen-v4-leakage-ranking-executive.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/halvorsen-v4-executive-pptx.png",
+          "pptx": "../presentations/halvorsen-v4-leakage-ranking-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/halvorsen-v4-executive-pptx-gen2.png",
+          "pptx": "../presentations/halvorsen-v4-leakage-ranking-executive.pptx"
+        }
+      }
     }
   ]
 }
