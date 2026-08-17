@@ -3990,6 +3990,44 @@
           ]
         }
       }
+    },
+    {
+      "id": "steel-value-chain",
+      "title": "Steel Mfg — pricing value chain (expects waterfall)",
+      "prompt": "Show how a pricing opportunity moves from insight to realized financial impact. Explain the major stages from identifying price leakage, prioritizing opportunities, executing pricing actions, and ultimately capturing EBITDA. Include the key business outcome at each stage and call out where value is most commonly lost or delayed. Conclude with the one action leadership should take to improve conversion from identified opportunity to realized value. (Executive persona, benchmarked to a mid-market steel manufacturer, ~$500M revenue)",
+      "cells": {
+        "v5-current": {
+          "variants": [
+            {
+              "label": "Waterfall (magnitude)",
+              "src": "versions/v5-current/previews/steel-value-chain-executive.png",
+              "html": "../../presentations/steel-pricing-value-chain-v4-executive.html"
+            },
+            {
+              "label": "Flow Diagram (h-train)",
+              "src": "versions/v5-current/previews/steel-value-chain-flow-executive.png",
+              "html": "../../presentations/steel-pricing-value-chain-flow-v4-executive.html"
+            },
+            {
+              "label": "Central Flow (hub-spoke)",
+              "src": "versions/v5-current/previews/steel-value-chain-central-executive.png",
+              "html": "../../presentations/steel-pricing-value-chain-central-v4-executive.html"
+            }
+          ],
+          "title": "Only $18M of $52M in Pricing Opportunities Reaches the P&L",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "Two layout variants from visual intent disambiguation: waterfall (magnitude/CFO) vs. flow diagram (process/COO)"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Waterfall: bridge encoding $52M → -$11M → -$16M (focal) → -$7M → $18M realized. Flow: h-train-expanded with loss callout cards per stage, Execute phase in red as focal"
+            }
+          ]
+        }
+      }
     }
   ]
 }

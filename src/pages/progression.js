@@ -76,7 +76,7 @@ export function mount(root) {
         let ptabs = '';
         if (hasPersonas) {
           const labels = new Set();
-          MODEL.cases.forEach((c) => { (c.cells[v]?.previews || []).forEach((p) => labels.add(p.label)); });
+          MODEL.cases.forEach((c) => { (c.cells[v]?.previews || []).forEach((p) => { if (ABBREV[p.label]) labels.add(p.label); }); });
           const labelsArr = [...labels];
           ptabs =
             '<div class="head-persona-tabs">' +

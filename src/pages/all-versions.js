@@ -101,7 +101,7 @@ export function mount(root) {
         let ptabs = '';
         if (hasPersonas) {
           const labels = new Set();
-          MODEL.cases.forEach((c) => { (c.cells[v]?.previews || []).forEach((p) => labels.add(p.label)); });
+          MODEL.cases.forEach((c) => { (c.cells[v]?.previews || []).forEach((p) => { if (ABBREV[p.label]) labels.add(p.label); }); });
           const labelsArr = [...labels];
           ptabs =
             '<div class="head-persona-tabs">' +
@@ -153,7 +153,15 @@ export function mount(root) {
           selectHtml = `<span>${run?.runId || 'not run'}</span>`;
         }
 
-        if (previews && previews.length) {
+        const isPersonaPreviews = previews && previews.length && previews.some((p) => ABBREV[p.label]);
+        if (previews && previews.length && !isPersonaPreviews) {
+          el.innerHTML =
+            '<span class="select-badge"></span>' +
+            `<button class="image-button active" data-variant="0"><img src="${previews[0].src}" alt="${c.title} · ${v} · ${previews[0].label}"></button>` +
+            previews.slice(1).map((p, i) =>
+              `<button class="image-button" data-variant="${i + 1}" style="display:none"><img src="${p.src}" alt="${c.title} · ${v} · ${p.label}"></button>`
+            ).join('');
+        } else if (isPersonaPreviews) {
           el.innerHTML =
             '<span class="select-badge"></span>' +
             '<div class="persona-tabs">' +
@@ -170,10 +178,30 @@ export function mount(root) {
               : '<div class="image-button"><span class="empty">No artifact</span></div>');
         }
 
+        if (!isPersonaPreviews && previews && previews.length > 1) {
+          el.innerHTML +=
+            '<div class="variant-wrap"><span class="variant-label">Layout</span>' +
+            `<select class="variant-select" data-ci="${ci}" data-vi="${vi}">` +
+            previews.map((p, pi) => `<option value="${pi}">${p.label}</option>`).join('') +
+            '</select></div>';
+        }
+
         el.innerHTML +=
           `<div class="cell-foot"><span class="${failed ? 'bad' : warnings ? 'warn' : ''}">${failed ? 'failed' : warnings + ' warning' + (warnings === 1 ? '' : 's')}</span>${selectHtml}</div>` +
           (run && !run.truth && run.preview ? '<span class="badge">no truth render</span>' : '') +
           (run && run.truth && !run.preview ? '<span class="badge">no engine preview</span>' : '');
+
+        const variantSelect = el.querySelector('.variant-select');
+        if (variantSelect) {
+          variantSelect.addEventListener('change', () => {
+            const idx = parseInt(variantSelect.value);
+            el.querySelectorAll('.image-button[data-variant]').forEach((btn) => {
+              const show = parseInt(btn.dataset.variant) === idx;
+              btn.style.display = show ? 'block' : 'none';
+              btn.classList.toggle('active', show);
+            });
+          });
+        }
 
         el.querySelectorAll('.persona-tab').forEach((tab) => {
           tab.addEventListener('click', () => {
@@ -187,13 +215,18 @@ export function mount(root) {
         el.querySelectorAll('.image-button').forEach((btn) => {
           btn.addEventListener('click', () => {
             if (compareMode) { handleCompareClick(ci, vi); return; }
-            const slot = btn.dataset.slot;
-            if (slot !== undefined && previews) modal.open(ci, vi, parseInt(slot));
-            else modal.open(ci, vi);
+            const variantIdx = btn.dataset.variant;
+            if (variantIdx !== undefined && previews && !isPersonaPreviews) {
+              modal.open(ci, vi, parseInt(variantIdx));
+            } else {
+              const slot = btn.dataset.slot;
+              if (slot !== undefined && previews) modal.open(ci, vi, parseInt(slot));
+              else modal.open(ci, vi);
+            }
           });
         });
 
-        const sel = el.querySelector('select');
+        const sel = el.querySelector('select:not(.variant-select)');
         if (sel) {
           sel.addEventListener('change', (e) => {
             selectedRun[`${ci}-${v}`] = parseInt(e.target.value);
@@ -216,7 +249,8 @@ export function mount(root) {
     let suffix = '';
     const lane = MODEL.lanes && MODEL.lanes[v];
 
-    if (previews && previews.length) {
+    const isPersona = previews && previews.length && previews.some((p) => ABBREV[p.label]);
+    if (previews && previews.length && isPersona) {
       const si = active.slot !== undefined ? active.slot : previews.length - 1;
       img = previews[si].src;
       suffix = ' · ' + previews[si].label;
@@ -229,6 +263,19 @@ export function mount(root) {
           modal.active.slot = parseInt(btn.dataset.slot);
           modal.update();
         });
+      });
+    } else if (previews && previews.length && !isPersona) {
+      const si = active.slot !== undefined ? active.slot : 0;
+      img = previews[si].src;
+      suffix = ' · ' + previews[si].label;
+      els.personaTabsEl.style.display = 'flex';
+      els.personaTabsEl.innerHTML =
+        '<select class="variant-select" style="margin:0 auto">' +
+        previews.map((p, pi) => `<option value="${pi}"${pi === si ? ' selected' : ''}>${p.label}</option>`).join('') +
+        '</select>';
+      els.personaTabsEl.querySelector('.variant-select').addEventListener('change', (e) => {
+        modal.active.slot = parseInt(e.target.value);
+        modal.update();
       });
     } else {
       els.personaTabsEl.style.display = 'none';

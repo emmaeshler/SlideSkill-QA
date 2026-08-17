@@ -56,6 +56,11 @@
         "gen-3": {
           "preview": "html-to-pptx/screenshots/halvorsen-v4-executive-pptx-gen3.png",
           "pptx": "../presentations/halvorsen-v4-leakage-ranking-executive.pptx"
+        },
+        "gen-4": {
+          "preview": "html-to-pptx/screenshots/halvorsen-v4-executive-pptx-gen4.png",
+          "pptx": "../presentations/halvorsen-v4-leakage-ranking-executive.pptx",
+          "note": "Fix: RECTANGLE → ROUNDED_RECTANGLE for rectRadius support"
         }
       }
     },
