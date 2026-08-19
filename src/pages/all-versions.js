@@ -2,7 +2,7 @@ import MODEL from '../data/all-versions.json';
 import { createMatrix } from '../components/matrix.js';
 import { createModal, createCompare } from '../components/modal.js';
 
-const ABBREV = { Analyst: 'A', Executive: 'E', Consultant: 'C' };
+const ABBREV = { Analyst: 'A', Executive: 'E', Consultant: 'C', Strategist: 'S' };
 
 export function mount(root) {
   let mode = 'truth';

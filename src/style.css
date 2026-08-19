@@ -113,6 +113,11 @@ select { max-width: 145px; border: 1px solid var(--line); border-radius: 6px; ba
 .persona-tab { flex: 1; padding: 5px 0; border: none; border-radius: 6px; font: 600 10px/1.3 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); background: var(--paper); cursor: pointer; transition: all 0.15s; }
 .persona-tab:hover { color: var(--ink); background: var(--line); }
 .persona-tab.active { color: #fff; background: var(--primary); }
+.persona-pane { display: none; }
+.persona-pane.active { display: block; }
+.persona-panes .persona-pane .image-button { display: block; aspect-ratio: 16/9; }
+.persona-panes .persona-pane .image-button[data-subvar] { display: none; }
+.persona-panes .persona-pane .image-button[data-subvar].active { display: block; }
 .persona-panes .image-button { display: none; aspect-ratio: 16/9; }
 .persona-panes .image-button.active { display: block; }
 
@@ -125,6 +130,9 @@ select { max-width: 145px; border: 1px solid var(--line); border-radius: 6px; ba
 .modal-persona-tab { padding: 6px 18px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 6px; font: 600 11px/1.3 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255, 255, 255, 0.5); background: transparent; cursor: pointer; transition: all 0.15s; }
 .modal-persona-tab:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
 .modal-persona-tab.active { color: #fff; background: var(--primary); border-color: var(--primary); }
+.modal-variant-select { padding: 6px 12px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 6px; font: 600 11px/1.3 var(--mono); color: rgba(255, 255, 255, 0.7); background: rgba(255, 255, 255, 0.08); cursor: pointer; margin-left: 8px; }
+.modal-variant-select:hover { border-color: rgba(255, 255, 255, 0.5); }
+.modal-variant-select option { background: var(--ink); color: #fff; }
 
 /* ── Compare mode ────────────────────────────── */
 .compare-toggle { background: var(--primary); color: #fff; border: none; border-radius: 8px; padding: 9px 18px; cursor: pointer; font: 600 13px/1 var(--sans); letter-spacing: 0; text-transform: none; transition: all 0.15s; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }

@@ -3981,7 +3981,7 @@
             },
             {
               "tag": "CHANGED",
-              "note": "Executive redesigned: replaced findings-list + hero-stat + segmented-bar with a single waterfall bridge showing $10.5M price capture → three leakage bars → $2.1M net margin — the visual IS the argument"
+              "note": "Executive redesigned: replaced findings-list + hero-stat + segmented-bar with a single waterfall bridge showing $10.5M price capture \u2192 three leakage bars \u2192 $2.1M net margin \u2014 the visual IS the argument"
             },
             {
               "tag": "ADDED",
@@ -3993,7 +3993,7 @@
     },
     {
       "id": "steel-value-chain",
-      "title": "Steel Mfg — pricing value chain (expects waterfall)",
+      "title": "Steel Mfg \u2014 pricing value chain (expects waterfall)",
       "prompt": "Show how a pricing opportunity moves from insight to realized financial impact. Explain the major stages from identifying price leakage, prioritizing opportunities, executing pricing actions, and ultimately capturing EBITDA. Include the key business outcome at each stage and call out where value is most commonly lost or delayed. Conclude with the one action leadership should take to improve conversion from identified opportunity to realized value. (Executive persona, benchmarked to a mid-market steel manufacturer, ~$500M revenue)",
       "cells": {
         "v5-current": {
@@ -4023,7 +4023,240 @@
             },
             {
               "tag": "ADDED",
-              "note": "Waterfall: bridge encoding $52M → -$11M → -$16M (focal) → -$7M → $18M realized. Flow: h-train-expanded with loss callout cards per stage, Execute phase in red as focal"
+              "note": "Waterfall: bridge encoding $52M \u2192 -$11M \u2192 -$16M (focal) \u2192 -$7M \u2192 $18M realized. Flow: h-train-expanded with loss callout cards per stage, Execute phase in red as focal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pepper",
+      "title": "Pepper \u2014 internal tool adoption dashboard (expects stacked bar)",
+      "prompt": "Create a slide showing early adoption and sustained usage of an internal productivity tool called Pepper, launched June 30. The slide should communicate that adoption has been strong only seven weeks after launch and that usage is becoming broad across the firm.\n\nUse the following data:\n\n82% of Delivery has used Pepper: 125 of 153 people\n71% of the entire firm has used Pepper: 183 of 259 people\n1,424 total sessions since launch\nPower BI represents 43% of sessions in the latest week, after launching July 21\n\nShow weekly Pepper sessions since launch, broken out by capability:\nJun 29: 107 sessions\nJul 6: 161\nJul 13: 216\nJul 20: 204\nJul 27: 225\nAug 3: 293\nAug 10: 218\n\nDistinguish Slides & Decks usage from Power BI usage beginning the week of Jul 20.\n\nThe core story: Pepper reached 82% of Delivery within seven weeks, while weekly usage has remained above 200 sessions for five consecutive weeks. Adoption is no longer concentrated in the original slide-generation use case; newer capabilities such as Power BI are expanding Pepper's coverage across workflows.\n\nMake the takeaway clear that the most important signal is breadth of adoption and sustained usage, not simply cumulative session volume.",
+      "cells": {
+        "v5-current": {
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/pepper-analyst.png"
+            },
+            {
+              "label": "Strategist",
+              "src": "versions/v5-current/previews/pepper-strategist.png"
+            }
+          ],
+          "html": "../../presentations/pepper-adoption-v4-analyst.html",
+          "title": "v5 \u2014 Analyst + Strategist",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "New Strategist persona: forward-looking, investment-decision framing"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Stacked bar chart with Slides & Decks vs Power BI capability breakout"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "pricing-pipeline",
+      "title": "Pricing Pipeline \u2014 execution bottleneck flow diagram",
+      "prompt": "Make a slide showing how pricing opportunities flow through our organization and where we're leaving money on the table. We identified $52M in potential but only $18M is hitting the P&L. The big drop-off is in execution \u2014 reps aren't implementing the recommended prices. Stages: Discovery \u2192 Prioritization \u2192 Execution \u2192 Realization. FY25 YTD. Flow diagram style (COO-style) showing the process and breakdown points.",
+      "cells": {
+        "v5-current": {
+          "previews": [
+            {
+              "label": "Analyst",
+              "src": "versions/v5-current/previews/pricing-pipeline-analyst.png",
+              "html": "../../presentations/pricing-pipeline-v5-analyst.html"
+            },
+            {
+              "label": "Executive",
+              "src": "versions/v5-current/previews/pricing-pipeline-executive.png",
+              "html": "../../presentations/pricing-pipeline-v5-executive.html"
+            },
+            {
+              "label": "Consultant",
+              "src": "versions/v5-current/previews/pricing-pipeline-consultant.png",
+              "html": "../../presentations/pricing-pipeline-v5-consultant.html"
+            },
+            {
+              "label": "Strategist",
+              "src": "versions/v5-current/previews/pricing-pipeline-strategist-v4.png",
+              "html": "../../presentations/pricing-pipeline-v5-strategist-v4.html",
+              "variants": [
+                {
+                  "label": "4 \u2014 Fresh build",
+                  "src": "versions/v5-current/previews/pricing-pipeline-strategist-v4.png",
+                  "html": "../../presentations/pricing-pipeline-v5-strategist-v4.html"
+                },
+                {
+                  "label": "3 \u2014 Refined funnel",
+                  "src": "versions/v5-current/previews/pricing-pipeline-strategist-v3.png",
+                  "html": "../../presentations/pricing-pipeline-v5-strategist-v3.html"
+                },
+                {
+                  "label": "2 \u2014 Funnel visual",
+                  "src": "versions/v5-current/previews/pricing-pipeline-strategist-v2.png",
+                  "html": "../../presentations/pricing-pipeline-v5-strategist-v2.html"
+                },
+                {
+                  "label": "1 \u2014 Linear pipeline",
+                  "src": "versions/v5-current/previews/pricing-pipeline-strategist.png",
+                  "html": "../../presentations/pricing-pipeline-v5-strategist.html"
+                }
+              ]
+            }
+          ],
+          "title": "v5 \u2014 All four personas + strategist iteration history",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "Analyst: Waterfall chart decomposing the $34M execution loss + stage-by-stage throughput data table"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Executive: Pipeline-funnel hero visual with compact Problem/Cause/Fix annotation columns"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Consultant: 4-stage pipeline-funnel with benchmark comparison bars (35% vs 65% peer median) and sourced findings"
+            },
+            {
+              "tag": "CHANGED",
+              "note": "v4 Strategist: Fresh build with goals-banner, pipeline-funnel visual-zone, diagnosis-action grid, summary-bar"
+            },
+            {
+              "tag": "CHANGED",
+              "note": "v3: Refined funnel into three distinct stages (Discovery+Prioritization \u2192 Execution \u2192 Realization)"
+            },
+            {
+              "tag": "CHANGED",
+              "note": "v2: Replaced linear pipeline with dramatic narrowing funnel visual"
+            },
+            {
+              "tag": "ADDED",
+              "note": "v1: Linear 4-stage pipeline with numbered circles, KPI strip, diagnosis + path forward text sections"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "coding-announcement",
+      "title": "Pepper \u2014 feature announcement (icon-text-stack + image placeholder)",
+      "prompt": "Create a strategist slide announcing that coding is now available in Pepper. The audience is internal \u2014 people who already use Pepper for slides and Power BI. The slide should communicate three things: what coding is (handles data cleanup, validation, and recurring tasks beyond Slides and Power BI \u2014 about 18,100 hours/year of that work), what guardrails are in place (hooks, whitelists, permission-based access), and when access starts (August 31, rolled out through in-person cohort workshops). Include a placeholder for a product screenshot on the right side. The callout should frame coding as unlocking time and flexibility to solve more, faster, right where the work happens.",
+      "cells": {
+        "v5-current": {
+          "previews": [
+            {
+              "label": "Strategist",
+              "src": "versions/v5-current/previews/pepper-coding-announcement-strategist.png"
+            }
+          ],
+          "html": "../../presentations/pepper-coding-announcement-v5-strategist.html",
+          "title": "Announcing Coding in Pepper",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "New Feature Announcement archetype for strategist persona \u2014 first use of icon-text-stack + image-placeholder layout"
+            },
+            {
+              "tag": "ADDED",
+              "note": "icon-text-stack component: circular icon badges with label/title/desc \u2014 no card boundaries, reads as one connected story"
+            },
+            {
+              "tag": "ADDED",
+              "note": "image-placeholder component: gray rect placeholder for product screenshots to be inserted in PPTX"
+            },
+            {
+              "tag": "ADDED",
+              "note": "callout-band-full component: surface-bg band with orange circle icon + bold sentence"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Intake feature-announcement detection: signal keywords + product visual gate + archetype_hint routing"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Cards vs icon-text-stack routing decision table in component README"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "client-ai-progress",
+      "title": "Client AI Progress — training complete, client deployment next",
+      "prompt": "Create a strategist slide showing our client-facing AI progress. Team training is complete — 40 out of 40 trained across 6 priority audiences (Leadership Team, Principals, Private Equity, Directors, Business Development, Senior Managers). The focus now shifts to client deployment as the Q3 priority. We have 7 active solutions across two agent types (Quoting and Explanation agents). Next-phase enablement includes Model Demo Training, Call Plan Agent Demo, Optimization Deep Dive, and Integration Deep Dive. On the client side, show the current solutions: Quick Quote, Explanation Agent, and Benchmark Agent (Quoting), plus FAQ Agent, Training Companion, and Call Plan Agent (Explanation). Status should show 3 live, 2 in pilot, 2 building. Format this as a progress/adoption slide.",
+      "cells": {
+        "v5-current": {
+          "previews": [
+            {
+              "label": "Strategist",
+              "src": "versions/v5-current/previews/client-ai-progress-strategist.png"
+            }
+          ],
+          "html": "../../presentations/client-ai-progress-v5-strategist.html",
+          "title": "Team training is complete. Client deployment is now the Q3 priority.",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "Progress/adoption archetype: journey timeline with done/current/target nodes"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Two-section layout: internal readiness (left) + client adoption matrix (right)"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Audience grid showing 6 completed training cohorts"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Solution status matrix with Live/Pilot/Building status chips across Quoting + Explanation agent types"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ai-strategy-recap",
+      "title": "AI Strategy Recap — capabilities vs adoption gap",
+      "prompt": "Create a strategist slide recapping our AI strategy. The goal is to create leverage for Delivery — unlock additional capacity and accelerate the client experience, and elevate the team to focus more on strategy and better client outcomes instead of tedious, repetitive execution detail. The slide should show the growing gap between capabilities (which are accelerating exponentially) and adoption (which is growing slowly). Structure the strategy in two parts: Part 1 is the Capability Strategy (focus on Delivery where biggest time savings are, build where time is spent per April time study, bring tools into existing workflows, keep client data secure with in-house inference). Part 2 is the Learning & Adoption Strategy (audience-first rollout by role priority, cohort workshops not self-serve, feedback loops that shape the next build, executive sponsorship to signal this matters). This is an internal strategy alignment slide.",
+      "cells": {
+        "v5-current": {
+          "previews": [
+            {
+              "label": "Strategist",
+              "src": "versions/v5-current/previews/ai-strategy-recap-strategist.png"
+            }
+          ],
+          "html": "../../presentations/ai-strategy-recap-v4-strategist.html",
+          "title": "Let's take a step back and recap our goal & strategies for capabilities & adoption.",
+          "warnings": [],
+          "changes": [
+            {
+              "tag": "ADDED",
+              "note": "Goals-banner hero element with mission statement + secondary objective"
+            },
+            {
+              "tag": "ADDED",
+              "note": "SVG capabilities-vs-adoption gap illustration showing exponential vs linear divergence"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Two-part pillar structure: Capability Strategy (4 items) + Learning & Adoption Strategy (4 items)"
+            },
+            {
+              "tag": "ADDED",
+              "note": "Summary bar anchoring the gap framing as the organizing problem"
             }
           ]
         }

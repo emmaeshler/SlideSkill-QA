@@ -3,7 +3,7 @@ import VERSION_INFO from '../data/version-info.json';
 import { createMatrix } from '../components/matrix.js';
 import { createModal, createCompare } from '../components/modal.js';
 
-const ABBREV = { Analyst: 'A', Executive: 'E', Consultant: 'C' };
+const ABBREV = { Analyst: 'A', Executive: 'E', Consultant: 'C', Strategist: 'S' };
 
 export function mount(root) {
   root.innerHTML = `
@@ -59,7 +59,7 @@ export function mount(root) {
     });
     matrixEl.querySelectorAll(`.cell[data-vi="${vi}"]`).forEach((cell) => {
       const tabs = cell.querySelectorAll('.persona-tab');
-      const panes = cell.querySelectorAll('.persona-panes .image-button');
+      const panes = cell.querySelectorAll('.persona-panes .persona-pane');
       if (!tabs.length) return;
       tabs.forEach((t) => t.classList.toggle('active', parseInt(t.dataset.tab) === slot));
       panes.forEach((p) => p.classList.toggle('active', parseInt(p.dataset.slot) === slot));
@@ -131,7 +131,19 @@ export function mount(root) {
             previews.map((p, pi) => `<button class="persona-tab${pi === previews.length - 1 ? ' active' : ''}" data-tab="${pi}">${ABBREV[p.label] || p.label}</button>`).join('') +
             '</div>' +
             '<div class="persona-panes">' +
-            previews.map((p, pi) => `<button class="image-button${pi === previews.length - 1 ? ' active' : ''}" data-slot="${pi}"><img src="${p.src}" alt="${c.title} · ${v} · ${p.label}"></button>`).join('') +
+            previews.map((p, pi) => {
+              const isActive = pi === previews.length - 1;
+              if (p.variants && p.variants.length > 1) {
+                return `<div class="persona-pane${isActive ? ' active' : ''}" data-slot="${pi}">` +
+                  p.variants.map((vr, vri) =>
+                    `<button class="image-button${vri === 0 ? ' active' : ''}" data-subvar="${vri}"${vri > 0 ? ' style="display:none"' : ''}><img src="${vr.src}" alt="${c.title} · ${v} · ${vr.label}"></button>`
+                  ).join('') +
+                  `<div class="variant-wrap"><span class="variant-label">Layout</span><select class="sub-variant-select" data-slot="${pi}">` +
+                  p.variants.map((vr, vri) => `<option value="${vri}">${vr.label}</option>`).join('') +
+                  '</select></div></div>';
+              }
+              return `<div class="persona-pane${isActive ? ' active' : ''}" data-slot="${pi}"><button class="image-button"><img src="${p.src}" alt="${c.title} · ${v} · ${p.label}"></button></div>`;
+            }).join('') +
             '</div>';
         } else {
           el.innerHTML =
@@ -141,7 +153,8 @@ export function mount(root) {
               : '<div class="image-button"><span class="empty">No artifact</span></div>');
         }
 
-        const htmlLink = variants ? variants[0].html : cell?.html;
+        const defaultPreview = previews && previews.length ? previews[previews.length - 1] : null;
+        const htmlLink = variants ? variants[0].html : defaultPreview ? defaultPreview.html : cell?.html;
         el.innerHTML +=
           '<div class="cell-foot">' +
           (cell?.pptx ? `<a href="${cell.pptx}" download>Download .pptx</a>` : htmlLink ? `<a class="html-link" href="${htmlLink}" target="_blank">Open HTML ↗</a>` : '') +
@@ -172,9 +185,30 @@ export function mount(root) {
         el.querySelectorAll('.persona-tab').forEach((tab) => {
           tab.addEventListener('click', () => {
             el.querySelectorAll('.persona-tab').forEach((t) => t.classList.remove('active'));
-            el.querySelectorAll('.persona-panes .image-button').forEach((p) => p.classList.remove('active'));
+            el.querySelectorAll('.persona-panes .persona-pane').forEach((p) => p.classList.remove('active'));
             tab.classList.add('active');
-            el.querySelector(`.persona-panes .image-button[data-slot="${tab.dataset.tab}"]`).classList.add('active');
+            el.querySelector(`.persona-panes .persona-pane[data-slot="${tab.dataset.tab}"]`).classList.add('active');
+            const link = el.querySelector('.html-link');
+            if (link && previews) {
+              const p = previews[parseInt(tab.dataset.tab)];
+              if (p) link.href = p.html;
+            }
+          });
+        });
+
+        el.querySelectorAll('.sub-variant-select').forEach((sel) => {
+          sel.addEventListener('change', () => {
+            const pane = sel.closest('.persona-pane');
+            const idx = parseInt(sel.value);
+            pane.querySelectorAll('.image-button[data-subvar]').forEach((btn) => {
+              const show = parseInt(btn.dataset.subvar) === idx;
+              btn.style.display = show ? 'block' : 'none';
+              btn.classList.toggle('active', show);
+            });
+            const link = el.querySelector('.html-link');
+            const slot = parseInt(pane.dataset.slot);
+            const p = previews[slot];
+            if (link && p?.variants?.[idx]?.html) link.href = p.variants[idx].html;
           });
         });
 
@@ -185,9 +219,14 @@ export function mount(root) {
             if (variantIdx !== undefined && variants) {
               modal.open(ci, vi, undefined, parseInt(variantIdx));
             } else {
-              const slot = btn.dataset.slot;
-              if (slot !== undefined && previews) modal.open(ci, vi, parseInt(slot));
-              else modal.open(ci, vi);
+              const pane = btn.closest('.persona-pane');
+              if (pane && previews) {
+                const slot = parseInt(pane.dataset.slot);
+                const subvar = btn.dataset.subvar !== undefined ? parseInt(btn.dataset.subvar) : undefined;
+                modal.open(ci, vi, slot, subvar);
+              } else {
+                modal.open(ci, vi);
+              }
             }
           });
         });
@@ -222,18 +261,44 @@ export function mount(root) {
       });
     } else if (previews && previews.length) {
       const si = active.slot !== undefined ? active.slot : previews.length - 1;
-      img = previews[si].src;
-      suffix = ' · ' + previews[si].label;
+      const p = previews[si];
+      const subVars = p.variants;
+      const svi = active.variantIdx !== undefined ? active.variantIdx : 0;
+
+      if (subVars && subVars.length > 1) {
+        img = subVars[svi].src;
+        suffix = ' · ' + p.label + ' · ' + subVars[svi].label;
+      } else {
+        img = p.src;
+        suffix = ' · ' + p.label;
+      }
+
       els.personaTabsEl.style.display = 'flex';
-      els.personaTabsEl.innerHTML = previews.map((p, pi) =>
-        `<button class="modal-persona-tab${pi === si ? ' active' : ''}" data-slot="${pi}">${p.label}</button>`
+      let tabsHtml = previews.map((pr, pi) =>
+        `<button class="modal-persona-tab${pi === si ? ' active' : ''}" data-slot="${pi}">${pr.label}</button>`
       ).join('');
+
+      if (subVars && subVars.length > 1) {
+        tabsHtml += '<select class="modal-variant-select">' +
+          subVars.map((vr, vri) => `<option value="${vri}"${vri === svi ? ' selected' : ''}>${vr.label}</option>`).join('') +
+          '</select>';
+      }
+
+      els.personaTabsEl.innerHTML = tabsHtml;
       els.personaTabsEl.querySelectorAll('.modal-persona-tab').forEach((btn) => {
         btn.addEventListener('click', () => {
           modal.active.slot = parseInt(btn.dataset.slot);
+          modal.active.variantIdx = 0;
           modal.update();
         });
       });
+      const modalVarSelect = els.personaTabsEl.querySelector('.modal-variant-select');
+      if (modalVarSelect) {
+        modalVarSelect.addEventListener('change', (e) => {
+          modal.active.variantIdx = parseInt(e.target.value);
+          modal.update();
+        });
+      }
     } else {
       els.personaTabsEl.style.display = 'none';
       els.personaTabsEl.innerHTML = '';
