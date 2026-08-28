@@ -4,7 +4,9 @@
     "gen-1",
     "gen-2",
     "gen-3",
-    "gen-4"
+    "gen-4",
+    "gen-5",
+    "gen-6"
   ],
   "cases": [
     {
@@ -136,6 +138,194 @@
       }
     },
     {
+      "id": "skeleton-19a-exec-summary",
+      "title": "Skeleton 19a — Executive Summary: Need → Solution → Approach",
+      "version": "V5",
+      "source": "commercial-services-pricing-v5-executive",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-19a-executive-summary.png",
+          "html": "../presentations/commercial-services-pricing-v5-executive.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-19a-executive-summary-pptx.png",
+          "pptx": "../presentations/commercial-services-pricing-v5-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-19a-executive-summary-pptx-gen2.png",
+          "pptx": "../presentations/commercial-services-pricing-v5-executive.pptx",
+          "note": "Fix: tier-based KPI sizing (stat=20pt, hero=36pt), manual render replacing kpiStrip component, visible accent bars and column dividers"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-19a-executive-summary-pptx-gen3.png",
+          "pptx": "../presentations/commercial-services-pricing-v5-executive.pptx",
+          "note": "Fix: title to 20pt (fits one line), uniform 26pt KPI values (focal by color only, not size)"
+        },
+        "gen-4": {
+          "preview": "html-to-pptx/screenshots/skeleton-19a-executive-summary-pptx-gen4.png",
+          "pptx": "../presentations/commercial-services-pricing-v5-executive.pptx",
+          "note": "Fix: detail text contained in KPI panel (detailRowH 0.22→0.32), more gap before findings grid"
+        },
+        "gen-5": {
+          "preview": "html-to-pptx/screenshots/skeleton-19a-executive-summary-pptx-gen5.png",
+          "pptx": "../presentations/commercial-services-pricing-v5-executive.pptx",
+          "note": "Fix: shrunk KPI fonts (value 20pt, label 10pt, detail 8pt), tighter padding, all text contained in panel"
+        },
+        "gen-6": {
+          "preview": "html-to-pptx/screenshots/skeleton-19a-executive-summary-pptx-gen6.png",
+          "pptx": "../presentations/commercial-services-pricing-v5-executive.pptx",
+          "note": "Final: refactored to use SC.render.kpiStrip (tier: stat) + SC.render.findingsGrid shared components"
+        }
+      }
+    },
+    {
+      "id": "skeleton-18a-before-after",
+      "title": "Skeleton 18a — Before/After Comparison (Executive)",
+      "version": "V5",
+      "source": "skeleton-18a-executive-before-after-balanced",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-18a-before-after-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-18a-executive-before-after-balanced.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-18a-before-after-pptx.png",
+          "pptx": "../presentations/skeleton-18a-before-after-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-18a-before-after-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-18a-before-after-executive.pptx",
+          "note": "Fix: content-sized table rows (rowH 2.07→1.35), compact updated-value boxes, fixed-height ownership box (1.62\") instead of fill-available"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-18a-before-after-pptx-gen3.png",
+          "pptx": "../presentations/skeleton-18a-before-after-executive.pptx",
+          "note": "Fix: rewrote to use shared components (comparisonRow, modelFlowCompact, ownershipSplit). Fixed label truncation, flow font sizing, ownership charSpacing"
+        }
+      }
+    },
+    {
+      "id": "skeleton-18b-savings",
+      "title": "Skeleton 18b — Before/After: Savings Hero (Executive)",
+      "version": "V5",
+      "source": "skeleton-18b-executive-before-after-savings",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-18b-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-18b-executive-before-after-savings.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-18b-savings-pptx.png",
+          "pptx": "../presentations/skeleton-18b-before-after-savings-executive.pptx",
+          "note": "Shared components (comparisonRow, modelFlowCompact, ownershipSplit). Hero value 36pt, detail spacing fix"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-18b-savings-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-18b-before-after-savings-executive.pptx",
+          "note": "Fix: tightened hero value→label gap (0.62→0.56), added 0.20\" breathing room before PREVIOUS MODEL"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-18b-savings-pptx-gen3.png",
+          "pptx": "../presentations/skeleton-18b-before-after-savings-executive.pptx",
+          "note": "HTML+PPTX co-design: inline value+label, 55/45 column split, horizontal ownership rows, shorter hero cards, removed context badge"
+        }
+      }
+    },
+    {
+      "id": "skeleton-18c-ownership",
+      "title": "Skeleton 18c — Before/After: Ownership Forward (Executive)",
+      "version": "V5",
+      "source": "skeleton-18c-executive-before-after-ownership",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-18c-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-18c-executive-before-after-ownership.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-18c-ownership-pptx.png",
+          "pptx": "../presentations/skeleton-18c-before-after-ownership-executive.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-03b-impact",
+      "title": "Skeleton 03b — Problem/Cause/Fix: Impact (Ranked Bars)",
+      "version": "V5",
+      "source": "skeleton-03b-executive-argument-impact",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-03b-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-03b-executive-argument-impact.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-03b-impact-pptx.png",
+          "pptx": "../presentations/skeleton-03b-impact-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-03b-impact-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-03b-impact-executive.pptx",
+          "note": "Componentized: inline ranked-bars replaced with SC.render.rankedBars()"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-03b-impact-pptx-gen3.png",
+          "pptx": "../presentations/skeleton-03b-impact-executive.pptx",
+          "note": "Fix: Rule 24 line outlines, hero stat tighter to claim, cause/fix divider breathing room, column divider centered"
+        }
+      }
+    },
+    {
+      "id": "skeleton-03c-cause",
+      "title": "Skeleton 03c — Problem/Cause/Fix: Cause Hero (Segmented Bar)",
+      "version": "V5",
+      "source": "skeleton-03c-executive-argument-cause",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-03c-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-03c-executive-argument-cause.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-03c-cause-pptx.png",
+          "pptx": "../presentations/skeleton-03c-cause-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-03c-cause-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-03c-cause-executive.pptx",
+          "note": "Componentized: inline segmented bar + legend replaced with SC.render.segmentedBar()"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-03c-cause-pptx-gen3.png",
+          "pptx": "../presentations/skeleton-03c-cause-executive.pptx",
+          "note": "Fix: Rule 24 line outlines on all shapes (width: 0 → 0.5)"
+        }
+      }
+    },
+    {
+      "id": "skeleton-03d-decision",
+      "title": "Skeleton 03d — Problem/Cause/Fix: Decision (Trend Bars)",
+      "version": "V5",
+      "source": "skeleton-03d-executive-argument-decision",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-03d-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-03d-executive-argument-decision.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-03d-decision-pptx.png",
+          "pptx": "../presentations/skeleton-03d-decision-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-03d-decision-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-03d-decision-executive.pptx",
+          "note": "Componentized: inline trend chart replaced with SC.render.trendBars()"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-03d-decision-pptx-gen3.png",
+          "pptx": "../presentations/skeleton-03d-decision-executive.pptx",
+          "note": "Fix: Rule 24 line outlines, problem/root-cause divider breathing room, card interior padding (title→metric→coverage)"
+        }
+      }
+    },
+    {
       "id": "halvorsen-leakage",
       "title": "Halvorsen — FY25 Discount Leakage Ranking",
       "version": "V4",
@@ -152,6 +342,287 @@
         "gen-2": {
           "preview": "html-to-pptx/screenshots/halvorsen-leakage-ranking-pptx-gen2.png",
           "pptx": "../presentations/halvorsen-v3-leakage-ranking-gen2.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-10a-balanced-exec",
+      "title": "Skeleton 10a — Variance Dispersion Balanced (Executive)",
+      "version": "V1",
+      "source": "skeleton-10a-executive-argument-dispersion-balanced",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-10a-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-10a-executive-argument-dispersion-balanced.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-10a-balanced-pptx.png",
+          "pptx": "../presentations/skeleton-10a-balanced-executive.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-10b-balanced-analyst",
+      "title": "Skeleton 10b — Variance Dispersion Balanced (Analyst)",
+      "version": "V1",
+      "source": "skeleton-10b-analyst-argument-dispersion-balanced",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-10b-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-10b-analyst-argument-dispersion-balanced.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-10b-balanced-pptx.png",
+          "pptx": "../presentations/skeleton-10b-balanced-analyst.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-10c-balanced-consultant",
+      "title": "Skeleton 10c — Variance Dispersion Balanced (Consultant)",
+      "version": "V1",
+      "source": "skeleton-10c-consultant-argument-dispersion-balanced",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-10c-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-10c-consultant-argument-dispersion-balanced.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-10c-balanced-pptx.png",
+          "pptx": "../presentations/skeleton-10c-balanced-consultant.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-10d-spread-exec",
+      "title": "Skeleton 10d — Variance Dispersion Spread (Executive)",
+      "version": "V1",
+      "source": "skeleton-10d-executive-argument-dispersion-spread",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-10d-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-10d-executive-argument-dispersion-spread.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-10d-spread-pptx.png",
+          "pptx": "../presentations/skeleton-10d-spread-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-10d-spread-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-10d-spread-executive.pptx",
+          "note": "Rewrite: html-to-pptx skill methodology (SC.spacing, brand-config, shared-components, 33 rules). Fork pill 0.80→1.10\", chip font 9→8pt"
+        }
+      }
+    },
+    {
+      "id": "skeleton-04a-flywheel",
+      "title": "Skeleton 04a — Process: Flywheel System (Executive)",
+      "version": "V1",
+      "source": "skeleton-04a-executive-process-flywheel-system",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-04a-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-04a-executive-process-flywheel-system.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-04a-pptx.png",
+          "pptx": "../presentations/skeleton-04a-flywheel-executive.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-04a-pptx.png",
+          "pptx": "../presentations/skeleton-04a-flywheel-executive.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-13a-progress",
+      "title": "Skeleton 13a — Process: Trend Chart + KPI Strip (Strategist)",
+      "version": "V2",
+      "source": "skeleton-13a-strategist-process-progress",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-13a-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-13a-strategist-process-progress.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-13a-pptx.png",
+          "pptx": "../presentations/skeleton-13a-progress-strategist.pptx",
+          "note": "V1: stepper-only layout (replaced)"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-13a-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-13a-progress-strategist.pptx",
+          "note": "V2: redesigned with native stacked bar chart hero, KPI strip at bottom"
+        }
+      }
+    },
+    {
+      "id": "skeleton-16a-funnel",
+      "title": "Skeleton 16a — Process: Pipeline Funnel Bottleneck (Executive)",
+      "version": "V1",
+      "source": "skeleton-16a-executive-process-funnel-bottleneck",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-16a-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-16a-executive-process-funnel-bottleneck.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-16a-pptx.png",
+          "pptx": "../presentations/skeleton-16a-funnel-executive.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-01a-ranking-analyst",
+      "title": "Skeleton 01a — Analyst Ranking Composition: Dominance",
+      "version": "V1",
+      "source": "skeleton-01a-analyst-dataviz-ranking-dominance",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-01a-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-01a-analyst-dataviz-ranking-dominance.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-01a-ranking-pptx.png",
+          "pptx": "../presentations/skeleton-01a-ranking-analyst.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-01a-ranking-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-01a-ranking-analyst.pptx",
+          "note": "Componentized: rankedBars(inline) + dataTable + chipPill shared components"
+        }
+      }
+    },
+    {
+      "id": "skeleton-20a-findings-consultant",
+      "title": "Skeleton 20a — Consultant Findings Summary (Balanced)",
+      "version": "V1",
+      "source": "skeleton-20a-consultant-argument-findings-balanced",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-20a-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-20a-consultant-argument-findings-balanced.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-20a-findings-pptx-gen1.png",
+          "pptx": "../presentations/skeleton-20a-findings-consultant.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-20a-findings-pptx.png",
+          "pptx": "../presentations/skeleton-20a-findings-consultant.pptx",
+          "note": "Font shrink: headline 22→18pt, body 11→9pt, category/source 10→8pt, KPI stat→compact tier. Tighter padding throughout"
+        }
+      }
+    },
+    {
+      "id": "skeleton-06a-benchmark-consultant",
+      "title": "Skeleton 06a — Consultant Benchmark Comparison: Position",
+      "version": "V1",
+      "source": "skeleton-06a-consultant-benchmark-comparison-position",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-06a-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-06a-consultant-benchmark-comparison-position.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-06a-benchmark-consultant-gen1.png",
+          "pptx": "../presentations/skeleton-06a-benchmark-consultant.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-10e-drivers-exec",
+      "label": "10e · Drivers · Executive",
+      "version": "V1",
+      "source": "skeleton-10e-executive-argument-dispersion-drivers",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-10e-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-10e-executive-argument-dispersion-drivers.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-10e-drivers-pptx-gen1.png",
+          "pptx": "../presentations/skeleton-10e-drivers-executive.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-08a-reference-data",
+      "title": "Skeleton 08a — Reference Lookup (Data-First, Consultant)",
+      "version": "skeleton",
+      "source": "skeleton-08a-consultant-argument-reference-data",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-08a-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-08a-consultant-argument-reference-data.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-08a-pptx.png",
+          "pptx": "../presentations/skeleton-08a-reference-data-consultant.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-08b-reference-rationale",
+      "title": "Skeleton 08b — Reference Lookup (Rationale-First, Consultant)",
+      "version": "skeleton",
+      "source": "skeleton-08b-consultant-argument-reference-rationale",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-08b-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-08b-consultant-argument-reference-rationale.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-08b-pptx.png",
+          "pptx": "../presentations/skeleton-08b-reference-rationale-consultant.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-15a-dual-track-parallel",
+      "title": "Skeleton 15a — Dual-Track Progress: Parallel (Strategist)",
+      "version": "V1",
+      "source": "crm-rollout-progress-strategist",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-15a-html.png",
+          "html": "../presentations/crm-rollout-progress-strategist.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/crm-rollout-progress-strategist-pptx.png",
+          "pptx": "../presentations/crm-rollout-progress-strategist.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-15b-dual-track-handoff",
+      "title": "Skeleton 15b — Dual-Track Progress: Handoff (Strategist)",
+      "version": "V1",
+      "source": "crm-migration-dual-track-strategist",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-15b-html.png",
+          "html": "../presentations/crm-migration-dual-track-strategist.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/crm-migration-dual-track-strategist-pptx.png",
+          "pptx": "../presentations/crm-migration-dual-track-strategist.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-15c-dual-track-program",
+      "title": "Skeleton 15c — Dual-Track Progress: Program (Strategist)",
+      "version": "V1",
+      "source": "digital-transformation-program-strategist",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-15c-html.png",
+          "html": "../presentations/digital-transformation-program-strategist.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/digital-transformation-program-strategist-pptx.png",
+          "pptx": "../presentations/digital-transformation-program-strategist.pptx"
         }
       }
     }

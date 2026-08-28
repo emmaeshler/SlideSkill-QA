@@ -1,0 +1,1338 @@
+{
+  "_doc": "Skeleton index \u2014 organized by families (argument type) with emphasis variants. The matcher reads this single file. Flow: intake fingerprint \u2192 match family \u2192 detect/ask emphasis \u2192 pick variant \u2192 load that variant's contract.",
+  "families": [
+    {
+      "family": "problem-cause-fix",
+      "description": "Diagnostic arc \u2014 names a problem, explains its root cause(s), proposes a fix",
+      "match": {
+        "archetype": "argument",
+        "argument": "problem-cause-fix",
+        "signals": [
+          "prompt contains a problem/loss/cost/risk AND its cause/driver/reason AND an action/fix/recommendation",
+          "quantifiable negative impact",
+          "cause can be decomposed into 2-4 segments"
+        ]
+      },
+      "cause_visual_options": {
+        "_doc": "The cause zone uses swappable chart types. Each skeleton defaults to one; the builder matches based on data shape.",
+        "types": {
+          "segmented-bar": {
+            "data_fit": "composition \u2014 parts sum to 100%",
+            "used_by": [
+              "skeleton-03a",
+              "skeleton-03c"
+            ]
+          },
+          "ranked-bars": {
+            "data_fit": "magnitude \u2014 independent drivers ranked by absolute value",
+            "used_by": [
+              "skeleton-03b"
+            ]
+          },
+          "trend-bars": {
+            "data_fit": "temporal \u2014 cause is a worsening trend over time",
+            "used_by": [
+              "skeleton-03d"
+            ]
+          }
+        }
+      },
+      "emphasis_question": {
+        "prompt": "What should the reader focus on first?",
+        "detect_from": "If the user says 'convince to act' or 'get approval' \u2192 decision. If 'understand why' or 'root cause' \u2192 cause. If 'how bad is it' or 'impact' \u2192 impact. If unclear \u2192 ask.",
+        "detect_mapping": {
+          "decision": "decision",
+          "cause": "cause",
+          "impact": "impact",
+          "balanced": "balanced",
+          "position": "balanced",
+          "gap": "impact",
+          "system": "cause",
+          "bottleneck": "cause",
+          "progress": "balanced"
+        },
+        "options": [
+          {
+            "key": "balanced",
+            "label": "Balanced view",
+            "description": "Equal weight across problem, cause, and fix",
+            "default": true
+          },
+          {
+            "key": "impact",
+            "label": "The financial impact",
+            "description": "Lead with the cost \u2014 hero stat dominates, cause and fix are supporting"
+          },
+          {
+            "key": "cause",
+            "label": "The root cause",
+            "description": "Lead with the breakdown \u2014 cause analysis is the hero, flanked by problem and fix"
+          },
+          {
+            "key": "decision",
+            "label": "The decision",
+            "description": "Lead with the action options \u2014 what to do is the hero, problem and cause are context"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-03a",
+          "emphasis": "balanced",
+          "name": "3-column equal weight",
+          "source_golden": "golden-03",
+          "layout": "3 equal columns: problem | cause | fix. Each has hero stat + claim + detail content. Progression strip at bottom.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "breakdown",
+            "comparison"
+          ],
+          "item_count": [
+            3,
+            8
+          ]
+        },
+        {
+          "id": "skeleton-03b",
+          "emphasis": "impact",
+          "name": "Impact hero with cause/fix sidebar",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-03b-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-03b-impact-pptx.png",
+          "cause_visual": "ranked-bars",
+          "layout": "58/42 split. Left: 72px hero stat + claim + 2 supporting stats. Right: stacked cause (ranked horizontal bars by magnitude) + fix (action steps). Summary bar at bottom.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "breakdown",
+            "comparison"
+          ],
+          "item_count": [
+            3,
+            8
+          ],
+          "pptx": "../presentations/skeleton-03b-impact-executive.pptx"
+        },
+        {
+          "id": "skeleton-03c",
+          "emphasis": "cause",
+          "name": "Cause breakdown hero",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-03c-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-03c-cause-pptx.png",
+          "cause_visual": "segmented-bar",
+          "layout": "Full-width cause segmented bar (36px) as hero in surface panel with aligned legend. Below: 2-column grid \u2014 left problem stat + context, right fix stat + action steps. Callout band at bottom.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "breakdown"
+          ],
+          "item_count": [
+            3,
+            6
+          ],
+          "pptx": "../presentations/skeleton-03c-cause-executive.pptx"
+        },
+        {
+          "id": "skeleton-03d",
+          "emphasis": "decision",
+          "name": "Decision-forward with context rail",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-03d-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-03d-decision-pptx.png",
+          "cause_visual": "trend-bars",
+          "layout": "Left 35%: context rail with problem stat + cause trend mini-chart (6-quarter vertical bars). Right 65%: 2 option zone-cards side by side, each with badge + title + metric + bullets. Decision callout at bottom.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "breakdown",
+            "comparison"
+          ],
+          "item_count": [
+            2,
+            6
+          ],
+          "pptx": "../presentations/skeleton-03d-decision-executive.pptx"
+        }
+      ]
+    },
+    {
+      "family": "waterfall-bridge",
+      "description": "Value walk \u2014 start \u2192 drivers (gains/drags) \u2192 end. Classic bridge or margin decomposition.",
+      "match": {
+        "archetype": "dataviz",
+        "argument": "thesis-evidence",
+        "signals": [
+          "prompt describes change from one value to another",
+          "names specific drivers/factors explaining the change",
+          "has start and end values with contributing items"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What matters more about this walk?",
+        "detect_from": "If the user focuses on 'what drove the change' \u2192 drivers. If 'where we ended up' \u2192 outcome. If 'what went wrong' \u2192 drags.",
+        "detect_mapping": {
+          "cause": "drivers",
+          "impact": "outcome",
+          "decision": "balanced",
+          "balanced": "balanced",
+          "gap": "outcome",
+          "system": "drivers",
+          "bottleneck": "drivers",
+          "position": "outcome",
+          "progress": "balanced"
+        },
+        "options": [
+          {
+            "key": "balanced",
+            "label": "Full bridge",
+            "description": "Equal weight \u2014 start, all drivers, end shown proportionally",
+            "default": true
+          },
+          {
+            "key": "drivers",
+            "label": "Driver deep-dive",
+            "description": "Chart is hero, findings annotate the top 2-3 drivers"
+          },
+          {
+            "key": "outcome",
+            "label": "Outcome focus",
+            "description": "End value is the hero stat, bridge is supporting context"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-05a",
+          "emphasis": "balanced",
+          "name": "60/40 waterfall + annotated findings",
+          "source_golden": "golden-05",
+          "layout": "Left 60%: waterfall chart with labeled bars. Right 40%: 2-3 analyst findings with chips.",
+          "personas": [
+            "analyst"
+          ],
+          "data_shape": [
+            "waterfall"
+          ],
+          "item_count": [
+            3,
+            8
+          ]
+        },
+        {
+          "id": "skeleton-09a",
+          "emphasis": "balanced",
+          "name": "Executive waterfall with action strip",
+          "source_golden": "golden-09",
+          "_status": "draft",
+          "preview": "html-to-pptx/screenshots/skeleton-09a-reference.png",
+          "layout": "Full-width CSS waterfall hero with running-total connectors + bracket annotation. Callout band + 3-step action strip below.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "waterfall"
+          ],
+          "item_count": [
+            3,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "family": "ranking-composition",
+      "description": "Items ranked or composed by value \u2014 who's biggest, what's the mix, where's the concentration.",
+      "match": {
+        "archetype": "dataviz",
+        "argument": "thesis-evidence",
+        "signals": [
+          "prompt lists items with comparable values",
+          "natural ordering by magnitude",
+          "concentration or dominance pattern"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What's the story in the ranking?",
+        "detect_from": "If the user highlights a gap between top and rest \u2192 dominance. If distribution matters \u2192 spread. If comparing two groups \u2192 split.",
+        "detect_mapping": {
+          "impact": "dominance",
+          "cause": "dominance",
+          "decision": "dominance",
+          "balanced": "dominance",
+          "gap": "split",
+          "position": "dominance",
+          "system": "spread",
+          "bottleneck": "dominance",
+          "progress": "spread"
+        },
+        "options": [
+          {
+            "key": "dominance",
+            "label": "Top-heavy",
+            "description": "Lead item dominates \u2014 hero stat is the leader, bar chart shows the drop-off",
+            "default": true
+          },
+          {
+            "key": "spread",
+            "label": "Even spread",
+            "description": "Distribution is the story \u2014 all items shown proportionally, no single hero"
+          },
+          {
+            "key": "split",
+            "label": "Two-group contrast",
+            "description": "Top group vs bottom group \u2014 visual split emphasizes the divide"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-01a",
+          "emphasis": "dominance",
+          "name": "Ranked bar chart + annotated rail",
+          "source_golden": "golden-01",
+          "_status": "built",
+          "preview": "html-to-pptx/screenshots/skeleton-01a-reference.png",
+          "pptx": "presentations/skeleton-01a-ranking-analyst.pptx",
+          "layout": "Left 55%: horizontal ranked bar chart with stats line. Right 45%: compact data table + findings rail with semantic chips. Summary bar at bottom.",
+          "personas": [
+            "analyst"
+          ],
+          "data_shape": [
+            "ranking",
+            "composition"
+          ],
+          "item_count": [
+            4,
+            10
+          ]
+        },
+        {
+          "id": "skeleton-02a",
+          "emphasis": "spread",
+          "name": "Horizontal ranking with detail rows",
+          "source_golden": "golden-02",
+          "_status": "draft",
+          "preview": "html-to-pptx/screenshots/skeleton-02a-reference.png",
+          "layout": "55/45 split. Left: three-tier ranked bars with vs-avg delta badges + spread summary line. Right: data table + findings rail. Spread-emphasis: quantifies range and ratio.",
+          "personas": [
+            "analyst"
+          ],
+          "data_shape": [
+            "ranking"
+          ],
+          "item_count": [
+            4,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "family": "benchmark-comparison",
+      "description": "Performance vs a reference point \u2014 industry benchmark, competitor, prior period, target.",
+      "match": {
+        "archetype": "benchmark",
+        "argument": "compare-contrast",
+        "signals": [
+          "prompt compares values against a benchmark or reference",
+          "has 'vs', 'compared to', 'relative to', 'gap'",
+          "named reference entity (industry, competitor, target)"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What matters more \u2014 where you stand or the gap?",
+        "detect_from": "If the user asks 'how do we compare' \u2192 position. If 'how far behind' or 'what to close' \u2192 gap.",
+        "detect_mapping": {
+          "position": "position",
+          "gap": "gap",
+          "impact": "gap",
+          "balanced": "position",
+          "decision": "gap",
+          "cause": "gap",
+          "system": "position",
+          "bottleneck": "gap",
+          "progress": "position"
+        },
+        "options": [
+          {
+            "key": "position",
+            "label": "Competitive position",
+            "description": "Side-by-side comparison \u2014 reader sees relative standing",
+            "default": true
+          },
+          {
+            "key": "gap",
+            "label": "Gap to close",
+            "description": "Delta is the hero \u2014 reader sees what needs to change"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-06a",
+          "emphasis": "position",
+          "name": "Margin comparison with benchmark line",
+          "source_golden": "golden-06",
+          "_status": "draft",
+          "preview": "html-to-pptx/screenshots/skeleton-06a-reference.png",
+          "pptx": "../presentations/skeleton-06a-benchmark-consultant.pptx",
+          "layout": "55/45 split. Left: hero gap stat + horizontal bars with benchmark markers + gap badges. Right: findings with bridge text + action block. Consultant credibility sourcing.",
+          "personas": [
+            "consultant"
+          ],
+          "data_shape": [
+            "comparison"
+          ],
+          "item_count": [
+            3,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "family": "process-flow",
+      "description": "Stages, phases, or steps in a sequence \u2014 pipeline, lifecycle, methodology, flywheel.",
+      "match": {
+        "archetype": "process",
+        "argument": "status-action",
+        "signals": [
+          "prompt describes sequential stages or phases",
+          "has step 1/2/3 or phase language",
+          "describes a pipeline, workflow, or methodology"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "Is this about the overall system or a specific bottleneck?",
+        "detect_from": "If the user focuses on one broken step \u2192 bottleneck. If describing the whole approach \u2192 system. If showing adoption \u2192 progress.",
+        "detect_mapping": {
+          "system": "system",
+          "bottleneck": "bottleneck",
+          "progress": "progress",
+          "balanced": "system",
+          "cause": "bottleneck",
+          "impact": "bottleneck",
+          "decision": "system",
+          "position": "system",
+          "gap": "bottleneck"
+        },
+        "options": [
+          {
+            "key": "system",
+            "label": "Full system view",
+            "description": "All stages shown equally \u2014 reader sees the whole process",
+            "default": true
+          },
+          {
+            "key": "bottleneck",
+            "label": "Bottleneck focus",
+            "description": "One stage is called out \u2014 reader sees where it breaks"
+          },
+          {
+            "key": "progress",
+            "label": "Progress tracking",
+            "description": "Stages shown with done/current/next status"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-04a",
+          "emphasis": "system",
+          "name": "Flywheel with thesis banner",
+          "source_golden": "golden-04",
+          "preview": "html-to-pptx/screenshots/skeleton-04a-html.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-04a-pptx.png",
+          "layout": "Circular flywheel diagram with thesis banner above. Stage labels around the ring.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "flow"
+          ],
+          "item_count": [
+            3,
+            6
+          ],
+          "pptx": "../presentations/skeleton-04a-flywheel-executive.pptx"
+        },
+        {
+          "id": "skeleton-13a",
+          "emphasis": "progress",
+          "name": "Trend chart with KPI strip",
+          "source_golden": "golden-13",
+          "preview": "html-to-pptx/screenshots/skeleton-13a-html.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-13a-pptx.png",
+          "layout": "Full-width stacked bar chart as hero. KPI stat-row below chart. Optional annotation marker.",
+          "personas": [
+            "strategist"
+          ],
+          "data_shape": [
+            "progress",
+            "trend"
+          ],
+          "item_count": [
+            4,
+            10
+          ],
+          "pptx": "../presentations/skeleton-13a-progress-strategist.pptx"
+        },
+        {
+          "id": "skeleton-16a",
+          "emphasis": "bottleneck",
+          "name": "Pipeline funnel with bottleneck callout",
+          "source_golden": "golden-16",
+          "preview": "html-to-pptx/screenshots/skeleton-16a-html.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-16a-pptx.png",
+          "layout": "Narrowing funnel diagram. Bottleneck stage highlighted. Findings annotate the drop-off.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "flow"
+          ],
+          "item_count": [
+            3,
+            6
+          ],
+          "pptx": "../presentations/skeleton-16a-funnel-executive.pptx"
+        }
+      ]
+    },
+    {
+      "family": "feature-announcement",
+      "description": "New capability, product, or initiative \u2014 what it is, why it matters, what changes.",
+      "match": {
+        "archetype": "feature_announcement",
+        "argument": "status-action",
+        "signals": [
+          "prompt announces something new",
+          "has 'launching', 'introducing', 'new capability', 'rolling out'",
+          "describes what it does + why it matters"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What should land first \u2014 the product or the impact?",
+        "detect_from": "If the user wants to show the UI \u2192 product. If they want to argue for adoption \u2192 impact.",
+        "detect_mapping": {
+          "impact": "impact",
+          "balanced": "product",
+          "decision": "impact",
+          "cause": "impact",
+          "system": "product",
+          "bottleneck": "impact",
+          "progress": "product",
+          "position": "product",
+          "gap": "impact"
+        },
+        "options": [
+          {
+            "key": "product",
+            "label": "Product showcase",
+            "description": "Screenshot/mockup is the hero \u2014 messaging supports it",
+            "default": true
+          },
+          {
+            "key": "impact",
+            "label": "Impact argument",
+            "description": "Benefits are the hero \u2014 product visual is supporting"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-14a",
+          "emphasis": "product",
+          "name": "Icon-text stack + product mockup",
+          "source_golden": "golden-14",
+          "layout": "Left 46%: icon-text messaging blocks. Right 54%: product image placeholder. Callout band below.",
+          "personas": [
+            "strategist"
+          ],
+          "data_shape": [
+            "flow"
+          ],
+          "item_count": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "family": "strategy-recap",
+      "description": "Internal alignment \u2014 thesis, strategic pillars, goals, rationale. For team buy-in, not external audiences.",
+      "match": {
+        "archetype": "strategy_recap",
+        "argument": "thesis-evidence",
+        "signals": [
+          "prompt describes strategy, priorities, or pillars",
+          "has 'our approach', 'strategic priorities', 'key pillars'",
+          "internal audience, not client-facing"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "Is this about the big picture or the specific priorities?",
+        "detect_from": "If the user wants alignment on direction \u2192 thesis. If listing specific workstreams \u2192 pillars.",
+        "detect_mapping": {
+          "balanced": "thesis",
+          "decision": "thesis",
+          "cause": "pillars",
+          "impact": "thesis",
+          "system": "pillars",
+          "bottleneck": "pillars",
+          "progress": "pillars",
+          "position": "thesis",
+          "gap": "pillars"
+        },
+        "options": [
+          {
+            "key": "thesis",
+            "label": "Thesis-first",
+            "description": "Lead with the overarching strategy, pillars support it",
+            "default": true
+          },
+          {
+            "key": "pillars",
+            "label": "Pillar-first",
+            "description": "Lead with the workstreams, thesis is context"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-17a",
+          "emphasis": "thesis",
+          "name": "Thesis banner + strategy pillars",
+          "source_golden": "golden-17",
+          "_status": "draft",
+          "preview": "html-to-pptx/screenshots/skeleton-17a-reference.png",
+          "layout": "Thesis banner with formula visual + 3 strategy pillar columns with numbered items + summary bar.",
+          "personas": [
+            "strategist"
+          ],
+          "data_shape": [
+            "breakdown"
+          ],
+          "item_count": [
+            4,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "family": "executive-summary",
+      "description": "1-slide proposal \u2014 business need, proposed solution, recommended approach. The slide that closes deals.",
+      "match": {
+        "archetype": "executive",
+        "argument": "problem-cause-fix",
+        "signals": [
+          "prompt asks for an executive summary or 1-slide overview of an engagement",
+          "has 'business need', 'proposed solution', 'approach', 'executive summary'",
+          "three-part arc: what's wrong, what we'll do, how we'll do it"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What should land hardest?",
+        "detect_from": "If the user emphasizes the pain/cost \u2192 problem. If the solution design \u2192 solution. If the engagement model \u2192 approach. If equal weight \u2192 balanced.",
+        "detect_mapping": {
+          "decision": "balanced",
+          "impact": "problem",
+          "cause": "problem",
+          "balanced": "balanced",
+          "system": "solution",
+          "bottleneck": "problem",
+          "progress": "approach",
+          "position": "balanced",
+          "gap": "problem"
+        },
+        "options": [
+          {
+            "key": "balanced",
+            "label": "Equal weight",
+            "description": "Need, solution, and approach shown side by side \u2014 reader follows the arc",
+            "default": true
+          },
+          {
+            "key": "problem",
+            "label": "The business pain",
+            "description": "Problem metrics dominate \u2014 solution and approach are supporting"
+          },
+          {
+            "key": "solution",
+            "label": "The solution design",
+            "description": "Solution details are the hero \u2014 problem is context, approach is footer"
+          },
+          {
+            "key": "approach",
+            "label": "The engagement model",
+            "description": "Timeline and scope dominate \u2014 problem and solution are compact context"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-19a",
+          "emphasis": "balanced",
+          "name": "Stat row + 3-column need/solution/approach",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-19a-executive-summary.png",
+          "pptx": "../presentations/commercial-services-pricing-v5-executive.pptx",
+          "layout": "Context bar at top. Stat row (4 KPIs) as hero. Below: 3-column findings grid \u2014 Business Need | Proposed Solution | Recommended Approach. Action column in orange accent.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "breakdown"
+          ],
+          "item_count": [
+            3,
+            9
+          ],
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-19a-executive-summary-pptx-gen6.png"
+        }
+      ]
+    },
+    {
+      "family": "before-after-comparison",
+      "description": "Side-by-side old state \u2192 new state with delta callouts. Proposals, restructured deals, timeline compression.",
+      "match": {
+        "archetype": "comparison",
+        "argument": "compare-contrast",
+        "signals": [
+          "prompt compares a previous/old/current state to a new/updated/proposed state",
+          "has 'before/after', 'previous vs updated', 'old \u2192 new', 'compressed', 'restructured'",
+          "quantifiable deltas between the two states (cost, time, scope)"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What should the reader focus on?",
+        "detect_from": "If the user emphasizes savings/reduction \u2192 savings. If restructured responsibilities \u2192 ownership. If equal weight \u2192 balanced.",
+        "detect_mapping": {
+          "impact": "savings",
+          "decision": "balanced",
+          "cause": "balanced",
+          "balanced": "balanced",
+          "gap": "savings",
+          "system": "ownership",
+          "bottleneck": "balanced",
+          "progress": "balanced",
+          "position": "balanced"
+        },
+        "options": [
+          {
+            "key": "balanced",
+            "label": "Full comparison",
+            "description": "Equal weight \u2014 both states shown with deltas between them",
+            "default": true
+          },
+          {
+            "key": "savings",
+            "label": "The savings",
+            "description": "Delta callouts dominate \u2014 reader sees the improvement first"
+          },
+          {
+            "key": "ownership",
+            "label": "The new structure",
+            "description": "After-state scope cards dominate \u2014 reader sees who owns what"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-18a",
+          "emphasis": "balanced",
+          "name": "Decision story \u2014 comparison rows + narrative + ownership",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-18a-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-18a-before-after-pptx.png",
+          "pptx": "../presentations/skeleton-18a-before-after-executive.pptx",
+          "layout": "Left 46%: comparison table (label | previous | delta | updated). Right 54%: narrative + process models + ownership split. Bottom: neutral hairline strip.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "comparison"
+          ],
+          "item_count": [
+            2,
+            8
+          ]
+        },
+        {
+          "id": "skeleton-18b",
+          "emphasis": "savings",
+          "name": "Savings-hero with before/after context",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-18b-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-18b-savings-pptx.png",
+          "pptx": "../presentations/skeleton-18b-before-after-savings-executive.pptx",
+          "layout": "Hero delta stats across top. Below: compact before/after comparison as supporting context.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "comparison"
+          ],
+          "item_count": [
+            2,
+            6
+          ]
+        },
+        {
+          "id": "skeleton-18c",
+          "emphasis": "ownership",
+          "name": "Ownership-forward with compact deltas",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-18c-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-18c-ownership-pptx.png",
+          "pptx": "../presentations/skeleton-18c-before-after-ownership-executive.pptx",
+          "layout": "Large ownership cards as hero (60%). Compact before/after KPI strip and deltas as sidebar (40%).",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "comparison"
+          ],
+          "item_count": [
+            2,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "family": "variance-dispersion",
+      "description": "Same starting point, materially different outcomes \u2014 the spread itself is the problem. Pricing, performance, compliance gaps across comparable entities.",
+      "match": {
+        "archetype": "argument",
+        "argument": "variance-dispersion",
+        "signals": [
+          "prompt has a single starting value/input that produces multiple different outcomes",
+          "variance or spread is not explained by the obvious variable (size, volume, tier)",
+          "entities can be compared on multiple dimensions (price, discount, margin)",
+          "the pattern suggests ad-hoc or inconsistent processes, not market forces"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What should the reader focus on first?",
+        "detect_from": "If the user says 'show the spread' or 'how different' \u2192 spread. If 'why is this happening' or 'root cause' \u2192 drivers. If unclear \u2192 balanced.",
+        "detect_mapping": {
+          "balanced": "balanced",
+          "impact": "spread",
+          "cause": "drivers",
+          "decision": "balanced",
+          "gap": "spread",
+          "system": "balanced",
+          "bottleneck": "drivers",
+          "progress": "balanced",
+          "position": "spread"
+        },
+        "options": [
+          {
+            "key": "balanced",
+            "label": "Balanced view",
+            "description": "Equal weight across the spread, its drivers, and the fix",
+            "default": true
+          },
+          {
+            "key": "spread",
+            "label": "The spread itself",
+            "description": "Lead with the visual divergence \u2014 how far apart the outcomes are"
+          },
+          {
+            "key": "drivers",
+            "label": "What's driving it",
+            "description": "Lead with the mechanism \u2014 why identical inputs produce different outputs"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-10a",
+          "emphasis": "balanced",
+          "name": "Divergence flow with findings rail",
+          "source_golden": "golden-10",
+          "_status": "built",
+          "preview": "html-to-pptx/screenshots/skeleton-10a-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-10a-balanced-pptx.png",
+          "pptx": "../presentations/skeleton-10a-balanced-executive.pptx",
+          "layout": "52/48 split. Left: source orb \u2192 fork \u2192 3 outcome orbs with entity cards. Right: finding title + drivers + quote + action card with chips.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "comparison"
+          ],
+          "item_count": [
+            3,
+            5
+          ]
+        },
+        {
+          "id": "skeleton-10b",
+          "emphasis": "balanced",
+          "name": "Scatter chart + data table with findings",
+          "source_golden": null,
+          "_status": "built",
+          "preview": "html-to-pptx/screenshots/skeleton-10b-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-10b-balanced-pptx.png",
+          "pptx": "../presentations/skeleton-10b-balanced-analyst.pptx",
+          "layout": "55/45 split. Left: scatter plot (Y=variance metric, X=size metric) with labeled data points + compact 5-column data table. Right: 3 semantic-dot findings + stakeholder quotes + action block.",
+          "personas": [
+            "analyst"
+          ],
+          "data_shape": [
+            "comparison"
+          ],
+          "item_count": [
+            3,
+            5
+          ]
+        },
+        {
+          "id": "skeleton-10c",
+          "emphasis": "balanced",
+          "name": "Benchmark bars with gap badges",
+          "source_golden": null,
+          "_status": "built",
+          "preview": "html-to-pptx/screenshots/skeleton-10c-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-10c-balanced-pptx.png",
+          "pptx": "../presentations/skeleton-10c-balanced-consultant.pptx",
+          "layout": "55/45 split. Left: hero gap stat + two benchmark bar panels (primary + consequence metric) with gap badges + interpretation line. Right: 3 findings with bridge text + numbered action steps.",
+          "personas": [
+            "consultant"
+          ],
+          "data_shape": [
+            "comparison"
+          ],
+          "item_count": [
+            3,
+            5
+          ]
+        },
+        {
+          "id": "skeleton-10d",
+          "emphasis": "spread",
+          "name": "Spread hero \u2014 full-width divergence flow with compact driver strip",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-10d-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-10d-spread-pptx.png",
+          "pptx": "../presentations/skeleton-10d-spread-executive.pptx",
+          "layout": "Full-width divergence flow as hero (65% height). Larger orbs, spread callout bracket on right edge. Below: 2-column strip \u2014 left drivers (compact), right action card.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "comparison"
+          ],
+          "item_count": [
+            3,
+            5
+          ]
+        },
+        {
+          "id": "skeleton-10e",
+          "emphasis": "drivers",
+          "name": "Drivers hero \u2014 ranked bars with context rail",
+          "source_golden": null,
+          "_status": "built",
+          "preview": "html-to-pptx/screenshots/skeleton-10e-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-10e-drivers-pptx-gen1.png",
+          "pptx": "../presentations/skeleton-10e-drivers-executive.pptx",
+          "layout": "38/62 split (inverted). Left context rail: compact source strip + outcome rows with mini orbs + spread badge. Right hero: finding title + ranked driver bars with magnitude + quote + action card.",
+          "personas": [
+            "executive"
+          ],
+          "data_shape": [
+            "comparison"
+          ],
+          "item_count": [
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "family": "findings-summary",
+      "description": "Key findings from an assessment \u2014 3-5 sourced findings, each with supporting data and a client bridge. The bread-and-butter consultant deliverable.",
+      "match": {
+        "archetype": [
+          "argument",
+          "benchmark"
+        ],
+        "argument": "thesis-evidence",
+        "signals": [
+          "prompt presents multiple findings or observations from an assessment/review",
+          "each finding has supporting data or evidence",
+          "no dominant visual (chart, diagram) \u2014 the structured findings ARE the deliverable",
+          "no diagnostic arc (not problem\u2192cause\u2192fix) \u2014 just: here is what we found",
+          "prompt compares metrics against targets/benchmarks but the structured findings ARE the deliverable (not a benchmark chart)"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "How should the findings be weighted?",
+        "detect_from": "If the user highlights one dominant finding \u2192 hero-finding. If the user emphasizes what to do about it \u2192 action-forward. If all findings are equally important \u2192 balanced.",
+        "detect_mapping": {
+          "balanced": "balanced",
+          "impact": "hero-finding",
+          "cause": "hero-finding",
+          "decision": "action-forward",
+          "gap": "hero-finding",
+          "system": "balanced",
+          "bottleneck": "hero-finding",
+          "progress": "balanced",
+          "position": "balanced"
+        },
+        "options": [
+          {
+            "key": "balanced",
+            "label": "Equal weight",
+            "description": "All findings shown equally in a grid \u2014 reader scans the full picture",
+            "default": true
+          },
+          {
+            "key": "hero-finding",
+            "label": "Lead finding",
+            "description": "One key finding is elevated as the hero \u2014 the rest support it"
+          },
+          {
+            "key": "action-forward",
+            "label": "Action-forward",
+            "description": "Findings are compact context \u2014 the recommendation block dominates"
+          }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-20a",
+          "emphasis": "balanced",
+          "name": "KPI strip + 3-column findings grid",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-20a-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-20a-findings-pptx.png",
+          "layout": "Full-width KPI strip (3 stats). Below: 3-column findings cards with semantic accent bars + bridge text + source citations. Action band at bottom.",
+          "personas": [
+            "consultant"
+          ],
+          "data_shape": [
+            "breakdown"
+          ],
+          "item_count": [
+            3,
+            8
+          ],
+          "pptx": "../presentations/skeleton-20a-findings-consultant.pptx"
+        },
+        {
+          "id": "skeleton-20b",
+          "emphasis": "hero-finding",
+          "name": "Hero finding + supporting cards",
+          "_status": "planned",
+          "source_golden": null,
+          "layout": "Lead finding as hero card (full-width, large stat). Below: 2-column supporting finding cards. Compact action strip.",
+          "personas": [
+            "consultant"
+          ],
+          "data_shape": [
+            "breakdown"
+          ],
+          "item_count": [
+            3,
+            6
+          ]
+        },
+        {
+          "id": "skeleton-20c",
+          "emphasis": "action-forward",
+          "name": "Compact findings + dominant action block",
+          "_status": "planned",
+          "source_golden": null,
+          "layout": "Compact 3-column finding summaries (title + key stat only). Action block takes 40% of slide with detailed steps and timeline.",
+          "personas": [
+            "consultant"
+          ],
+          "data_shape": [
+            "breakdown"
+          ],
+          "item_count": [
+            3,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "family": "maturity-assessment",
+      "description": "Capability scoring against a maturity model — where you are, where peers are, what's dragging the score down.",
+      "match": {
+        "archetype": "argument",
+        "argument": "thesis-evidence",
+        "signals": [
+          "prompt scores capabilities against a maturity model or readiness scale",
+          "has 'maturity', 'readiness', 'capability assessment', 'score X out of Y'",
+          "compares current state to a target or peer benchmark on a defined scale"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What should the reader focus on first?",
+        "detect_from": "If 'where do we stand' → position. If 'what's holding us back' → gaps. If 'what do we do about it' → action.",
+        "detect_mapping": { "position": "position", "gap": "gaps", "impact": "gaps", "cause": "gaps", "decision": "action", "balanced": "position", "system": "position", "bottleneck": "gaps", "progress": "position" },
+        "options": [
+          { "key": "position", "label": "Current position", "description": "Maturity track is the hero — reader sees where they sit on the scale", "default": true },
+          { "key": "gaps", "label": "Capability gaps", "description": "Capability breakdown bars are the hero — reader sees which dimensions drag the score" },
+          { "key": "action", "label": "Closing the gap", "description": "Action plan dominates — maturity track and scores are compact context" }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-07a",
+          "emphasis": "position",
+          "name": "Maturity track + capability bars + findings",
+          "source_golden": "golden-07",
+          "_status": "planned",
+          "layout": "55/45 split. Left: maturity stage track (5 stages, current + target highlighted) with gap badge, capability score bars below. Right: 3 findings + action block.",
+          "personas": ["consultant"],
+          "data_shape": ["breakdown", "comparison"],
+          "item_count": [4, 8]
+        },
+        {
+          "id": "skeleton-07b",
+          "emphasis": "gaps",
+          "name": "Capability bars hero with compact maturity rail",
+          "_status": "planned",
+          "source_golden": null,
+          "layout": "Full-width capability bar chart as hero (ranked worst-first, target lines). Compact maturity stage strip above. Findings + action below.",
+          "personas": ["consultant"],
+          "data_shape": ["breakdown"],
+          "item_count": [4, 8]
+        },
+        {
+          "id": "skeleton-07c",
+          "emphasis": "action",
+          "name": "Action roadmap with compact maturity context",
+          "_status": "planned",
+          "source_golden": null,
+          "layout": "Left 40%: compact maturity track + overall score + capability sparklines. Right 60%: sequenced action cards with target score and priority rationale.",
+          "personas": ["consultant"],
+          "data_shape": ["breakdown"],
+          "item_count": [3, 6]
+        }
+      ]
+    },
+    {
+      "family": "reference-lookup",
+      "description": "Quick-reference data — rate cards, fee schedules, conversion tables. The data IS the deliverable.",
+      "match": {
+        "archetype": ["argument", "dataviz"],
+        "argument": "thesis-evidence",
+        "signals": [
+          "prompt presents a table of reference values (rates, fees, thresholds, parameters)",
+          "has 'rate card', 'fee schedule', 'conversion table', 'reference', 'fixed rates'",
+          "reader needs to find a specific value quickly, not follow a narrative"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What matters more — the data or why it's set this way?",
+        "detect_from": "If just needs the numbers → data. If explain methodology → rationale. If one row is key → highlight.",
+        "detect_mapping": { "balanced": "data", "decision": "rationale", "cause": "rationale", "impact": "highlight", "system": "rationale", "position": "data", "gap": "highlight", "bottleneck": "highlight", "progress": "data" },
+        "options": [
+          { "key": "data", "label": "Data-first", "description": "Table dominates — rationale is a sidebar for context", "default": true },
+          { "key": "rationale", "label": "Rationale-first", "description": "Equal weight — table and methodology shown side by side" },
+          { "key": "highlight", "label": "Key-row callout", "description": "One row or value is the hero — the rest is supporting context" }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-08a",
+          "emphasis": "data",
+          "name": "Data table + rationale sidebar",
+          "source_golden": "golden-08",
+          "preview": "html-to-pptx/screenshots/skeleton-08a-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-08a-pptx.png",
+          "layout": "50/50 split. Left: styled data table with header row, base-row highlight, footnote. Right: rationale header + 3-4 rationale items. Action band at bottom.",
+          "personas": ["consultant"],
+          "data_shape": ["breakdown"],
+          "item_count": [4, 10],
+          "pptx": "../presentations/skeleton-08a-reference-data-consultant.pptx"
+        },
+        {
+          "id": "skeleton-08b",
+          "emphasis": "rationale",
+          "name": "Methodology-forward with compact table",
+          "source_golden": null,
+          "preview": "html-to-pptx/screenshots/skeleton-08b-reference.png",
+          "pptx_preview": "html-to-pptx/screenshots/skeleton-08b-pptx.png",
+          "layout": "Left 55%: methodology title + 4 rationale cards. Right 45%: compact data table. Callout band at bottom.",
+          "personas": ["consultant"],
+          "data_shape": ["breakdown"],
+          "item_count": [4, 8],
+          "pptx": "../presentations/skeleton-08b-reference-rationale-consultant.pptx"
+        }
+      ]
+    },
+    {
+      "family": "period-trend",
+      "description": "Performance tracked over time periods — quarterly revenue, monthly pipeline, annual headcount.",
+      "match": {
+        "archetype": "dataviz",
+        "argument": "thesis-evidence",
+        "signals": [
+          "prompt has values for the same metric across 3+ time periods",
+          "has 'quarterly', 'monthly', 'Q1/Q2/Q3/Q4', 'year-over-year', 'trend'",
+          "multiple series or categories tracked over the same time axis"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What's the story in the trend?",
+        "detect_from": "If one series growing/shrinking → focal-series. If mix shifting → mix-shift. If showing trajectory → trajectory.",
+        "detect_mapping": { "balanced": "trajectory", "impact": "focal-series", "cause": "focal-series", "decision": "focal-series", "gap": "focal-series", "system": "trajectory", "bottleneck": "focal-series", "position": "mix-shift", "progress": "trajectory" },
+        "options": [
+          { "key": "trajectory", "label": "Full trajectory", "description": "Stacked chart + data table — reader sees all series over all periods", "default": true },
+          { "key": "focal-series", "label": "One series stands out", "description": "Chart highlights the focal series — hero stat + findings explain why" },
+          { "key": "mix-shift", "label": "Mix is shifting", "description": "Composition change is the story — share percentages and mix-shift callouts dominate" }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-11a",
+          "emphasis": "trajectory",
+          "name": "Stacked bar chart + data table + findings rail",
+          "source_golden": "golden-11",
+          "_status": "planned",
+          "layout": "55/45 split. Left: stacked bar chart with legend + KPI strip. Right: data table with Δ column + findings with semantic chips. Summary bar at bottom.",
+          "personas": ["analyst"],
+          "data_shape": ["trend"],
+          "item_count": [4, 10]
+        },
+        {
+          "id": "skeleton-11b",
+          "emphasis": "focal-series",
+          "name": "Focal series hero with contribution context",
+          "source_golden": null,
+          "_status": "planned",
+          "layout": "58/42 split. Left: stacked bar chart with focal series highlighted. Right: hero stat + mix-shift callout + narrative + callout band.",
+          "personas": ["executive"],
+          "data_shape": ["trend"],
+          "item_count": [3, 8]
+        }
+      ]
+    },
+    {
+      "family": "growth-decomposition",
+      "description": "What drove the change — contribution bars showing which categories added or subtracted from a total.",
+      "match": {
+        "archetype": "dataviz",
+        "argument": "thesis-evidence",
+        "signals": [
+          "prompt names a total that grew or shrank and lists what contributed",
+          "has 'contributed', 'drove growth', 'offset by', 'net change'",
+          "categories have positive and negative contributions that sum to a net delta"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "What should land first — the drivers or the headline number?",
+        "detect_from": "If biggest contributor → driver-hero. If total change → headline-hero. If full decomposition → balanced.",
+        "detect_mapping": { "balanced": "balanced", "impact": "headline-hero", "cause": "driver-hero", "decision": "headline-hero", "gap": "driver-hero", "system": "balanced", "bottleneck": "driver-hero", "position": "headline-hero", "progress": "balanced" },
+        "options": [
+          { "key": "balanced", "label": "Full decomposition", "description": "Bridge endpoints + contribution bars + narrative — reader traces the whole walk", "default": true },
+          { "key": "driver-hero", "label": "Lead driver", "description": "Biggest contributor is the hero stat — chart and narrative support it" },
+          { "key": "headline-hero", "label": "Headline number", "description": "Net change is the hero — contribution bars are supporting context" }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-12a",
+          "emphasis": "balanced",
+          "name": "Bridge endpoints + contribution bars + narrative",
+          "source_golden": "golden-12",
+          "_status": "planned",
+          "layout": "58/42 split. Left: bridge panel (start → end with delta) + diverging contribution bars with net total. Right: hero stat + mix-shift + narrative + callout band.",
+          "personas": ["executive"],
+          "data_shape": ["waterfall"],
+          "item_count": [3, 8]
+        },
+        {
+          "id": "skeleton-12b",
+          "emphasis": "driver-hero",
+          "name": "Lead driver callout with compact decomposition",
+          "source_golden": null,
+          "_status": "planned",
+          "layout": "Left 40%: hero stat (lead driver) + mix-shift badge + narrative. Right 60%: compact bridge + contribution bars. Summary band at bottom.",
+          "personas": ["executive"],
+          "data_shape": ["waterfall"],
+          "item_count": [3, 6]
+        }
+      ]
+    },
+    {
+      "family": "dual-track-progress",
+      "description": "Two parallel workstreams tracked side by side — internal readiness vs client adoption, build vs rollout.",
+      "match": {
+        "archetype": "process",
+        "argument": "status-action",
+        "signals": [
+          "prompt tracks two distinct but related workstreams in parallel",
+          "has 'track 1 / track 2', 'internal + external', 'build + adopt'",
+          "each track has its own completion metric or milestone status"
+        ]
+      },
+      "emphasis_question": {
+        "prompt": "Are the two tracks equally important, or is one the bottleneck?",
+        "detect_from": "If one track done and other is focus → handoff. If both equal → parallel. If showing overall program → program.",
+        "detect_mapping": { "balanced": "parallel", "decision": "handoff", "cause": "handoff", "impact": "handoff", "system": "program", "bottleneck": "handoff", "progress": "parallel", "position": "parallel", "gap": "handoff" },
+        "options": [
+          { "key": "parallel", "label": "Two equal tracks", "description": "Both tracks shown side by side with matching visual weight", "default": true },
+          { "key": "handoff", "label": "Handoff moment", "description": "Track A is done — the slide is about transitioning focus to Track B" },
+          { "key": "program", "label": "Program overview", "description": "Both tracks feed a shared objective — the goal card is the hero" }
+        ]
+      },
+      "variants": [
+        {
+          "id": "skeleton-15a",
+          "emphasis": "parallel",
+          "name": "Side-by-side track panels with KPI chips",
+          "source_golden": "golden-15",
+          "_status": "draft",
+          "preview": "html-to-pptx/screenshots/skeleton-15a-reference.png",
+          "layout": "Full-width. Two side-by-side section panels. Left: journey timeline + detail grid + next-phase cards. Right: item list + objective card. Summary bar at bottom.",
+          "personas": ["strategist"],
+          "data_shape": ["flow"],
+          "item_count": [4, 12]
+        },
+        {
+          "id": "skeleton-15b",
+          "emphasis": "handoff",
+          "name": "Completed track compact + active track hero",
+          "source_golden": null,
+          "_status": "draft",
+          "preview": "html-to-pptx/screenshots/skeleton-15b-reference.png",
+          "layout": "Left 35%: compact completed-track summary. Right 65%: active track as hero — timeline, current items, next actions. Goal card at bottom.",
+          "personas": ["strategist"],
+          "data_shape": ["flow"],
+          "item_count": [3, 8]
+        },
+        {
+          "id": "skeleton-15c",
+          "emphasis": "program",
+          "name": "Shared goal hero with compact track strips",
+          "source_golden": null,
+          "_status": "draft",
+          "preview": "html-to-pptx/screenshots/skeleton-15c-reference.png",
+          "layout": "Hero goal card at top. Below: two compact track strips showing milestone status + KPI. Summary bar at bottom.",
+          "personas": ["strategist"],
+          "data_shape": ["flow"],
+          "item_count": [3, 8]
+        }
+      ]
+    }
+  ]
+}
