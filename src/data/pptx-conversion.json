@@ -625,6 +625,445 @@
           "pptx": "../presentations/digital-transformation-program-strategist.pptx"
         }
       }
+    },
+    {
+      "id": "skeleton-20b-hero-finding",
+      "title": "Skeleton 20b — Findings Exhibit: Hero-Finding (Consultant)",
+      "version": "V1",
+      "source": "skeleton-20b-consultant-argument-findings-hero",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-20b-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-20b-consultant-argument-findings-hero.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-20b-reference.png",
+          "pptx": "../presentations/skeleton-20b-hero-finding-consultant.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-20c-findings-action",
+      "title": "Skeleton 20c — Findings Summary: Action-Forward (Consultant)",
+      "version": "V1",
+      "source": "skeleton-20c-consultant-argument-findings-action",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-20c-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-20c-consultant-argument-findings-action.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-20c-action-gen1.png",
+          "pptx": "../presentations/skeleton-20c-findings-action-consultant.pptx",
+          "notes": "Text overlap on findings, content didn't fill slide"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-20c-action-gen2.png",
+          "pptx": "../presentations/skeleton-20c-findings-action-consultant.pptx",
+          "notes": "Fixed spacing, cards fill available height, source anchored to bottom"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-20c-action-gen3.png",
+          "pptx": "../presentations/skeleton-20c-findings-action-consultant.pptx",
+          "notes": "Compact cards (~1.03\" each from HTML px), em-dash headline at 17pt, density matches HTML reference"
+        },
+        "gen-4": {
+          "preview": "html-to-pptx/screenshots/skeleton-20c-action-gen4.png",
+          "pptx": "../presentations/skeleton-20c-findings-action-consultant.pptx",
+          "notes": "Added breathing room below headline — body content no longer touches title"
+        }
+      }
+    },
+    {
+      "id": "skeleton-21a-quadrant",
+      "title": "Skeleton 21a — Category Quadrant: Balanced (Strategist)",
+      "version": "V1",
+      "source": "skeleton-21a-strategist-category-quadrant-balanced",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-21a-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-21a-strategist-category-quadrant-balanced.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-21a-pptx.png",
+          "pptx": "../presentations/skeleton-21a-quadrant-strategist.pptx",
+          "notes": "Fixed callout overlap; uses manual quadrant shapes"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-21a-pptx.png",
+          "pptx": "../presentations/skeleton-21a-quadrant-strategist.pptx",
+          "notes": "Callout spacing fix (callLeadH 0.60→0.80)"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-21a-pptx.png",
+          "pptx": "../presentations/skeleton-21a-quadrant-strategist.pptx",
+          "notes": "Breathing room: bodyH computed from summY, pill width 0.08+0.35, removed eyebrow/kicker/breadcrumb footer"
+        }
+      }
+    },
+    {
+      "id": "skeleton-11a-trajectory",
+      "title": "Skeleton 11a — Period Trend: Trajectory (Analyst)",
+      "version": "V1",
+      "source": "skeleton-11a-analyst-dataviz-trend-trajectory",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-11a-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-11a-analyst-dataviz-trend-trajectory.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-11a-trajectory-pptx.png",
+          "pptx": "../presentations/skeleton-11a-trajectory-analyst.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-11a-trajectory-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-11a-trajectory-analyst.pptx",
+          "note": "Fix: single pipe title (removed duplicate separator)"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-11a-trajectory-pptx.png",
+          "pptx": "../presentations/skeleton-11a-trajectory-analyst.pptx",
+          "note": "Fix: vertical stacked columns (was BAR_STACKED undefined → BAR+stacked), segment data labels, dynamic findings sizing, axis range 0-160"
+        },
+        "gen-4": {
+          "preview": "html-to-pptx/screenshots/skeleton-11a-trajectory-pptx-gen4.png",
+          "pptx": "../presentations/skeleton-11a-trajectory-analyst.pptx",
+          "note": "Fix: inline KPI tier, hairline padding +0.04\", summary bar raised 0.28\" above footer"
+        }
+      }
+    },
+    {
+      "id": "skeleton-11b-focal-series",
+      "title": "Skeleton 11b — Period Trend: Focal Series (Executive)",
+      "version": "V1",
+      "source": "skeleton-11b-executive-dataviz-trend-focal-series",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-11b-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-11b-executive-dataviz-trend-focal-series.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-11b-focal-series-pptx.png",
+          "pptx": "../presentations/skeleton-11b-focal-series-executive.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-07b-gaps",
+      "title": "Skeleton 07b — Maturity Assessment: Gaps (Consultant)",
+      "version": "V1",
+      "source": "skeleton-07b-consultant-maturity-assessment-gaps",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-07b-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-07b-consultant-maturity-assessment-gaps.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-07b-gaps-pptx.png",
+          "pptx": "../presentations/skeleton-07b-gaps-consultant.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-07b-gaps-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-07b-gaps-consultant.pptx",
+          "note": "Fix: remove eyebrow/accent bar, single pipe title, taller maturity strip, better finding spacing"
+        }
+      }
+    },
+    {
+      "id": "skeleton-07c-action",
+      "title": "Skeleton 07c — Maturity Assessment: Action (Consultant)",
+      "version": "V1",
+      "source": "skeleton-07c-consultant-maturity-assessment-action",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-07c-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-07c-consultant-maturity-assessment-action.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-07c-action-pptx.png",
+          "pptx": "../presentations/skeleton-07c-action-consultant.pptx"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-07c-action-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-07c-action-consultant.pptx",
+          "note": "Fix: remove eyebrow/accent bar, single pipe title"
+        }
+      }
+    },
+    {
+      "id": "skeleton-22a-aspiration",
+      "title": "Skeleton 22a — Goal Hierarchy: Aspiration (Strategist)",
+      "version": "V1",
+      "source": "skeleton-22a-strategist-goal-hierarchy-aspiration",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-22a-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-22a-strategist-goal-hierarchy-aspiration.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-22a-pptx.png",
+          "pptx": "../presentations/skeleton-22a-converted.pptx",
+          "note": "RECTANGLE shape — pills render as squares"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-22a-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-22a-converted.pptx",
+          "note": "ROUNDED_RECTANGLE via SC.render.pillNode"
+        }
+      }
+    },
+    {
+      "id": "skeleton-22b-decomposition",
+      "title": "Skeleton 22b — Goal Hierarchy: Decomposition (Strategist)",
+      "version": "V1",
+      "source": "skeleton-22b-strategist-goal-hierarchy-decomposition",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-22b-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-22b-strategist-goal-hierarchy-decomposition.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-22b-pptx.png",
+          "pptx": "../presentations/skeleton-22b-converted.pptx",
+          "note": "RECTANGLE shape — pills render as squares"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-22b-pptx-gen2.png",
+          "pptx": "../presentations/skeleton-22b-converted.pptx",
+          "note": "ROUNDED_RECTANGLE via SC.render.pillNode"
+        }
+      }
+    },
+    {
+      "id": "skeleton-12a-contribution",
+      "title": "Skeleton 12a — Growth Decomposition (Executive)",
+      "version": "skeleton",
+      "source": "skeleton-12a-executive-dataviz-contribution-balanced",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-12a-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-12a-executive-dataviz-contribution-balanced.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-12a-pptx.png",
+          "pptx": "../presentations/skeleton-12a-contribution-executive.pptx",
+          "notes": "Title had double-pipe bug"
+        },
+        "gen-2": {
+          "preview": "html-to-pptx/screenshots/skeleton-12a-pptx.png",
+          "pptx": "../presentations/skeleton-12a-contribution-executive.pptx",
+          "notes": "Fixed title double-pipe"
+        },
+        "gen-3": {
+          "preview": "html-to-pptx/screenshots/skeleton-12a-pptx.png",
+          "pptx": "../presentations/skeleton-12a-contribution-executive.pptx",
+          "notes": "Fixed mixShift Rule 27 font sizes + spacing overflow"
+        },
+        "gen-4": {
+          "preview": "html-to-pptx/screenshots/skeleton-12a-pptx.png",
+          "pptx": "../presentations/skeleton-12a-contribution-executive.pptx",
+          "notes": "Right column vertical centering + proportional spacing"
+        },
+        "gen-5": {
+          "preview": "html-to-pptx/screenshots/skeleton-12a-pptx.png",
+          "pptx": "../presentations/skeleton-12a-contribution-executive.pptx",
+          "notes": "Box heights ≥ font sizes; mixShift spec carries boxH + gaps; no overlap"
+        }
+      }
+    },
+    {
+      "id": "skeleton-12b-contribution",
+      "title": "Skeleton 12b — Growth Decomposition Driver-Hero (Executive)",
+      "version": "skeleton",
+      "source": "skeleton-12b-executive-dataviz-contribution-driver-hero",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-12b-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-12b-executive-dataviz-contribution-driver-hero.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-12b-reference.png",
+          "pptx": "../presentations/skeleton-12b-contribution-executive.pptx",
+          "notes": "Initial conversion — adapted from 12a with 40/60 column swap"
+        }
+      }
+    },
+    {
+      "id": "skeleton-12c-contribution",
+      "title": "Skeleton 12c — Growth Decomposition Headline-Hero (Executive)",
+      "version": "skeleton",
+      "source": "skeleton-12c-executive-dataviz-contribution-headline-hero",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-12c-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-12c-executive-dataviz-contribution-headline-hero.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-12c-pptx.png",
+          "pptx": "../presentations/skeleton-12c-contribution-executive.pptx",
+          "notes": "Initial conversion — 45/55 split with trendContext component"
+        }
+      }
+    },
+    {
+      "id": "skeleton-21b-quadrant-focal",
+      "title": "Skeleton 21b — Category Quadrant Focal (Strategist)",
+      "version": "skeleton",
+      "source": "skeleton-21b-strategist-category-quadrant-focal",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-21b-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-21b-strategist-category-quadrant-focal.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-21b-pptx.png",
+          "pptx": "../presentations/skeleton-21b-quadrant-focal-strategist.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-23b-gantt",
+      "title": "Skeleton 23b — Implementation Timeline Gantt (Consultant)",
+      "version": "skeleton",
+      "source": "skeleton-23b-timeline-gantt",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-23b-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-23b-timeline-gantt.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-23b-pptx.png",
+          "pptx": "../presentations/skeleton-23b-gantt-consultant.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-14a-feature",
+      "title": "Skeleton 14a — Feature Announcement: Product (Strategist)",
+      "version": "skeleton",
+      "source": "skeleton-14-strategist-feature-announcement",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-14a-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-14-strategist-feature-announcement.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-14a-pptx.png",
+          "pptx": "../presentations/skeleton-14a-feature-announcement.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-17a-strategy-recap",
+      "title": "Skeleton 17a — Strategy Recap: Thesis (Strategist)",
+      "version": "skeleton",
+      "source": "skeleton-17a-strategist-strategy-recap-thesis",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-17a-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-17a-strategist-strategy-recap-thesis.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-17a-pptx.png",
+          "pptx": "../presentations/skeleton-17a-strategy-recap-strategist.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-17b-strategy-recap",
+      "title": "Skeleton 17b — Strategy Recap: Pillars (Strategist)",
+      "version": "skeleton",
+      "source": "skeleton-17b-strategist-strategy-recap-pillars",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-17b-html.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-17b-strategist-strategy-recap-pillars.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-17b-pptx.png",
+          "pptx": "../presentations/skeleton-17b-strategy-recap-strategist.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-09a-waterfall-executive",
+      "title": "Skeleton 09a — Executive Waterfall Bridge (Balanced)",
+      "version": "skeleton",
+      "source": "skeleton-09a-executive-dataviz-waterfall-balanced",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-09a-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-09a-executive-dataviz-waterfall-balanced.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-09a-pptx.png",
+          "pptx": "../presentations/skeleton-09a-waterfall-executive.pptx"
+        }
+      }
+    },
+    {
+      "id": "template-agenda-clean",
+      "title": "Template — Agenda (Clean)",
+      "version": "template",
+      "source": "agenda.html",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/agenda-clean.png",
+          "html": "../.claude/skills/branded-html-slide/templates/agenda.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/template-agenda-clean-pptx.png",
+          "pptx": "../presentations/template-agenda-clean.pptx"
+        }
+      }
+    },
+    {
+      "id": "template-agenda-bold",
+      "title": "Template — Agenda (Bold)",
+      "version": "template",
+      "source": "agenda-bold.html",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/agenda-bold.png",
+          "html": "../.claude/skills/branded-html-slide/templates/agenda-bold.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/template-agenda-bold-pptx.png",
+          "pptx": "../presentations/template-agenda-bold.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-23a-hybrid",
+      "title": "Skeleton 23a — Implementation Timeline Hybrid (Consultant)",
+      "version": "skeleton",
+      "source": "skeleton-23a-timeline-hybrid",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-23a-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-23a-timeline-hybrid.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-23a-pptx.png",
+          "pptx": "../presentations/skeleton-23a-hybrid-consultant.pptx"
+        }
+      }
+    },
+    {
+      "id": "skeleton-23c-phases",
+      "title": "Skeleton 23c — Implementation Timeline Phases (Consultant)",
+      "version": "skeleton",
+      "source": "skeleton-23c-timeline-phases",
+      "cells": {
+        "html-source": {
+          "preview": "html-to-pptx/screenshots/skeleton-23c-reference.png",
+          "html": "../.claude/skills/branded-html-slide/skeletons/skeleton-23c-timeline-phases.html"
+        },
+        "gen-1": {
+          "preview": "html-to-pptx/screenshots/skeleton-23c-pptx.png",
+          "pptx": "../presentations/skeleton-23c-phases-consultant.pptx"
+        }
+      }
     }
   ]
 }

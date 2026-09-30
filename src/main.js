@@ -3,6 +3,9 @@ import { createNav } from './components/nav.js';
 import { mount as mountProgression } from './pages/progression.js';
 import { mount as mountConversion } from './pages/conversion.js';
 import { mount as mountAllVersions } from './pages/all-versions.js';
+import { mount as mountSkeletons } from './pages/skeletons.js';
+import { mount as mountGoldens } from './pages/goldens.js';
+import { mount as mountTemplates } from './pages/templates.js';
 
 const navEl = document.getElementById('siteNav');
 const appEl = document.getElementById('app');
@@ -17,6 +20,12 @@ function navigate(pageId) {
     cleanup = mountConversion(appEl);
   } else if (page === 'all-versions') {
     cleanup = mountAllVersions(appEl);
+  } else if (page === 'skeletons') {
+    cleanup = mountSkeletons(appEl);
+  } else if (page === 'templates') {
+    cleanup = mountTemplates(appEl);
+  } else if (page === 'goldens') {
+    cleanup = mountGoldens(appEl);
   } else {
     cleanup = mountProgression(appEl);
   }

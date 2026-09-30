@@ -2,6 +2,9 @@ const PAGES = [
   { id: 'all-versions', label: 'All Versions' },
   { id: 'progression', label: 'Skill Progression' },
   { id: 'conversion', label: 'PPTX Conversion' },
+  { id: 'skeletons', label: 'Skeletons' },
+  { id: 'templates', label: 'Templates' },
+  { id: 'goldens', label: 'Goldens' },
 ];
 
 export function createNav(container, { onNavigate }) {

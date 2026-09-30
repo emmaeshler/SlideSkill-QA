@@ -23,14 +23,19 @@ export function mount(root) {
       <header class="mast">
         <h1>PowerPoint conversion</h1>
         <p style="color:var(--soft);max-width:72ch;margin-bottom:4px">These slides are built with PptxGenJS, which renders native PowerPoint charts. think-cell is not available on Mac, so chart fidelity here reflects the PptxGenJS engine only.</p>
-        <div class="meta">
+      </header>
+      <div class="sticky-search">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <div class="search-bar" style="flex:1;min-width:200px">
+            <input id="pptxSearch" type="text" placeholder="Search cases… (Enter to jump)">
+          </div>
           <button id="compareToggle" class="compare-toggle">Compare slides</button>
         </div>
         <div id="compareBar" class="compare-bar">
           <span id="compareStatus" class="compare-status">Click two slides to compare</span>
           <button id="compareClearBtn" class="compare-clear">Clear</button>
         </div>
-      </header>
+      </div>
       <section class="matrix-wrap" aria-label="HTML to PPTX conversion matrix">
         <div id="matrix" class="matrix"></div>
       </section>
@@ -234,6 +239,30 @@ export function mount(root) {
 
   window.addEventListener('keydown', keyHandler);
   render();
+
+  const pptxSearchInput = root.querySelector('#pptxSearch');
+  const matrixWrap = matrixEl.closest('.matrix-wrap');
+  pptxSearchInput.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter') return;
+    const q = pptxSearchInput.value.trim().toLowerCase();
+    if (!q) return;
+    root.querySelectorAll('.search-hit').forEach(el => el.classList.remove('search-hit'));
+    const heads = matrixEl.querySelectorAll('.case-head');
+    for (const head of heads) {
+      if (head.textContent.toLowerCase().includes(q)) {
+        head.classList.add('search-hit');
+        const wrapRect = matrixWrap.getBoundingClientRect();
+        const headRect = head.getBoundingClientRect();
+        const offsetTop = headRect.top - wrapRect.top + matrixWrap.scrollTop;
+        matrixWrap.scrollTo({
+          top: offsetTop - matrixWrap.clientHeight / 2 + headRect.height / 2,
+          behavior: 'smooth',
+        });
+        setTimeout(() => head.classList.remove('search-hit'), 3000);
+        return;
+      }
+    }
+  });
 
   return () => {
     window.removeEventListener('keydown', keyHandler);

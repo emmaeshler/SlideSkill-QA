@@ -96,6 +96,25 @@ h1{font:700 clamp(28px,4vw,44px)/1.08 var(--display);letter-spacing:-.02em;margi
 @media(max-width:720px){.wrap{padding:0 14px}.case-head{width:180px}.cell{width:280px}}
 .close-x{position:absolute;top:18px;right:18px;width:40px;height:40px;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font:400 24px/40px system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .15s;z-index:60}.close-x:hover{background:rgba(255,255,255,.3);border-color:rgba(255,255,255,.6)}
 @media print{body{background:#fff}.modal{display:none!important}.site-nav{display:none}}
+
+/* ── Skeleton cards ── */
+.skel-card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden}
+.skel-header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line)}
+.skel-title{font:700 18px/1.2 var(--display);letter-spacing:-.01em}
+.skel-badges{display:flex;gap:8px;align-items:center}
+.skel-badge{padding:5px 12px;border-radius:99px;font:700 12px/1 var(--mono);letter-spacing:.04em}
+.skel-badge.time{background:#e8f5e9;color:#2e7d32}
+.skel-badge.tools{background:var(--tint);color:var(--accent)}
+.skel-badge.delta{background:#fff3e0;color:#e65100}
+.skel-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.skel-body-3{grid-template-columns:1fr 1fr 1fr}
+.skel-pane{padding:16px;border-right:1px solid var(--line)}
+.skel-pane:last-child{border-right:none}
+.skel-pane-label{font:600 10px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.skel-pane img{width:100%;border-radius:6px;border:1px solid var(--line);cursor:zoom-in}
+.skel-prompt{padding:16px 24px;border-top:1px solid var(--line);background:var(--paper)}
+.skel-prompt summary{font:600 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--soft);cursor:pointer;padding:4px 0}
+.skel-prompt pre{margin-top:10px;font:12px/1.55 var(--mono);color:var(--ink);white-space:pre-wrap;word-break:break-word;max-height:200px;overflow:auto}
 /* ── Column collapse ─────────────── */
 .collapse-btn{position:absolute;top:8px;right:8px;width:28px;height:28px;border:1px solid rgba(255,255,255,.3);border-radius:6px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);cursor:pointer;display:grid;place-items:center;font:700 16px/1 var(--body);transition:all .15s;z-index:1;padding:0}
 .collapse-btn:hover{background:rgba(255,255,255,.25);color:#fff}
@@ -128,6 +147,7 @@ h1{font:700 clamp(28px,4vw,44px)/1.08 var(--display);letter-spacing:-.02em;margi
 <div style="display:flex;align-items:center;gap:4px;margin:18px 0 12px">
 <button class="content-tab active" data-tab="conversion">HTML&rarr;PPTX V4</button>
 <button class="content-tab" data-tab="new-skill">HTML&rarr;PPTX V5</button>
+<button class="content-tab" data-tab="skeletons">Skeletons</button>
 </div>
 <div class="meta">
 <span id="tabMeta">4 cases · 2 generations · all gen-2 complete</span>
@@ -143,6 +163,9 @@ h1{font:700 clamp(28px,4vw,44px)/1.08 var(--display);letter-spacing:-.02em;margi
 </section>
 <section id="tab-new-skill" class="matrix-wrap" style="display:none" aria-label="New skill conversion matrix">
 <div id="matrix2" class="matrix"></div>
+</section>
+<section id="tab-skeletons" style="display:none" aria-label="Skeleton builder tests">
+<div id="skeletonGrid"></div>
 </section>
 </main>
 <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="Zoomed screenshot">
@@ -322,16 +345,166 @@ const MODEL_B={
           "html":"../../presentations/replacement-pricing-logic-v5-strategist.html"
         }
       }
+    },
+    {
+      "id":"enterprise-saas-pricing-strategist",
+      "title":"Enterprise SaaS Pricing — Lock-In Strategy (Strategist)",
+      "source":"enterprise-saas-pricing-v5-strategist",
+      "cells":{
+        "html-source":{
+          "preview":"screenshots/enterprise-saas-pricing-v5-strategist-html.png",
+          "html":"../../presentations/enterprise-saas-pricing-v5-strategist.html"
+        }
+      }
+    },
+    {
+      "id":"crm-rollout-progress-strategist",
+      "title":"CRM Rollout Progress — Dual-Track (Strategist)",
+      "source":"crm-rollout-progress-strategist",
+      "cells":{
+        "html-source":{
+          "preview":"screenshots/crm-rollout-progress-strategist-html.png",
+          "html":"../../presentations/crm-rollout-progress-strategist.html"
+        },
+        "gen-1":{
+          "preview":"screenshots/crm-rollout-progress-strategist-pptx.png",
+          "pptx":"../../presentations/crm-rollout-progress-strategist.pptx"
+        }
+      }
+    },
+    {
+      "id":"crm-migration-dual-track-strategist",
+      "title":"CRM Migration — Dual-Track Progress Handoff (Strategist)",
+      "source":"crm-migration-dual-track-strategist",
+      "cells":{
+        "html-source":{
+          "preview":"screenshots/crm-migration-dual-track-strategist-html.png",
+          "html":"../../presentations/crm-migration-dual-track-strategist.html"
+        },
+        "gen-1":{
+          "preview":"screenshots/crm-migration-dual-track-strategist-pptx.png",
+          "pptx":"../../presentations/crm-migration-dual-track-strategist.pptx"
+        }
+      }
+    },
+    {
+      "id":"digital-transformation-program-strategist",
+      "title":"Digital Transformation — Dual-Track Program Progress (Strategist)",
+      "source":"digital-transformation-program-strategist",
+      "cells":{
+        "html-source":{
+          "preview":"screenshots/digital-transformation-program-strategist-html.png",
+          "html":"../../presentations/digital-transformation-program-strategist.html"
+        },
+        "gen-1":{
+          "preview":"screenshots/digital-transformation-program-strategist-pptx.png",
+          "pptx":"../../presentations/digital-transformation-program-strategist.pptx"
+        }
+      }
     }
   ]
 };
+
+/* ═══════════════════════════════════════
+   TAB 3 — SKELETON BUILDER TESTS
+   ═══════════════════════════════════════ */
+const SKELETONS=[
+  {
+    id:'skeleton-03-leakage',
+    title:'FY25 Margin Leakage — Executive Argument',
+    skeleton:'skeleton-03-executive-argument',
+    persona:'executive',
+    golden:'golden-03',
+    duration:160,
+    tools:9,
+    baseline:551,
+    goldenPreview:'screenshots/golden-03-reference.png',
+    outputPreview:'screenshots/skeleton-03-margin-leakage-executive.png',
+    outputHtml:'../../presentations/fy25-margin-leakage-executive.html',
+    prompt:'Create a slide explaining that FY25 annualized margin leakage is concentrated in a few accounts. Total $31.7M across 214 accounts. Top three accounts: Great Lakes Machine & Tool ($4.8M), Southeastern Process Equipment ($4.1M), Ohio Valley Fabrication Partners ($3.6M) — $12.5M total, 39.4%. Next five accounts: $9.9M, 31.3%. Long tail: 206 accounts, $9.3M, 29.3%. Systemic mechanics: 61% manual branch overrides, 24% stale competitive discounts, 15% freight side agreements. No reviews since FY23. Recommendation: discount-floor reviews on top three before Q1 close; freeze override authority pending completion.'
+  },
+  {
+    id:'skeleton-05-novapack',
+    title:'NovaPack Gross Margin Bridge — Analyst Waterfall',
+    skeleton:'skeleton-05-analyst-waterfall',
+    persona:'analyst',
+    golden:'golden-05',
+    duration:330,
+    tools:9,
+    baseline:551,
+    goldenPreview:'screenshots/golden-05-reference.png',
+    outputPreview:'screenshots/skeleton-05-novapack-waterfall-analyst.png',
+    outputHtml:'../../presentations/novapack-margin-bridge-analyst.html',
+    prompt:'Create a slide showing NovaPack Industries’ FY24–FY25 gross margin bridge. Gross margin went from $142.3M (FY24) to $151.8M (FY25). Drivers: Price realization +$18.6M, Volume/mix +$4.2M, Raw material costs -$8.1M, Labor inflation -$3.9M, Freight/logistics -$2.7M, Operational efficiency +$1.4M. The story: pricing power carried the year, but cost headwinds ate most of it. Net gain of $9.5M (6.7% growth). Recommend locking in FY26 supplier contracts at current commodity levels before Q4 spot prices reset.'
+  },
+  {
+    id:'skeleton-14-dashboard',
+    title:'Dashboard Insights — Strategist Feature Announcement',
+    skeleton:'skeleton-14-strategist-feature-announcement',
+    persona:'strategist',
+    golden:'golden-14',
+    duration:124,
+    tools:8,
+    baseline:551,
+    goldenPreview:'screenshots/golden-14-reference.png',
+    outputPreview:'screenshots/skeleton-14-dashboard-insights-strategist.png',
+    outputHtml:'../../presentations/dashboard-insights-announcement-strategist.html',
+    prompt:'Announcing Dashboard Insights in our analytics platform. What it is: an AI layer that surfaces anomalies and trends automatically — no manual report building. Covers about 12,000 hours of analyst time per year across the firm. Guardrails: all outputs are flagged as “AI-suggested” with confidence scores. Analysts review before anything goes to clients. No raw data leaves the platform. When: pilot starts September 15 with the Chicago and Denver offices. Full rollout by Q1 based on pilot feedback.'
+  },
+  {
+    id:'skeleton-12-contribution',
+    title:'Revenue Decomposition — Executive Dataviz',
+    skeleton:'skeleton-12a-executive-dataviz-contribution',
+    persona:'executive',
+    golden:'golden-12',
+    duration:180,
+    tools:10,
+    baseline:551,
+    goldenPreview:'screenshots/skeleton-12a-reference.png',
+    outputPreview:'screenshots/skeleton-12a-pptx.png',
+    outputHtml:'../../.claude/skills/branded-html-slide/skeletons/skeleton-12a-executive-dataviz-contribution-balanced.html',
+    prompt:'Create a slide showing Cascade Beverage revenue growth decomposition. Revenue went from $847M (FY23) to $912M (FY24), a $65M increase (+7.7%). Drivers: Core portfolio volume +$38M, Premium mix shift +$22M, New market entry +$14M, Contract renewals +$8M, Price erosion -$11M, Channel partner exits -$6M. Premium share shifted from 31% to 38%. Net: organic drivers outpaced headwinds 3:1, validating the premiumization strategy.'
+  },
+  {
+    id:'skeleton-12b-contribution-driver',
+    title:'Revenue Decomposition Driver-Hero — Executive Dataviz',
+    skeleton:'skeleton-12b-executive-dataviz-contribution-driver-hero',
+    persona:'executive',
+    golden:'golden-12',
+    duration:180,
+    tools:10,
+    baseline:551,
+    goldenPreview:'screenshots/skeleton-12b-reference.png',
+    outputPreview:'screenshots/skeleton-12b-reference.png',
+    outputHtml:'../../.claude/skills/branded-html-slide/skeletons/skeleton-12b-executive-dataviz-contribution-driver-hero.html',
+    prompt:'Create an executive slide about Meridian Financial deposit growth. Commercial deposits added $892M — 74% of $1.21B net deposit growth. Q1 FY26 $8.45B to Q4 FY26 $9.66B (+14.3%). Contributors: Commercial +$892M (focal), Wealth Mgmt +$445M, Consumer Checking -$78M, Savings/CD -$48M. Commercial share shifted 31.2% to 38.6%. Emphasize the lead driver.'
+  },
+  {
+    id:'skeleton-12c-contribution-headline',
+    title:'Revenue Decomposition Headline-Hero — Executive Dataviz',
+    skeleton:'skeleton-12c-executive-dataviz-contribution-headline-hero',
+    persona:'executive',
+    golden:'golden-12',
+    duration:180,
+    tools:10,
+    baseline:551,
+    goldenPreview:'screenshots/skeleton-12c-reference.png',
+    outputPreview:'screenshots/skeleton-12c-reference.png',
+    outputHtml:'../../.claude/skills/branded-html-slide/skeletons/skeleton-12c-executive-dataviz-contribution-headline-hero.html',
+    prompt:'Create an executive slide about Pinnacle Healthcare Group operating margin growth. Operating margin expanded $14.2M net (+22.8%), from $62.3M (Q1 FY26) to $76.5M (Q4 FY26). Quarterly trajectory: Q1→Q2 +$2.1M (+3.4%), Q2→Q3 +$4.8M (+7.4%), Q3→Q4 +$7.3M (+10.5%) — accelerating. Contributors: Ambulatory Surgery +$9.8M (focal), Diagnostics +$6.1M, Primary Care −$0.9M, Rehab Services −$0.8M. Build for the executive persona emphasizing the total change.'
+  }
+];
 
 /* ═══════════════════════════════════════
    SHARED STATE
    ═══════════════════════════════════════ */
 function metaText(tab){
   if(tab==='conversion') return MODEL.cases.length+' cases · '+(MODEL.versions.length-1)+' generations · all gen-2 complete';
-  return MODEL_B.cases.length+' cases · '+(MODEL_B.versions.length-1)+' generations';
+  if(tab==='skeletons'){
+    var avg=Math.round(SKELETONS.reduce(function(s,c){return s+c.duration},0)/SKELETONS.length);
+    return SKELETONS.length+' tests · avg '+avg+'s · baseline '+SKELETONS[0].baseline+'s';
+  }
+  return MODEL_B.cases.length+' cases · '+(MODEL_B.versions.length-1)+' generations · 3 with PPTX';
 }
 
 const HEADER_LABELS={'html-source':'HTML Source'};
@@ -660,7 +833,9 @@ document.querySelectorAll('.content-tab').forEach(function(btn){
     document.querySelectorAll('.content-tab').forEach(function(b){b.classList.toggle('active',b.dataset.tab===tab)});
     document.querySelector('#tab-conversion').style.display=tab==='conversion'?'':'none';
     document.querySelector('#tab-new-skill').style.display=tab==='new-skill'?'':'none';
+    document.querySelector('#tab-skeletons').style.display=tab==='skeletons'?'':'none';
     document.querySelector('#tabMeta').textContent=metaText(tab);
+    document.querySelector('#compareToggle').style.display=tab==='skeletons'?'none':'';
     if(compareMode){compareMode=false;compareToggle.classList.remove('active');compareBar.classList.remove('active');clearCompare()}
   });
 });
@@ -672,9 +847,68 @@ var nav=document.getElementById('siteNav');
 window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>8)});
 
 /* ═══════════════════════════════════════
+   TAB 3 — SKELETON RENDERING
+   ═══════════════════════════════════════ */
+function renderSkeletons(){
+  var grid=document.querySelector('#skeletonGrid');
+  grid.innerHTML='';
+  SKELETONS.forEach(function(s){
+    var pctSaved=Math.round((1-s.duration/s.baseline)*100);
+    var card=document.createElement('div');
+    card.className='skel-card';
+    card.innerHTML=
+      '<div class="skel-header">'+
+        '<div class="skel-title">'+s.title+'</div>'+
+        '<div class="skel-badges">'+
+          '<span class="skel-badge time">'+s.duration+'s</span>'+
+          '<span class="skel-badge tools">'+s.tools+' tools</span>'+
+          '<span class="skel-badge delta">&minus;'+pctSaved+'% vs full</span>'+
+        '</div>'+
+      '</div>'+
+      '<div class="skel-body skel-body-3">'+
+        '<div class="skel-pane">'+
+          '<div class="skel-pane-label">Golden reference ('+s.golden+')</div>'+
+          '<img src="'+s.goldenPreview+'" alt="'+s.golden+' reference">'+
+        '</div>'+
+        '<div class="skel-pane">'+
+          '<div class="skel-pane-label">Skeleton output ('+s.skeleton+')</div>'+
+          '<img src="'+s.outputPreview+'" alt="'+s.id+' output">'+
+        '</div>'+
+        '<div class="skel-pane" style="display:flex;flex-direction:column;gap:12px">'+
+          '<div class="skel-pane-label">Build stats</div>'+
+          '<table style="font:12px/1.6 var(--mono);color:var(--ink);width:100%;border-collapse:collapse">'+
+            '<tr><td style="color:var(--faint)">Skeleton</td><td style="text-align:right;font-weight:700">'+s.skeleton+'</td></tr>'+
+            '<tr><td style="color:var(--faint)">Persona</td><td style="text-align:right;font-weight:700">'+s.persona+'</td></tr>'+
+            '<tr style="border-top:1px solid var(--line)"><td style="color:var(--faint)">Duration</td><td style="text-align:right;font-weight:700;color:#2e7d32">'+s.duration+'s</td></tr>'+
+            '<tr><td style="color:var(--faint)">Tool uses</td><td style="text-align:right;font-weight:700">'+s.tools+'</td></tr>'+
+            '<tr><td style="color:var(--faint)">Baseline</td><td style="text-align:right;font-weight:700;color:var(--soft)">'+s.baseline+'s / 19 tools</td></tr>'+
+            '<tr style="border-top:1px solid var(--line)"><td style="color:var(--faint)">Savings</td><td style="text-align:right;font-weight:700;color:#e65100">&minus;'+pctSaved+'% ('+(s.baseline-s.duration)+'s)</td></tr>'+
+          '</table>'+
+          '<a href="'+s.outputHtml+'" target="_blank" style="display:inline-block;margin-top:auto;padding:6px 14px;border:1px solid var(--line);border-radius:6px;font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;text-align:center">Open HTML &nearr;</a>'+
+        '</div>'+
+      '</div>'+
+      '<div class="skel-prompt"><details>'+
+        '<summary>Prompt</summary>'+
+        '<pre>'+s.prompt.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</pre>'+
+      '</details></div>';
+
+    card.querySelectorAll('.skel-pane img').forEach(function(img){
+      img.addEventListener('click',function(){
+        document.querySelector('#modalTitle').textContent=s.title;
+        document.querySelector('#modalImage').src=img.src;
+        document.querySelector('#modal').classList.add('open');
+        active=null;
+      });
+    });
+    grid.appendChild(card);
+  });
+}
+
+/* ═══════════════════════════════════════
    INIT
    ═══════════════════════════════════════ */
 render();
 renderB();
+renderSkeletons();
 </script>
 </body></html>
